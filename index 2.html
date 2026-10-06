@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>بيان | BAYAN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Noto+Naskh+Arabic:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Amiri+Quran&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1:#EFE3D5; --bg2:#F8F1E8; --card:rgba(251,247,240,.9); --card-solid:#FBF7F0;
+  --ink:#1F3A2E; --ink-soft:#5F6F64; --muted:#8C867B; --line:#E6DACB;
+  --green:#34503F; --green-2:#2A4434; --green-soft:#DDE6DB; --sand:#E9DFD1;
+  --fire-a:#F28C28; --fire-b:#E5532D; --gold:#B8924F;
+  --font:'IBM Plex Sans Arabic','Segoe UI',Tahoma,Arial,sans-serif;
+  --head:'Noto Naskh Arabic','Amiri',Georgia,serif;
+  --tab:74px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+[hidden]{display:none!important}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.75;background:linear-gradient(180deg,var(--bg1),var(--bg2) 55%,var(--bg1));background-attachment:fixed;min-height:100vh;overflow-x:hidden}
+button,input,textarea{font-family:var(--font)}
+button{cursor:pointer}
+.deco{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.leaf{position:absolute;color:rgba(86,106,76,.30);filter:blur(1.2px)}
+.leaf.a{top:-10px;inset-inline-end:-26px;width:190px;transform:rotate(20deg)}
+.leaf.b{bottom:70px;inset-inline-start:-34px;width:170px;transform:rotate(-155deg)}
+.leaf.c{top:36%;inset-inline-start:-44px;width:130px;transform:rotate(-70deg);opacity:.7}
+.leaf.d{top:46%;inset-inline-end:-46px;width:120px;transform:rotate(100deg);opacity:.6}
+.screen,.view{position:relative;z-index:1;max-width:520px;margin:0 auto;padding:12px 16px 28px}
+.view{padding-bottom:calc(var(--tab) + 40px + env(safe-area-inset-bottom,0px))}
+.view.full{padding-bottom:20px}
+
+/* logo + arch */
+.arch{position:relative;text-align:center;padding:30px 18px 26px;margin:0 auto;max-width:440px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260' preserveAspectRatio='none'%3E%3Cpath d='M10 260V150C10 110 64 94 104 64C140 38 172 22 200 2C228 22 260 38 296 64C336 94 390 110 390 150V260Z' fill='%23FBF7F0' fill-opacity='.82' stroke='%23FFFFFF' stroke-opacity='.95' stroke-width='3'/%3E%3C/svg%3E") center top/100% 100% no-repeat;filter:drop-shadow(0 10px 18px rgba(120,90,60,.16))}
+.logo{padding-top:14px}
+.logo-ar{font-family:'Aref Ruqaa','Amiri',serif;font-weight:700;font-size:3.7rem;line-height:1.15;color:var(--green-2)}
+.logo-en{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:.34em;color:var(--green-2);font-size:1.05rem;margin-top:-4px;padding-inline-start:.34em}
+.orn{display:flex;align-items:center;justify-content:center;gap:6px;margin:8px 0 0}
+.orn i{display:block;width:44px;height:1.5px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn i:last-child{background:linear-gradient(270deg,transparent,var(--gold))}
+.orn b{display:block;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.logo.sm .logo-ar{font-size:2.9rem}
+.corner{position:absolute;top:10px;width:46px;height:46px;border-radius:50%;border:0;background:rgba(249,243,235,.95);color:var(--green-2);display:grid;place-items:center;box-shadow:0 4px 12px rgba(120,90,60,.15)}
+.corner.s{inset-inline-start:2px}.corner.e{inset-inline-end:2px}
+.corner svg{width:22px;height:22px}
+.chip-e{position:absolute;top:10px;inset-inline-end:0;display:flex;align-items:center;gap:6px;padding:0 14px;height:42px;border:0;border-radius:21px;background:rgba(249,243,235,.95);color:var(--ink);font-size:.95rem;box-shadow:0 4px 12px rgba(120,90,60,.15)}
+.chip-e svg{width:18px;height:18px}
+h1.t{font-family:var(--head);font-weight:700;font-size:1.75rem;line-height:1.5;margin:6px 0 0;color:var(--green-2)}
+.sub{margin:2px 0 0;color:var(--ink-soft);font-size:.95rem}
+
+/* generic */
+.card{background:var(--card);border-radius:30px;padding:18px;margin-top:14px;box-shadow:0 8px 24px rgba(120,90,60,.10),inset 0 0 0 1px rgba(255,255,255,.75)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;border:0;border-radius:28px;background:var(--green);color:#fff;font-size:1.08rem;font-weight:500;box-shadow:0 6px 14px -6px rgba(42,68,52,.55)}
+.btn svg{width:22px;height:22px}
+.btn.alt{background:var(--sand);color:var(--green-2);box-shadow:none;min-height:50px}
+.btn:active{transform:scale(.985)}
+.btn[disabled]{opacity:.6}
+.btn:focus-visible,.tab:focus-visible,.lnk:focus-visible,.corner:focus-visible,.langrow:focus-visible,.iconbtn:focus-visible,.tile:focus-visible,.story:focus-visible,.heart:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.lnk{display:block;margin:10px auto 0;background:none;border:0;color:var(--green-2);font-size:.98rem;text-decoration:underline;text-underline-offset:5px;padding:6px 10px}
+.busy .btn,.busy .lnk{pointer-events:none;opacity:.6}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--tab) + 36px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--green-2);color:#fff;padding:10px 20px;border-radius:22px;font-size:.95rem;box-shadow:0 8px 20px rgba(0,0,0,.2);max-width:90%;text-align:center}
+
+/* language */
+.langtitle{font-family:var(--head);font-weight:700;font-size:2rem;color:var(--green-2);margin:4px 0 0;line-height:1.4}
+.langsub{font-family:var(--font);color:var(--ink-soft);font-size:1.25rem;margin:0 0 14px}
+.langrow{direction:ltr;display:flex;align-items:center;gap:14px;width:100%;margin-top:10px;padding:10px 16px;min-height:66px;border:1.5px solid transparent;border-radius:24px;background:var(--card);box-shadow:0 4px 14px rgba(120,90,60,.08);text-align:start;color:var(--ink)}
+.langrow .g{flex:none;width:48px;height:48px;border-radius:50%;background:var(--sand);display:grid;place-items:center;font-size:1.15rem;color:var(--green-2)}
+.langrow .nm{flex:1;line-height:1.35}
+.langrow .nm b{display:block;font-family:var(--head);font-size:1.15rem;color:var(--green-2)}
+.langrow .nm small{color:var(--muted);font-size:.85rem}
+.langrow .ch{color:var(--muted);font-size:1.2rem}
+.langrow.on{border-color:var(--green);background:#fff}
+.langrow.on .ch{color:var(--green)}
+.footbtn{margin-top:18px}
+
+/* auth */
+.fld{display:flex;align-items:center;gap:12px;height:58px;padding:0 16px;margin-top:12px;border-radius:29px;background:rgba(244,237,227,.95);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.fld svg{flex:none;width:22px;height:22px;color:var(--green-2)}
+.fld input{flex:1;min-width:0;border:0;background:none;font-size:1rem;color:var(--ink);outline:none;height:100%}
+.fld input::placeholder{color:var(--muted)}
+.fld:focus-within{box-shadow:0 0 0 2.5px var(--gold)}
+.fld .eye{flex:none;border:0;background:none;color:var(--muted);padding:4px;display:grid}
+.msg{min-height:1.5em;margin:10px 4px 0;color:#9C3B2B;font-size:.92rem;text-align:center}
+.msg.ok{color:var(--green)}
+.divider{display:flex;align-items:center;gap:12px;margin:14px 0 4px;color:var(--ink-soft);font-size:.95rem}
+.divider:before,.divider:after{content:"";flex:1;height:1px;background:var(--line)}
+.socials{display:flex;gap:12px;justify-content:center;margin-top:10px}
+.iconbtn{flex:1;max-width:150px;height:54px;border-radius:22px;border:0;background:rgba(244,237,227,.95);display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.iconbtn svg{width:26px;height:26px}
+.switch{text-align:center;margin-top:12px;color:var(--ink-soft);font-size:.95rem}
+.switch button{background:none;border:0;color:var(--green-2);font-weight:600;text-decoration:underline;text-underline-offset:4px;font-size:.95rem;padding:2px 4px}
+
+/* home */
+.hello{display:flex;align-items:center;justify-content:center;gap:10px;font-family:var(--head);font-weight:700;font-size:1.9rem;color:var(--green-2);margin-top:6px}
+.streak{display:flex;flex-direction:column;gap:14px}
+.streak-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.snum{display:flex;align-items:center;gap:8px}
+.snum b{font-family:var(--head);font-size:2.8rem;line-height:1;color:var(--green-2)}
+.snum span.fl{font-size:2.2rem;line-height:1}
+.snum small{display:block;font-weight:500;color:var(--green-2);font-size:.95rem}
+.stxt b{display:block;font-family:var(--head);font-size:1.3rem;color:var(--green-2)}
+.stxt small{color:var(--muted)}
+.week{display:flex;justify-content:space-between;gap:4px}
+.d{flex:1;text-align:center;font-size:.72rem;color:var(--ink-soft)}
+.d i{position:relative;display:block;width:100%;max-width:48px;aspect-ratio:1;margin:0 auto 4px;border-radius:50%;border:1.8px dashed #D6C9B8;background:rgba(255,255,255,.35) center/cover;font-style:normal;display:grid;place-items:center;font-size:1.1rem}
+.d.on i{border:2.5px solid #fff;box-shadow:0 0 0 1.5px #CBBFAE}
+.d.now{color:var(--green-2);font-weight:600}
+.d.now i{border-color:var(--gold)}
+.d.now.on i{border-color:#fff}
+.ck{position:absolute;bottom:-3px;inset-inline-end:-3px;width:20px;height:20px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;border:2px solid #FBF7F0}
+.ck svg{width:11px;height:11px}
+.cnt{position:absolute;top:-4px;inset-inline-start:-4px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:var(--fire-b);color:#fff;font-size:.68rem;font-weight:700;line-height:18px;text-align:center;font-style:normal}
+.hero{display:block;width:100%;height:210px;object-fit:cover;border-radius:22px;background:var(--sand)}
+.heroph{height:210px;border-radius:22px;background:linear-gradient(135deg,#EADFCF,#F5EDE0);display:grid;place-items:center;text-align:center;color:var(--green-2);padding:12px}
+.heroph em{display:block;font-style:normal;font-size:3rem;line-height:1.2}
+.heroph span{font-family:var(--head);font-size:1.35rem;font-weight:700}
+.logged{display:flex;align-items:center;gap:8px;margin:12px 2px 0;color:var(--muted);font-size:.95rem}
+.logged .ck2{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center}
+.logged .ck2 svg{width:12px;height:12px}
+.headline{font-family:var(--head);font-weight:700;font-size:1.65rem;line-height:1.5;margin:2px 2px 0;color:var(--ink)}
+.desc{margin:2px 2px 14px;color:var(--ink-soft);font-size:.98rem;line-height:1.8}
+.thumbs{display:flex;gap:8px;margin:10px 0 0}
+.thumbs button{width:54px;height:54px;border-radius:16px;border:2px solid #fff;box-shadow:0 0 0 1.5px #CBBFAE;background:center/cover;padding:0}
+.q{font-family:var(--head);font-weight:700;font-size:1.5rem;line-height:1.6;text-align:center;margin:12px 0 14px}
+.slots{display:flex;gap:10px;margin:0 0 14px}
+.slot{flex:1;aspect-ratio:1;border-radius:20px;border:2px dashed #D6C9B8;background:rgba(255,255,255,.4) center/cover;display:grid;place-items:center;font-size:1.5rem;color:var(--muted);padding:0}
+button.slot{border:2.5px solid #fff;box-shadow:0 0 0 1.5px #CBBFAE}
+.slot.next{border-color:var(--gold);color:var(--gold)}
+.askcard{text-align:center;padding-top:22px}
+.askic{width:62px;height:62px;border-radius:50%;background:var(--green-soft);display:grid;place-items:center;margin:0 auto 6px;color:var(--green-2)}
+.askic svg{width:30px;height:30px}
+.asktitle{font-family:var(--head);font-weight:700;font-size:2rem;color:var(--green-2);margin:0;line-height:1.4}
+.askline{margin:0;color:var(--ink-soft);font-size:.98rem}
+.askbar{display:flex;align-items:center;gap:8px;margin-top:14px;height:62px;padding:0 8px 0 8px;border-radius:31px;background:rgba(244,237,227,.95);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.askbar>svg{flex:none;width:22px;height:22px;color:var(--green-2);margin-inline-start:10px}
+.askbar input{flex:1;min-width:0;border:0;background:none;font-size:1rem;color:var(--ink);outline:none;height:100%}
+.askbar input::placeholder{color:var(--muted)}
+.askbar button{flex:none;width:48px;height:48px;border-radius:50%;border:0;background:var(--green-2);color:#fff;display:grid;place-items:center}
+.askbar button svg{width:22px;height:22px}
+.askbar:focus-within{box-shadow:0 0 0 2.5px var(--gold)}
+.verse{text-align:center;padding:22px 14px 20px;background-image:linear-gradient(180deg,rgba(251,247,240,.55),rgba(251,247,240,.92)),linear-gradient(135deg,#DDE3E0,#F1E7D8)}
+.verse .askic{background:rgba(221,230,219,.9)}
+.vbox{margin-top:12px;padding:14px 12px;border-radius:20px;background:rgba(221,226,219,.75)}
+.vtxt{font-family:'Amiri Quran','Amiri',serif;font-size:1.55rem;line-height:2.1;color:var(--ink)}
+.vref{color:var(--ink-soft);font-size:.9rem}
+
+/* friends */
+.frhead h1.t{margin-top:8px}
+.stories{display:flex;gap:14px;overflow-x:auto;padding:14px 4px 8px;margin:0 -4px;scrollbar-width:none}
+.stories::-webkit-scrollbar{display:none}
+.story{flex:none;width:68px;text-align:center;background:none;border:0;padding:0;color:var(--ink-soft);font-size:.82rem}
+.story i{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 4px;border-radius:50%;background:#F4EDE2 center/cover;border:3px solid var(--green);box-shadow:0 0 0 2px #fff;font-style:normal;font-size:1.6rem;color:var(--green-2)}
+.story.off i{border-color:#D6C9B8}
+.story.add i{border:2px solid #D6C9B8;font-size:2rem;color:var(--green-2)}
+.story span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post{background:var(--card);border-radius:28px;padding:12px;margin-top:14px;box-shadow:0 8px 22px rgba(120,90,60,.10),inset 0 0 0 1px rgba(255,255,255,.75)}
+.phead{display:flex;align-items:center;gap:10px;padding:0 4px 10px}
+.av{flex:none;width:44px;height:44px;border-radius:50%;background:var(--sand) center/cover;border:2px solid #fff;box-shadow:0 0 0 1.5px #CBBFAE;display:grid;place-items:center;color:var(--green-2);font-weight:600}
+.pn{flex:1;line-height:1.4}
+.pn b{display:block;font-family:var(--head);font-size:1.1rem;color:var(--green-2)}
+.pn small{color:var(--muted);font-size:.82rem}
+.more{flex:none;width:36px;height:36px;border:0;background:none;color:var(--ink-soft);font-size:1.3rem;letter-spacing:2px}
+.pimg{position:relative;display:block;width:100%;height:190px;border:0;padding:0;border-radius:20px;overflow:hidden;background:var(--sand)}
+.pimg img{width:100%;height:100%;object-fit:cover;display:block}
+.pimg .pc{position:absolute;top:10px;inset-inline-end:10px;background:rgba(0,0,0,.5);color:#fff;border-radius:12px;padding:0 10px;font-size:.82rem;line-height:26px}
+.pfoot{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;padding:10px 6px 2px}
+.pfoot .tx{flex:1}
+.pfoot b{display:block;font-family:var(--head);font-size:1.25rem;color:var(--green-2);line-height:1.5}
+.pfoot small{display:block;color:var(--muted);font-size:.9rem;line-height:1.6}
+.heart{flex:none;display:flex;align-items:center;gap:6px;border:0;background:none;color:var(--ink-soft);font-size:1rem;padding:6px}
+.heart svg{width:26px;height:26px}
+.heart.on{color:#C8452F}
+.heart.on svg{fill:#C8452F}
+.empty{color:var(--muted);text-align:center;margin:26px 8px}
+
+/* account */
+.prof{text-align:center}
+.bigav{width:84px;height:84px;margin:0 auto 6px;border-radius:50%;background:var(--green-soft);display:grid;place-items:center;font-family:var(--head);font-size:2.2rem;font-weight:700;color:var(--green-2);box-shadow:0 0 0 3px #fff}
+.stats{display:flex;gap:10px;margin-top:14px}
+.stat{flex:1;text-align:center;background:rgba(244,237,227,.9);border-radius:22px;padding:10px 4px}
+.stat em{display:block;font-style:normal;font-size:1.5rem}
+.stat b{display:block;font-family:var(--head);font-size:1.7rem;color:var(--green-2);line-height:1.3}
+.stat span{font-size:.78rem;color:var(--muted)}
+.code{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:2.4rem;letter-spacing:.3em;direction:ltr;color:var(--green-2);text-align:center;padding-inline-start:.3em}
+.row{display:flex;gap:10px;margin-top:8px}
+.row .btn{min-height:50px;font-size:1rem}
+.setrow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 4px;border-top:1px solid var(--line);font-size:1rem}
+.setrow:first-child{border-top:0}
+.setrow input[type=checkbox]{width:24px;height:24px;accent-color:var(--green)}
+.setrow button.val{border:0;background:none;color:var(--green-2);font-weight:600;font-size:1rem}
+.note{color:var(--muted);font-size:.82rem;margin:8px 4px 0}
+
+/* tabs */
+.tabs{position:fixed;z-index:30;inset-inline:14px;bottom:calc(10px + env(safe-area-inset-bottom,0px));max-width:492px;margin:0 auto;height:var(--tab);padding:8px;display:flex;gap:4px;background:rgba(251,247,240,.96);border-radius:34px;box-shadow:0 10px 28px rgba(90,70,50,.20),inset 0 0 0 1px rgba(255,255,255,.8)}
+.tab{flex:1;border:0;border-radius:26px;background:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:.78rem;font-weight:500}
+.tab svg{width:26px;height:26px}
+.tab[aria-selected="true"]{background:var(--sand);color:var(--green-2);font-weight:600}
+
+/* ask view */
+.askhead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.back{width:44px;height:44px;border-radius:50%;border:0;background:rgba(249,243,235,.95);color:var(--green-2);display:grid;place-items:center;box-shadow:0 4px 12px rgba(120,90,60,.15)}
+.back svg{width:22px;height:22px}
+.askhead h2{margin:0;font-family:var(--head);font-size:1.7rem;color:var(--green-2)}
+.qbanner{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:20px;padding:8px 14px;margin-bottom:10px;font-size:.92rem;color:var(--ink-soft)}
+.qbanner span{flex:1}
+.qbanner button{border:0;background:var(--sand);color:var(--green-2);border-radius:14px;padding:4px 12px;font-size:.88rem}
+#bp-embedded-webchat{position:relative;width:100%;height:calc(100vh - 270px);height:calc(100dvh - 270px - env(safe-area-inset-bottom,0px));min-height:420px;border-radius:26px;overflow:hidden;background:var(--card-solid);box-shadow:0 8px 24px rgba(120,90,60,.12)}
+#bp-embedded-webchat .bpFab{display:none!important}
+#bp-embedded-webchat .bpWebchat{width:100%!important;height:100%!important;max-height:none!important;position:relative!important;inset:auto!important;border-radius:0!important;box-shadow:none!important}
+#bp-embedded-webchat iframe{width:100%;height:100%;border:0}
+.bp-msg{text-align:center;color:var(--ink-soft);padding:12px 4px}
+
+/* sheet */
+.sb{position:fixed;inset:0;background:rgba(20,30,24,.5);opacity:0;transition:opacity .3s;z-index:40}
+.sb.open{opacity:1}
+.sheet{position:fixed;z-index:41;inset-inline:0;bottom:0;margin:0 auto;max-width:600px;max-height:calc(100% - env(safe-area-inset-top,0px) - 10px);overflow-y:auto;background:var(--card-solid);border-radius:30px 30px 0 0;padding:14px 18px calc(22px + env(safe-area-inset-bottom,0px));transform:translateY(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);overscroll-behavior:contain}
+.sheet.open{transform:none}
+.grab{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.grab i{display:block;width:44px;height:5px;border-radius:9px;background:var(--line);margin:0 auto}
+.x{width:42px;height:42px;border-radius:50%;border:0;background:var(--sand);color:var(--ink);display:grid;place-items:center;flex:none}
+.x svg{width:18px;height:18px}
+.x:focus-visible{outline:3px solid var(--gold)}
+.photo{display:block;width:100%;aspect-ratio:4/3.4;max-height:40vh;object-fit:cover;border-radius:22px;background:var(--sand)}
+.pill{display:inline-block;margin:14px 6px 2px 0;padding:3px 14px;border-radius:99px;background:var(--green-soft);color:var(--green-2);font-size:.9rem;font-weight:600}
+.pill.warn{background:#F8E9C8;color:#7A5200}
+.pill.sun{background:linear-gradient(135deg,var(--fire-a),var(--fire-b));color:#fff}
+.subj{margin:6px 0 0;color:var(--muted);font-size:.9rem}
+.sheet h2{margin:4px 0 8px;font-family:var(--head);font-size:1.7rem;line-height:1.5;color:var(--green-2)}
+.refl{font-size:1.08rem;line-height:2;margin:0 0 16px}
+.rule{background:#F8E9C8;border-radius:18px;padding:12px 16px;margin:0 0 16px}
+.rule b{display:block;color:#7A5200;font-size:.95rem}
+.rule p{margin:2px 0 0;line-height:1.9}
+.act{display:flex;align-items:center;gap:12px;width:100%;text-align:start;border:1.5px solid var(--line);background:none;border-radius:20px;padding:12px 14px;color:var(--ink);font-size:1.02rem}
+.act .ckk{flex:none;width:32px;height:32px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;color:transparent}
+.act .ckk svg{width:16px;height:16px}
+.act .t{display:block;font-size:.85rem;color:var(--muted)}
+.act[aria-pressed="true"]{border-color:var(--gold);background:#FBF0D6}
+.act[aria-pressed="true"] .ckk{background:var(--gold);border-color:var(--gold);color:#fff}
+.src{margin:14px 0 0;font-size:.85rem;color:var(--muted)}
+.disc{margin:6px 0 0;font-size:.8rem;color:var(--muted)}
+.center{text-align:center;padding:18px 0 6px}
+.wait{font-size:2.4rem;display:inline-block;animation:flicker 1.2s ease-in-out infinite}
+@keyframes flicker{0%,100%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.14) rotate(3deg)}}
+.textarea{width:100%;margin:12px 0;padding:12px 14px;border-radius:18px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font-size:1.05rem;resize:none}
+.textarea:focus{outline:3px solid var(--gold)}
+.smsg{font-size:1.08rem;line-height:1.9;margin:14px 0 0}
+.stack{display:grid;gap:12px;margin-top:6px}
+.hid{position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.confetti{position:fixed;top:-40px;z-index:70;pointer-events:none;will-change:transform}
+.splash{display:grid;place-items:center;min-height:80vh;text-align:center;color:var(--ink-soft)}
+@media (prefers-reduced-motion: reduce){.wait{animation:none}.sheet,.sb{transition:none}}
+.tab{font-size:.7rem}.tab svg{width:24px;height:24px}
+.wprog{height:10px;border-radius:99px;background:var(--sand);overflow:hidden;margin:10px 0 4px}.wprog>b{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--gold));border-radius:99px;transition:width .4s}
+.wbadge{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border-radius:20px;background:#FBF0D6;color:#7A5A1E;font-weight:600;margin-top:10px}
+.wgoals{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.wgoals button{border:1.5px solid var(--line);background:none;border-radius:99px;padding:6px 14px;color:var(--ink);font-size:.95rem}.wgoals button[aria-pressed="true"]{background:var(--green);color:#fff;border-color:var(--green)}
+.qpage{font-family:'Amiri Quran','Amiri',serif;font-size:1.65rem;line-height:2.5;text-align:justify;color:var(--ink);padding:6px 4px}
+.qsurah{text-align:center;border:1.5px solid var(--gold);border-radius:16px;padding:6px 12px;margin:14px 0 8px;font-family:var(--head);font-weight:700;color:var(--green-2);background:linear-gradient(90deg,transparent,rgba(184,146,79,.14),transparent)}
+.qbism{text-align:center;font-size:1.5rem;margin:4px 0 10px;color:var(--green-2)}.qnum{color:var(--gold);font-size:1.15rem;padding:0 2px}.qmeta{text-align:center;color:var(--ink-soft);font-size:.9rem;margin-top:8px}
+.wnav{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:12px}.wnav .btn{min-height:46px;font-size:1rem}.wnav .btn:disabled,.btn:disabled{opacity:.55}
+.wjump{display:flex;gap:6px;align-items:center}.wjump input{width:110px;height:44px;border-radius:22px;border:1.5px solid var(--line);background:#fff;padding:0 14px;font-size:1rem;color:var(--ink)}.wjump button{height:44px;border:0;border-radius:22px;background:var(--green);color:#fff;padding:0 16px;font-size:1rem}
+.wrow{display:flex;align-items:center;gap:12px;width:100%;border:0;text-align:start;color:var(--green-2);font-size:1.02rem}.wrow .wic{font-size:1.5rem}
+.wfr{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line)}.wfr:first-of-type{border-top:0}.wfa{flex:none;width:40px;height:40px;border-radius:50%;background:var(--green-soft);display:grid;place-items:center;font-family:var(--head);font-weight:700;color:var(--green-2)}
+.wfn{flex:1}.wfn b{display:block;color:var(--green-2);line-height:1.4}.wfn small{color:var(--muted)}.wfn small.ok{color:var(--green);font-weight:600}.wfs{color:var(--fire-b);font-weight:600}
+.story i{position:relative}.wb{position:absolute;bottom:-4px;inset-inline-end:-4px;font-style:normal;font-size:.8rem;width:22px;height:22px;border-radius:50%;background:#FBF0D6;display:grid;place-items:center;border:2px solid #fff}
+.seg{display:flex;background:var(--sand);border-radius:99px;padding:4px;gap:2px;margin-top:12px}.seg button{flex:1;border:0;background:none;border-radius:99px;padding:8px 6px;font-size:.92rem;color:var(--ink-soft)}.seg button[aria-pressed="true"]{background:#fff;color:var(--green-2);font-weight:600;box-shadow:0 2px 8px rgba(120,90,60,.15)}.seg.sm button{font-size:.85rem;padding:7px 2px}
+.lbrow{display:flex;align-items:center;gap:10px;padding:10px 6px;border-top:1px solid var(--line)}.lbrow.me{background:#FBF0D6;border-radius:16px;border-top-color:transparent}.lbrk{flex:none;width:34px;text-align:center;font-weight:700;color:var(--green-2)}.lbn{flex:1;min-width:0}.lbn b{display:block;line-height:1.4;color:var(--green-2)}.lbn small{color:var(--muted)}.lbs{text-align:end;font-weight:700;color:var(--fire-b)}.lbs small{display:block;color:var(--muted);font-weight:400;font-size:.75rem}.lbgap{text-align:center;color:var(--muted)}
+.sel{width:100%;height:50px;border-radius:25px;border:1.5px solid var(--line);background:#fff;padding:0 16px;font-size:1rem;color:var(--ink);margin-top:10px}
+.langmore{display:block;width:100%;margin:6px 0 2px;padding:12px;border:1.5px dashed var(--line);border-radius:18px;background:none;color:var(--green-2);font-size:1rem}
+</style>
+</head>
+<body>
+<div class="deco" aria-hidden="true">
+  <svg class="leaf a" viewBox="0 0 120 200" fill="currentColor"><path d="M62 200C60 150 64 90 72 8" stroke="currentColor" stroke-width="2.4" fill="none"/><ellipse cx="46" cy="160" rx="24" ry="9" transform="rotate(-38 46 160)"/><ellipse cx="82" cy="136" rx="24" ry="9" transform="rotate(38 82 136)"/><ellipse cx="46" cy="106" rx="22" ry="8" transform="rotate(-38 46 106)"/><ellipse cx="86" cy="80" rx="22" ry="8" transform="rotate(38 86 80)"/><ellipse cx="52" cy="52" rx="18" ry="7" transform="rotate(-38 52 52)"/><ellipse cx="82" cy="24" rx="14" ry="6" transform="rotate(38 82 24)"/></svg>
+  <svg class="leaf b" viewBox="0 0 120 200" fill="currentColor"><path d="M62 200C60 150 64 90 72 8" stroke="currentColor" stroke-width="2.4" fill="none"/><ellipse cx="46" cy="160" rx="24" ry="9" transform="rotate(-38 46 160)"/><ellipse cx="82" cy="136" rx="24" ry="9" transform="rotate(38 82 136)"/><ellipse cx="46" cy="106" rx="22" ry="8" transform="rotate(-38 46 106)"/><ellipse cx="86" cy="80" rx="22" ry="8" transform="rotate(38 86 80)"/><ellipse cx="52" cy="52" rx="18" ry="7" transform="rotate(-38 52 52)"/></svg>
+  <svg class="leaf c" viewBox="0 0 120 200" fill="currentColor"><path d="M62 200C60 150 64 90 72 8" stroke="currentColor" stroke-width="2.4" fill="none"/><ellipse cx="46" cy="150" rx="22" ry="8" transform="rotate(-38 46 150)"/><ellipse cx="84" cy="110" rx="22" ry="8" transform="rotate(38 84 110)"/><ellipse cx="48" cy="70" rx="18" ry="7" transform="rotate(-38 48 70)"/></svg>
+  <svg class="leaf d" viewBox="0 0 120 200" fill="currentColor"><path d="M62 200C60 150 64 90 72 8" stroke="currentColor" stroke-width="2.4" fill="none"/><ellipse cx="46" cy="150" rx="22" ry="8" transform="rotate(-38 46 150)"/><ellipse cx="84" cy="110" rx="22" ry="8" transform="rotate(38 84 110)"/><ellipse cx="48" cy="70" rx="18" ry="7" transform="rotate(-38 48 70)"/></svg>
+</div>
+
+<section class="screen" id="scrLang" hidden></section>
+<section class="screen" id="scrAuth" hidden></section>
+<section class="screen" id="scrSplash" hidden><div class="splash"><div><div class="logo"><div class="logo-ar">بَيَانُ</div><div class="logo-en">BAYAN</div></div></div></div></section>
+
+<div id="appShell" hidden>
+  <section class="view" id="vHome" hidden></section>
+    <section class="view" id="vWird" hidden></section>
+  <section class="view" id="vFriends" hidden></section>
+  <section class="view" id="vMe" hidden></section>
+  <section class="view" id="vAsk"></section>
+  <nav class="tabs" id="tabs" role="tablist"></nav>
+</div>
+
+<input class="hid" type="file" accept="image/*" capture="environment" id="cam" tabindex="-1">
+<input class="hid" type="file" accept="image/*" id="gal" tabindex="-1">
+
+<div class="sb" id="sb" hidden></div>
+<section class="sheet" id="sheet" role="dialog" aria-modal="true" hidden>
+  <div class="grab">
+    <button class="x" id="sx" aria-label="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <i></i><span style="width:42px"></span>
+  </div>
+  <div id="sbody"></div>
+</section>
+
+<script>
+(function(){
+  'use strict';
+  const KEY = 'taammul_v1', PREF_KEY = 'bayan_prefs_v1', MAX_PER_DAY = 3;
+
+  // ===== إعدادات Firebase =====
+  const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyAw3wvbhDYf7HYO2z5JXk5vapOlzHXagMw",
+    authDomain: "taammul.firebaseapp.com",
+    projectId: "taammul",
+    appId: "1:840029273479:web:452b1c3c93d7dc8cfea722"
+  };
+  const FB_VER = '10.12.2';
+
+  // ===== helpers =====
+  const $ = id => document.getElementById(id);
+  function el(tag, cls, txt){ const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+  function svg(html){ const s = document.createElement('span'); s.innerHTML = html; return s.firstChild; }
+  const ymd = d => d.toLocaleDateString('en-CA');
+  const today = () => ymd(new Date());
+
+  // ===== icons =====
+  const IC = {
+    home: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-2.5v9h-5v-6h-3v6h-5v-9H3z"/></svg>',
+    cam: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.6"/></svg>',
+    users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17.5 14.2c2.3.2 3.9 1.9 3.9 4.3"/></svg>',
+    user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>',
+    userplus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="3.8"/><path d="M3 20c0-3.8 3.1-6 7-6 1.6 0 3 .4 4.2 1"/><path d="M19 13v6M16 16h6"/></svg>',
+    bell: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M10 21h4"/></svg>',
+    mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>',
+    lock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg>',
+    eye: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+    eyeoff: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg>',
+    globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>',
+    chev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>',
+    chevd: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>',
+    arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+    book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-2-1.5-5-2-8-1.5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13C17 4 14 4.5 12 6z"/><path d="M12 6v13"/></svg>',
+    chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-11.4 7.2L4 20l1-4.4A8 8 0 1 1 20 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke-width="2.4"/></svg>',
+    search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>',
+    heart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10.3A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.5C19.5 15.400 12 20 12 20z"/></svg>',
+    google: '<svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.800 2.400 30.300 0 24 0 14.600 0 6.500 5.400 2.600 13.200l7.900 6.100C12.400 13.600 17.700 9.500 24 9.500z"/><path fill="#4285F4" d="M46.500 24.500c0-1.600-.1-3.100-.4-4.500H24v9h12.700c-.6 3-2.300 5.500-4.800 7.200l7.600 5.900c4.500-4.200 7-10.300 7-17.600z"/><path fill="#FBBC05" d="M10.500 28.700A14.500 14.500 0 0 1 9.500 24c0-1.600.3-3.200.9-4.700l-7.900-6.100A24 24 0 0 0 0 24c0 3.900.9 7.500 2.600 10.800l7.900-6.100z"/><path fill="#34A853" d="M24 48c6.500 0 11.900-2.100 15.900-5.800l-7.600-5.900c-2.100 1.400-4.800 2.300-8.300 2.300-6.300 0-11.600-4.100-13.500-9.800l-7.900 6.100C6.500 42.600 14.600 48 24 48z"/></svg>',
+    apple: '<svg viewBox="0 0 24 24" fill="#111"><path d="M16.400 12.600c0-2.400 2-3.500 2.100-3.600-1.100-1.700-2.900-1.900-3.500-1.900-1.500-.2-2.900.9-3.700.9s-1.900-.9-3.200-.8c-1.600 0-3.100 1-4 2.400-1.700 3-.4 7.300 1.200 9.700.8 1.200 1.800 2.500 3 2.400 1.200 0 1.700-.8 3.100-.8s1.900.8 3.200.8c1.300 0 2.200-1.200 3-2.400.9-1.400 1.300-2.700 1.300-2.800-.1 0-2.500-1-2.500-3.900zM14 5.500c.7-.8 1.100-1.900 1-3-.9 0-2.100.6-2.800 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></svg>'
+  };
+
+  // ===== languages & strings =====
+  const LANGS = [
+    { c: 'ar', g: 'ع', n: 'العربية', s: 'Arabic' }, { c: 'en', g: 'Aa', n: 'English', s: 'English' },
+    { c: 'fr', g: 'Fr', n: 'Français', s: 'French' }, { c: 'tr', g: '☪', n: 'Türkçe', s: 'Turkish' },
+    { c: 'ur', g: 'اردو', n: 'اردو', s: 'Urdu' }, { c: 'id', g: 'Id', n: 'Bahasa Indonesia', s: 'Indonesian' },
+    { c: 'bn', g: 'অ', n: 'বাংলা', s: 'Bengali' }, { c: 'ms', g: '✿', n: 'Melayu', s: 'Malay' }
+  ];
+  const STR = {
+    ar: {
+      continue:'متابعة', signup_title:'ابدأ رحلتك مع بيان', signup_sub:'احفظ تأملاتك، ابنِ سلسلتك اليومية، وتعلّم من حولك.',
+      login_title:'أهلاً بعودتك', login_sub:'سجّل دخولك لترجع لتأملاتك وأصدقائك.',
+      full_name:'الاسم الكامل', email:'البريد الإلكتروني', password:'كلمة المرور', confirm:'تأكيد كلمة المرور',
+      create_account:'إنشاء حساب', login_btn:'تسجيل الدخول', or:'أو', have_acc:'عندك حساب؟', no_acc:'ما عندك حساب؟',
+      login_link:'تسجيل الدخول', signup_link:'إنشاء حساب', guest:'تصفّح بدون حساب', forgot:'نسيت كلمة المرور؟',
+      pw_mismatch:'كلمتا المرور غير متطابقتين.', need_fields:'اكتب البريد وكلمة المرور.', soon:'قريباً بإذن الله', loading:'جاري التحميل...',
+      greet_m:'صباح النور', greet_d:'طاب يومك', greet_e:'مساء النور', greet_n:'تصبح على خير', home_sub:'كل يوم فرصة جديدة للاقتراب من الله.',
+      streak_title:'استمر في رحلتك', streak_sub:'كل يوم خطوة أقرب.', days_zero:'ابدأ سلسلتك', days_one:'يوم متتالي', days_two:'يومان متتاليان', days_many:'أيام متتالية',
+      logged_today:'سجلتَ تأملك اليوم', open_reflection:'افتح التأمل', shoot_again:'صوّر مرة ثانية', add_photo:'أضف صورة {n} من {max}',
+      challenge:'صوّر أي شيء أمامك', free_sub:'وبيّان يعطيك تأملاً خاصاً بصورتك', shoot_now:'صوّر الآن', or_gallery:'أو اختر صورة من جهازك', maxed:'كملت صور اليوم الثلاث', see_tomorrow:'نشوفك بكرة 🌙',
+      ask_title:'اسأل بيّان', ask_sub:'ما الذي يدور في بالك؟', ask_sub2:'احصل على إجابة موثوقة من مصادرنا المعتمدة.', ask_ph:'اكتب سؤالك هنا...', verse_label:'تذكرة لك اليوم',
+      tab_home:'تأمل', tab_ask:'اسأل بيّان', tab_wird:'وِردك', tab_cam:'تأمل', tab_friends:'الأصدقاء', tab_me:'حسابي',
+      fr_title:'لحظات أصدقائك', fr_sub:'شاركوا التأمل، وكونوا أقرب.', add_friend:'إضافة صديق', your_story:'قصتك',
+      ago_now:'الآن', ago_m:'منذ {n} دقيقة', ago_h:'منذ {n} ساعة', ago_d:'منذ {n} يوم',
+      fr_empty:'ما عندك أصدقاء بعد. أضف صديقاً بالكود!', fr_login:'سجّل دخولك عشان تشوف أصدقاءك وتشاركهم لحظاتك.',
+      my_code:'كودك لدعوة الأصدقاء', share_invite:'شارك الدعوة', copy_code:'نسخ الكود', copied:'اننسخ ✓', friend_code_ph:'كود صديقك', add:'أضف',
+      remove_friend:'إزالة الصديق', confirm_remove:'تشيل {name} من أصدقائك؟', invite_text:'ضيفني في بيان وخلنا نتأمل كل يوم 🔥 كودي: {code}',
+      code6:'الكود لازم يكون ٦ خانات', code_nf:'ما لقينا هذا الكود. تأكد منه.', code_self:'هذا كودك أنت 😄', code_already:'هو صديقك من قبل ✅', added:'🎉 أضفت {name}', add_failed:'تعذرت الإضافة. جرّب مرة ثانية.', like_failed:'تعذر الإعجاب. حدّث القواعد في Firebase.',
+      today_photos:'صور اليوم', notif_none:'ما فيه إشعارات جديدة 🔔',
+      me_title:'حسابي', best_streak:'أطول سلسلة', total_days:'كل الأيام', cur_streak:'سلسلتك الآن', share_photos:'شارك صوري مع أصدقائي', language:'اللغة',
+      logout:'تسجيل الخروج', confirm_logout:'تسجّل خروج من حسابك؟', login_to_sync:'سجّل دخولك لحفظ أصدقائك', privacy:'🔒 اللي عندهم كودك يشوفون صورك. تقدر تشيل أي صديق بأي وقت.',
+      ok:'تمام', analyzing:'جاري التأمل في صورتك...', cancel:'إلغاء', limit_reached:'وصلت للحد اليومي: {max} صور. نشوفك بكرة 🌙',
+      read_error:'ما قدرنا نقرأ الصورة. جرّب صورة ثانية.', describe_prompt:'هذا العرض ما يقرأ الصور مباشرة. اكتب بكلمات قليلة شنو في صورتك:', describe_ph:'مثلاً: غروب على البحر', analyze_btn:'حلّل صورتي',
+      generic_error:'صار خلل بسيط. جرّب مرة ثانية.', local_note:'💡 هذا تأمل جاهز لتحدي اليوم. تقدر تسأل بيّان من الرئيسية.',
+      pill_reflect:'🌿 تأمّل', pill_warn:'⚠️ تنبيه لطيف', pill_note:'💡 ملاحظة اليوم', practice_label:'🎯 عمل اليوم', source_label:'المصدر:',
+      disclaimer:'هذا تذكير وليس فتوى. للتأكد اسأل مرشداً أو عالماً موثوقاً.', first_pill:'🌱 بداية جميلة', streak_pill:'🔥 ما شاء الله، {n} أيام متتالية', photo_k:'📸 صورة {k} من {max}',
+      subj_challenge:'صورة تحدي اليوم: {p}', subj_extra:'صورة إضافية من يومك',
+      ask_back:'رجوع', bp_loading:'جاري تحميل بيّان...', bp_fail:'تعذر تحميل بيّان. تأكد من اتصالك بالإنترنت.', retry:'إعادة المحاولة', your_question:'سؤالك:', copy:'نسخ',
+      err_used:'هذا البريد مسجّل من قبل. جرّب تسجيل الدخول.', err_email:'البريد الإلكتروني غير صحيح.', err_weak:'كلمة المرور لازم تكون ٦ أحرف على الأقل.',
+      err_cred:'البريد أو كلمة المرور غير صحيحة.', err_many:'محاولات كثيرة. انتظر شوي وجرّب مرة ثانية.', err_net:'تأكد من اتصالك بالإنترنت.',
+      err_off:'هذه الطريقة غير مفعّلة في Firebase.', err_api:'إعدادات Firebase فيها خطأ في مفتاح الـAPI.', err_domain:'هذا الموقع غير مضاف في Firebase (Authorized domains).', err_generic:'صار خلل. جرّب مرة ثانية.',
+      reset_sent:'📩 أرسلنا لك رابط تغيير كلمة المرور.', type_email_first:'اكتب بريدك أول.', name_default:'صديق'
+    },
+    en: {
+      continue:'Continue', signup_title:'Start your journey with Bayan', signup_sub:'Save your reflections, build your daily streak, and learn from the world around you.',
+      login_title:'Welcome back', login_sub:'Log in to return to your reflections and friends.',
+      full_name:'Full name', email:'Email address', password:'Password', confirm:'Confirm password',
+      create_account:'Create account', login_btn:'Log in', or:'or', have_acc:'Already have an account?', no_acc:"Don't have an account?",
+      login_link:'Log in', signup_link:'Sign up', guest:'Continue without an account', forgot:'Forgot password?',
+      pw_mismatch:'Passwords do not match.', need_fields:'Enter your email and password.', soon:'Coming soon', loading:'Loading...',
+      greet_m:'Good morning', greet_d:'Good day', greet_e:'Good evening', greet_n:'Good night', home_sub:'Every day is a new chance to draw closer to God.',
+      streak_title:'Keep going on your journey', streak_sub:'Every day is a step closer.', days_zero:'Start your streak', days_one:'day in a row', days_two:'days in a row', days_many:'days in a row',
+      logged_today:"You logged today's reflection", open_reflection:'Open reflection', shoot_again:'Take another photo', add_photo:'Add photo {n} of {max}',
+      challenge:'Capture anything in front of you', free_sub:'Bayan gives you a reflection about your own photo', shoot_now:'Take a photo', or_gallery:'Or choose from your device', maxed:"You've taken all 3 photos today", see_tomorrow:'See you tomorrow 🌙',
+      ask_title:'Ask Bayan', ask_sub:"What's on your mind?", ask_sub2:'Get a trusted answer from our approved sources.', ask_ph:'Type your question here...', verse_label:'Your reminder today',
+      tab_home:'Reflect', tab_ask:'Ask Bayan', tab_wird:'Wird', tab_cam:'Reflect', tab_friends:'Friends', tab_me:'Me',
+      fr_title:"Your friends' moments", fr_sub:'Share reflections and grow closer.', add_friend:'Add friend', your_story:'Your story',
+      ago_now:'Just now', ago_m:'{n} min ago', ago_h:'{n} h ago', ago_d:'{n} d ago',
+      fr_empty:'No friends yet. Add one with a code!', fr_login:'Log in to see your friends and share your moments.',
+      my_code:'Your invite code', share_invite:'Share invite', copy_code:'Copy code', copied:'Copied ✓', friend_code_ph:"Friend's code", add:'Add',
+      remove_friend:'Remove friend', confirm_remove:'Remove {name} from your friends?', invite_text:'Add me on Bayan and let us reflect every day 🔥 My code: {code}',
+      code6:'The code must be 6 characters', code_nf:"We couldn't find this code.", code_self:"That's your own code 😄", code_already:'Already your friend ✅', added:'🎉 You added {name}', add_failed:"Couldn't add. Try again.", like_failed:"Couldn't like. Update the Firebase rules.",
+      today_photos:"Today's photos", notif_none:'No new notifications 🔔',
+      me_title:'My account', best_streak:'Best streak', total_days:'All days', cur_streak:'Current streak', share_photos:'Share my photos with friends', language:'Language',
+      logout:'Log out', confirm_logout:'Log out of your account?', login_to_sync:'Log in to save your friends', privacy:'🔒 People with your code can see your photos. You can remove any friend anytime.',
+      ok:'OK', analyzing:'Reflecting on your photo...', cancel:'Cancel', limit_reached:'Daily limit reached: {max} photos. See you tomorrow 🌙',
+      read_error:"We couldn't read the photo. Try another one.", describe_prompt:"This view can't read photos directly. Describe your photo in a few words:", describe_ph:'e.g. a sunset over the sea', analyze_btn:'Analyze my photo',
+      generic_error:'Something went wrong. Please try again.', local_note:'💡 This is a ready-made reflection for today’s challenge. You can ask Bayan from Home.',
+      pill_reflect:'🌿 Reflection', pill_warn:'⚠️ Gentle note', pill_note:"💡 Today's note", practice_label:"🎯 Today's action", source_label:'Source:',
+      disclaimer:'This is a reminder, not a fatwa. Ask a trusted scholar or mentor to be sure.', first_pill:'🌱 A lovely start', streak_pill:'🔥 Mashaa Allah, {n} days in a row', photo_k:'📸 Photo {k} of {max}',
+      subj_challenge:"Today's challenge photo: {p}", subj_extra:'An extra photo from your day',
+      ask_back:'Back', bp_loading:'Loading Bayan...', bp_fail:"Couldn't load Bayan. Check your connection.", retry:'Try again', your_question:'Your question:', copy:'Copy',
+      err_used:'This email is already registered. Try logging in.', err_email:'Invalid email address.', err_weak:'Password must be at least 6 characters.',
+      err_cred:'Wrong email or password.', err_many:'Too many attempts. Please wait and try again.', err_net:'Check your internet connection.',
+      err_off:'This sign-in method is not enabled in Firebase.', err_api:'Firebase config has a wrong API key.', err_domain:'This site is not in Firebase Authorized domains.', err_generic:'Something went wrong. Try again.',
+      reset_sent:'📩 We sent you a password reset link.', type_email_first:'Enter your email first.', name_default:'Friend'
+    }
+  };
+
+  // ===== extra languages (fr, tr, ur, id, bn, ms) + English keys that previously fell back to Arabic =====
+  const EN_EXTRA = {"no_acc": "Don't have an account?", "logged_today": "You logged your reflection today", "maxed": "You finished today's three photos", "ask_sub": "What's on your mind?", "fr_title": "Your friends' moments", "friend_code_ph": "Your friend's code", "code_nf": "We couldn't find this code. Check it.", "code_self": "This is your own code 😄", "add_failed": "Couldn't add. Try again.", "like_failed": "Couldn't like. Update the Firebase rules.", "today_photos": "Today's photos", "read_error": "We couldn't read the photo. Try another one.", "describe_prompt": "This view can't read photos directly. Describe your photo in a few words:", "pill_note": "💡 Today's note", "practice_label": "🎯 Today's practice", "subj_challenge": "Today's challenge photo: {p}", "bp_fail": "Couldn't load Bayan. Check your internet connection."};
+  Object.assign(STR.en, EN_EXTRA);
+  const I18N_MORE = {"fr": {"str": {"continue": "Continuer", "signup_title": "Commencez votre voyage avec Bayan", "signup_sub": "Enregistrez vos réflexions, construisez votre série quotidienne et apprenez de ce qui vous entoure.", "login_title": "Bon retour", "login_sub": "Connectez-vous pour retrouver vos réflexions et vos amis.", "full_name": "Nom complet", "email": "Adresse e-mail", "password": "Mot de passe", "confirm": "Confirmer le mot de passe", "create_account": "Créer un compte", "login_btn": "Se connecter", "or": "ou", "have_acc": "Vous avez déjà un compte ?", "no_acc": "Vous n'avez pas de compte ?", "login_link": "Se connecter", "signup_link": "S'inscrire", "guest": "Continuer sans compte", "forgot": "Mot de passe oublié ?", "pw_mismatch": "Les mots de passe ne correspondent pas.", "need_fields": "Saisissez votre e-mail et votre mot de passe.", "soon": "Bientôt disponible", "loading": "Chargement...", "greet_m": "Bonjour", "greet_d": "Bonne journée", "greet_e": "Bonsoir", "greet_n": "Bonne nuit", "home_sub": "Chaque jour est une nouvelle chance de se rapprocher de Dieu.", "streak_title": "Poursuivez votre voyage", "streak_sub": "Chaque jour est un pas de plus.", "days_zero": "Commencez votre série", "days_one": "jour d'affilée", "days_two": "jours d'affilée", "days_many": "jours d'affilée", "logged_today": "Vous avez enregistré votre réflexion aujourd'hui", "open_reflection": "Ouvrir la réflexion", "shoot_again": "Prendre une autre photo", "add_photo": "Ajouter la photo {n} sur {max}", "challenge": "Photographiez ce qui est devant vous", "free_sub": "Bayan vous offre une réflexion sur votre propre photo", "shoot_now": "Prendre une photo", "or_gallery": "Ou choisir depuis votre appareil", "maxed": "Vous avez terminé les trois photos du jour", "see_tomorrow": "À demain 🌙", "ask_title": "Demandez à Bayan", "ask_sub": "Qu'avez-vous en tête ?", "ask_sub2": "Obtenez une réponse fiable issue de nos sources approuvées.", "ask_ph": "Écrivez votre question ici...", "verse_label": "Votre rappel du jour", "tab_home": "Réflexion", "tab_ask": "Demander", "tab_wird": "Wird", "tab_cam": "Réflexion", "tab_friends": "Amis", "tab_me": "Moi", "fr_title": "Les moments de vos amis", "fr_sub": "Partagez vos réflexions et rapprochez-vous.", "add_friend": "Ajouter un ami", "your_story": "Votre story", "friend_code_ph": "Code de votre ami", "ago_now": "À l'instant", "ago_m": "il y a {n} min", "ago_h": "il y a {n} h", "ago_d": "il y a {n} j", "fr_empty": "Pas encore d'amis. Ajoutez-en un avec un code !", "fr_login": "Connectez-vous pour voir vos amis et partager vos moments.", "my_code": "Votre code d'invitation", "share_invite": "Partager l'invitation", "copy_code": "Copier le code", "copied": "Copié ✓", "add": "Ajouter", "remove_friend": "Retirer l'ami", "confirm_remove": "Retirer {name} de vos amis ?", "invite_text": "Ajoutez-moi sur Bayan et réfléchissons chaque jour 🔥 Mon code : {code}", "code6": "Le code doit contenir 6 caractères", "code_nf": "Ce code est introuvable. Vérifiez-le.", "code_self": "C'est votre propre code 😄", "code_already": "Déjà votre ami ✅", "added": "🎉 Vous avez ajouté {name}", "add_failed": "Ajout impossible. Réessayez.", "like_failed": "Impossible d'aimer. Mettez à jour les règles Firebase.", "notif_none": "Aucune nouvelle notification 🔔", "me_title": "Mon compte", "best_streak": "Meilleure série", "total_days": "Jours au total", "cur_streak": "Série actuelle", "share_photos": "Partager mes photos avec mes amis", "language": "Langue", "logout": "Se déconnecter", "confirm_logout": "Se déconnecter de votre compte ?", "login_to_sync": "Connectez-vous pour enregistrer vos amis", "privacy": "🔒 Les personnes qui ont votre code peuvent voir vos photos. Vous pouvez retirer un ami à tout moment.", "ok": "OK", "today_photos": "Photos du jour", "analyzing": "Réflexion sur votre photo...", "cancel": "Annuler", "limit_reached": "Limite quotidienne atteinte : {max} photos. À demain 🌙", "read_error": "Impossible de lire la photo. Essayez-en une autre.", "describe_prompt": "Cet affichage ne peut pas lire les photos directement. Décrivez votre photo en quelques mots :", "describe_ph": "p. ex. un coucher de soleil sur la mer", "analyze_btn": "Analyser ma photo", "generic_error": "Une erreur s'est produite. Veuillez réessayer.", "local_note": "💡 Ceci est une réflexion prête à l'emploi. Vous pouvez interroger Bayan depuis l'accueil.", "pill_reflect": "🌿 Réflexion", "pill_warn": "⚠️ Remarque bienveillante", "pill_note": "💡 Note du jour", "practice_label": "🎯 À pratiquer aujourd'hui", "source_label": "Source :", "disclaimer": "Ceci est un rappel, pas une fatwa. Demandez à un savant ou mentor de confiance pour être sûr.", "first_pill": "🌱 Un beau début", "streak_pill": "🔥 Mashaa Allah, {n} jours d'affilée", "photo_k": "📸 Photo {k} sur {max}", "subj_extra": "Une photo de plus de votre journée", "subj_challenge": "Photo du défi du jour : {p}", "ask_back": "Retour", "bp_loading": "Chargement de Bayan...", "bp_fail": "Impossible de charger Bayan. Vérifiez votre connexion Internet.", "retry": "Réessayer", "your_question": "Votre question :", "copy": "Copier", "err_used": "Cet e-mail est déjà enregistré. Essayez de vous connecter.", "err_email": "Adresse e-mail invalide.", "err_weak": "Le mot de passe doit contenir au moins 6 caractères.", "err_cred": "E-mail ou mot de passe incorrect.", "err_many": "Trop de tentatives. Patientez puis réessayez.", "err_net": "Vérifiez votre connexion Internet.", "err_off": "Cette méthode de connexion n'est pas activée dans Firebase.", "err_api": "La configuration Firebase contient une clé API incorrecte.", "err_domain": "Ce site ne figure pas dans les domaines autorisés de Firebase.", "err_generic": "Une erreur s'est produite. Réessayez.", "reset_sent": "📩 Nous vous avons envoyé un lien de réinitialisation du mot de passe.", "type_email_first": "Saisissez d'abord votre e-mail.", "name_default": "Ami"}, "ws": {"title": "Wird quotidien", "sub": "Lisez chaque jour le Livre d'Allah et partagez-le avec vos amis", "goal": "Objectif du jour", "one": "page", "two": "pages", "many": "pages", "doneBadge": "✅ Vous avez lu votre wird du jour", "cont": "Continuer la lecture", "start": "Commencer la lecture", "page": "Page", "of": "sur", "juz": "Juz", "khatma": "Votre khatm", "mark": "✓ J'ai lu cette page", "marked": "✓ Page lue", "next": "Suivante", "prev": "Précédente", "go": "Aller", "goPh": "Page", "back": "Retour", "loading": "Chargement de la page…", "fail": "Impossible de charger la page. Vérifiez votre connexion et réessayez.", "retry": "Réessayer", "shareNote": "Votre wird est partagé avec vos amis. Vous pouvez désactiver le partage dans « Moi ».", "toastDone": "MashaAllah ! Vous avez terminé votre wird du jour 🌙", "toastPage": "Page enregistrée ✓", "you": "Vous", "fDone": "A lu son wird ✓", "fNot": "Pas encore", "homeDone": "Votre wird du jour : terminé ✓", "homeNot": "Votre wird du jour : pas encore lu", "surah": "Sourate", "khatmaDone": "Félicitations ! Vous avez terminé un khatm complet 🎉", "pagesToday": "Pages du jour", "today": "Lecture du jour", "notYet": "Vous n'avez pas encore terminé votre wird", "fTitle": "📖 Le wird des amis aujourd'hui", "wstreak": "Série de wird : {n} j"}, "bs": {"tabFeed": "Moments", "tabBoard": "🏆 Classement", "friends": "Amis", "region": "Région", "country": "Pays", "world": "Monde", "title": "Classement des séries :", "renew": "Réinitialisé le 1er de chaque mois", "daysLeft": "", "day": "jour restant", "daysWord": "jours restants", "days": "jours ce mois-ci", "empty": "Personne dans le classement pour l'instant. Soyez le premier !", "join": "Rejoindre le classement", "joinTxt": "Pour apparaître dans les classements région, pays et monde, choisissez votre lieu et activez le partage. Seul votre prénom est affiché.", "setupTitle": "Votre profil de classement", "pickCountry": "Choisir le pays", "pickRegion": "Choisir la région", "showMe": "Afficher mon prénom dans les classements publics", "save": "Enregistrer", "saved": "Enregistré ✓", "yourRank": "Votre rang", "you": "Vous", "needRegion": "Choisissez votre région dans « Profil de classement » pour apparaître ici.", "regionSaOnly": "Le classement par région est actuellement disponible pour l'Arabie saoudite.", "loading": "Chargement du classement…", "fail": "Impossible de charger le classement. Vérifiez votre connexion et les règles Firebase.", "retry": "Réessayer", "score": "Plus longue série ce mois-ci", "setupRow": "Classement public", "off": "Désactivé", "on": "Activé", "note": "Classé selon votre plus longue série de jours de photos consécutifs ce mois-ci.", "lastDay": "Dernier jour du mois"}}, "tr": {"str": {"continue": "Devam", "signup_title": "Bayan ile yolculuğunuza başlayın", "signup_sub": "Tefekkürlerinizi kaydedin, günlük serinizi oluşturun ve çevrenizden öğrenin.", "login_title": "Tekrar hoş geldiniz", "login_sub": "Tefekkürlerinize ve arkadaşlarınıza dönmek için giriş yapın.", "full_name": "Ad soyad", "email": "E-posta adresi", "password": "Şifre", "confirm": "Şifreyi onayla", "create_account": "Hesap oluştur", "login_btn": "Giriş yap", "or": "veya", "have_acc": "Zaten hesabınız var mı?", "no_acc": "Hesabınız yok mu?", "login_link": "Giriş yap", "signup_link": "Kayıt ol", "guest": "Hesapsız devam et", "forgot": "Şifrenizi mi unuttunuz?", "pw_mismatch": "Şifreler eşleşmiyor.", "need_fields": "E-posta ve şifrenizi girin.", "soon": "Yakında", "loading": "Yükleniyor...", "greet_m": "Günaydın", "greet_d": "İyi günler", "greet_e": "İyi akşamlar", "greet_n": "İyi geceler", "home_sub": "Her gün Allah'a yaklaşmak için yeni bir fırsattır.", "streak_title": "Yolculuğunuza devam edin", "streak_sub": "Her gün bir adım daha yakın.", "days_zero": "Serinize başlayın", "days_one": "gün üst üste", "days_two": "gün üst üste", "days_many": "gün üst üste", "logged_today": "Bugünkü tefekkürünüzü kaydettiniz", "open_reflection": "Tefekkürü aç", "shoot_again": "Bir fotoğraf daha çek", "add_photo": "{max} fotoğraftan {n}. fotoğrafı ekle", "challenge": "Önünüzdeki herhangi bir şeyi çekin", "free_sub": "Bayan, kendi fotoğrafınız hakkında size bir tefekkür sunar", "shoot_now": "Fotoğraf çek", "or_gallery": "Veya cihazınızdan seçin", "maxed": "Bugünkü üç fotoğrafı tamamladınız", "see_tomorrow": "Yarın görüşürüz 🌙", "ask_title": "Bayan'a sor", "ask_sub": "Aklınızda ne var?", "ask_sub2": "Onaylı kaynaklarımızdan güvenilir bir yanıt alın.", "ask_ph": "Sorunuzu buraya yazın...", "verse_label": "Bugünkü hatırlatmanız", "tab_home": "Tefekkür", "tab_ask": "Bayan'a sor", "tab_wird": "Vird", "tab_cam": "Tefekkür", "tab_friends": "Arkadaşlar", "tab_me": "Ben", "fr_title": "Arkadaşlarınızın anları", "fr_sub": "Tefekkürleri paylaşın, birbirinize yakınlaşın.", "add_friend": "Arkadaş ekle", "your_story": "Hikâyeniz", "friend_code_ph": "Arkadaşınızın kodu", "ago_now": "Az önce", "ago_m": "{n} dk önce", "ago_h": "{n} sa önce", "ago_d": "{n} gün önce", "fr_empty": "Henüz arkadaşınız yok. Bir kodla ekleyin!", "fr_login": "Arkadaşlarınızı görmek ve anlarınızı paylaşmak için giriş yapın.", "my_code": "Davet kodunuz", "share_invite": "Daveti paylaş", "copy_code": "Kodu kopyala", "copied": "Kopyalandı ✓", "add": "Ekle", "remove_friend": "Arkadaşı kaldır", "confirm_remove": "{name} arkadaşlarınızdan kaldırılsın mı?", "invite_text": "Beni Bayan'da ekle, her gün birlikte tefekkür edelim 🔥 Kodum: {code}", "code6": "Kod 6 karakter olmalıdır", "code_nf": "Bu kod bulunamadı. Kontrol edin.", "code_self": "Bu sizin kendi kodunuz 😄", "code_already": "Zaten arkadaşınız ✅", "added": "🎉 {name} eklendi", "add_failed": "Eklenemedi. Tekrar deneyin.", "like_failed": "Beğenilemedi. Firebase kurallarını güncelleyin.", "notif_none": "Yeni bildirim yok 🔔", "me_title": "Hesabım", "best_streak": "En iyi seri", "total_days": "Toplam gün", "cur_streak": "Mevcut seri", "share_photos": "Fotoğraflarımı arkadaşlarımla paylaş", "language": "Dil", "logout": "Çıkış yap", "confirm_logout": "Hesabınızdan çıkış yapılsın mı?", "login_to_sync": "Arkadaşlarınızı kaydetmek için giriş yapın", "privacy": "🔒 Kodunuza sahip kişiler fotoğraflarınızı görebilir. Bir arkadaşı istediğiniz zaman kaldırabilirsiniz.", "ok": "Tamam", "today_photos": "Bugünün fotoğrafları", "analyzing": "Fotoğrafınız üzerinde tefekkür ediliyor...", "cancel": "İptal", "limit_reached": "Günlük sınıra ulaşıldı: {max} fotoğraf. Yarın görüşürüz 🌙", "read_error": "Fotoğraf okunamadı. Başka bir fotoğraf deneyin.", "describe_prompt": "Bu görünüm fotoğrafları doğrudan okuyamaz. Fotoğrafınızı birkaç kelimeyle anlatın:", "describe_ph": "örn. denizde gün batımı", "analyze_btn": "Fotoğrafımı analiz et", "generic_error": "Bir şeyler ters gitti. Lütfen tekrar deneyin.", "local_note": "💡 Bu hazır bir tefekkürdür. Ana sayfadan Bayan'a soru sorabilirsiniz.", "pill_reflect": "🌿 Tefekkür", "pill_warn": "⚠️ Nazik bir not", "pill_note": "💡 Bugünün notu", "practice_label": "🎯 Bugünün amelî uygulaması", "source_label": "Kaynak:", "disclaimer": "Bu bir hatırlatmadır, fetva değildir. Emin olmak için güvenilir bir âlime veya rehbere sorun.", "first_pill": "🌱 Güzel bir başlangıç", "streak_pill": "🔥 Maşallah, üst üste {n} gün", "photo_k": "📸 {max} fotoğraftan {k}.", "subj_extra": "Gününüzden ek bir fotoğraf", "subj_challenge": "Bugünün görev fotoğrafı: {p}", "ask_back": "Geri", "bp_loading": "Bayan yükleniyor...", "bp_fail": "Bayan yüklenemedi. İnternet bağlantınızı kontrol edin.", "retry": "Tekrar dene", "your_question": "Sorunuz:", "copy": "Kopyala", "err_used": "Bu e-posta zaten kayıtlı. Giriş yapmayı deneyin.", "err_email": "Geçersiz e-posta adresi.", "err_weak": "Şifre en az 6 karakter olmalıdır.", "err_cred": "E-posta veya şifre hatalı.", "err_many": "Çok fazla deneme. Lütfen bekleyip tekrar deneyin.", "err_net": "İnternet bağlantınızı kontrol edin.", "err_off": "Bu giriş yöntemi Firebase'de etkin değil.", "err_api": "Firebase yapılandırmasında yanlış bir API anahtarı var.", "err_domain": "Bu site Firebase'in yetkili alan adları arasında değil.", "err_generic": "Bir şeyler ters gitti. Tekrar deneyin.", "reset_sent": "📩 Size bir şifre sıfırlama bağlantısı gönderdik.", "type_email_first": "Önce e-postanızı girin.", "name_default": "Arkadaş"}, "ws": {"title": "Günlük Vird", "sub": "Her gün Allah'ın Kitabı'ndan okuyun ve arkadaşlarınızla paylaşın", "goal": "Günlük hedef", "one": "sayfa", "two": "sayfa", "many": "sayfa", "doneBadge": "✅ Günlük virdinizi okudunuz", "cont": "Okumaya devam et", "start": "Okumaya başla", "page": "Sayfa", "of": "/", "juz": "Cüz", "khatma": "Hatminiz", "mark": "✓ Bu sayfayı okudum", "marked": "✓ Sayfa okundu", "next": "Sonraki", "prev": "Önceki", "go": "Git", "goPh": "Sayfa", "back": "Geri", "loading": "Sayfa yükleniyor…", "fail": "Sayfa yüklenemedi. İnternetinizi kontrol edip tekrar deneyin.", "retry": "Tekrar dene", "shareNote": "Virdiniz arkadaşlarınızla paylaşılır. Paylaşımı “Ben” bölümünden kapatabilirsiniz.", "toastDone": "Maşallah! Günlük virdinizi tamamladınız 🌙", "toastPage": "Sayfa kaydedildi ✓", "you": "Siz", "fDone": "Virdini okudu ✓", "fNot": "Henüz değil", "homeDone": "Bugünkü virdiniz: tamam ✓", "homeNot": "Bugünkü virdiniz: henüz okunmadı", "surah": "Sûre", "khatmaDone": "Tebrikler! Bir hatmi tamamladınız 🎉", "pagesToday": "Bugünkü sayfalar", "today": "Bugünün okuması", "notYet": "Virdinizi henüz tamamlamadınız", "fTitle": "📖 Arkadaşların bugünkü virdi", "wstreak": "{n} günlük vird serisi"}, "bs": {"tabFeed": "Anlar", "tabBoard": "🏆 Sıralama", "friends": "Arkadaşlar", "region": "Bölge", "country": "Ülke", "world": "Dünya", "title": "Seri sıralaması:", "renew": "Her ayın 1'inde sıfırlanır", "daysLeft": "", "day": "gün kaldı", "daysWord": "gün kaldı", "days": "gün bu ay", "empty": "Henüz sıralamada kimse yok. İlk siz olun!", "join": "Sıralamaya katıl", "joinTxt": "Bölge, ülke ve dünya sıralamalarında görünmek için konumunuzu seçin ve paylaşımı açın. Yalnızca adınız gösterilir.", "setupTitle": "Sıralama profiliniz", "pickCountry": "Ülke seçin", "pickRegion": "Bölge seçin", "showMe": "Adımı herkese açık sıralamalarda göster", "save": "Kaydet", "saved": "Kaydedildi ✓", "yourRank": "Sıranız", "you": "Siz", "needRegion": "Burada görünmek için “Sıralama profili”nden bölgenizi seçin.", "regionSaOnly": "Bölge sıralaması şu an yalnızca Suudi Arabistan için mevcut.", "loading": "Sıralama yükleniyor…", "fail": "Sıralama yüklenemedi. İnternetinizi ve Firebase kurallarını kontrol edin.", "retry": "Tekrar dene", "score": "Bu ayın en uzun serisi", "setupRow": "Herkese açık sıralama", "off": "Kapalı", "on": "Açık", "note": "Bu ay üst üste fotoğraf çektiğiniz en uzun gün serisine göre sıralanır.", "lastDay": "Ayın son günü"}}, "ur": {"str": {"continue": "جاری رکھیں", "signup_title": "بیان کے ساتھ اپنے سفر کا آغاز کریں", "signup_sub": "اپنے تاثرات محفوظ کریں، روزانہ کا سلسلہ بنائیں اور اپنے اردگرد سے سیکھیں۔", "login_title": "خوش آمدید", "login_sub": "اپنے تاثرات اور دوستوں تک واپس آنے کے لیے لاگ اِن کریں۔", "full_name": "پورا نام", "email": "ای میل", "password": "پاس ورڈ", "confirm": "پاس ورڈ کی تصدیق کریں", "create_account": "اکاؤنٹ بنائیں", "login_btn": "لاگ اِن", "or": "یا", "have_acc": "پہلے سے اکاؤنٹ ہے؟", "no_acc": "اکاؤنٹ نہیں ہے؟", "login_link": "لاگ اِن", "signup_link": "رجسٹر کریں", "guest": "اکاؤنٹ کے بغیر جاری رکھیں", "forgot": "پاس ورڈ بھول گئے؟", "pw_mismatch": "پاس ورڈ مماثل نہیں ہیں۔", "need_fields": "ای میل اور پاس ورڈ درج کریں۔", "soon": "جلد آ رہا ہے", "loading": "لوڈ ہو رہا ہے...", "greet_m": "صبح بخیر", "greet_d": "آپ کا دن اچھا گزرے", "greet_e": "شام بخیر", "greet_n": "شب بخیر", "home_sub": "ہر دن اللہ کے قریب ہونے کا ایک نیا موقع ہے۔", "streak_title": "اپنا سفر جاری رکھیں", "streak_sub": "ہر دن ایک قدم قریب۔", "days_zero": "اپنا سلسلہ شروع کریں", "days_one": "دن مسلسل", "days_two": "دن مسلسل", "days_many": "دن مسلسل", "logged_today": "آپ نے آج کا تاثر درج کر لیا", "open_reflection": "تاثر کھولیں", "shoot_again": "ایک اور تصویر لیں", "add_photo": "{max} میں سے تصویر {n} شامل کریں", "challenge": "اپنے سامنے کسی بھی چیز کی تصویر لیں", "free_sub": "بیان آپ کی اپنی تصویر پر ایک تاثر پیش کرتا ہے", "shoot_now": "تصویر لیں", "or_gallery": "یا اپنے آلے سے منتخب کریں", "maxed": "آپ نے آج کی تینوں تصاویر مکمل کر لیں", "see_tomorrow": "کل ملیں گے 🌙", "ask_title": "بیان سے پوچھیں", "ask_sub": "آپ کے ذہن میں کیا ہے؟", "ask_sub2": "ہمارے مستند ذرائع سے قابلِ اعتماد جواب حاصل کریں۔", "ask_ph": "اپنا سوال یہاں لکھیں...", "verse_label": "آج کے لیے آپ کی یاد دہانی", "tab_home": "تاثر", "tab_ask": "پوچھیں", "tab_wird": "ورد", "tab_cam": "تاثر", "tab_friends": "دوست", "tab_me": "میرا", "fr_title": "آپ کے دوستوں کے لمحات", "fr_sub": "تاثرات شیئر کریں اور ایک دوسرے کے قریب رہیں۔", "add_friend": "دوست شامل کریں", "your_story": "آپ کی کہانی", "friend_code_ph": "آپ کے دوست کا کوڈ", "ago_now": "ابھی", "ago_m": "{n} منٹ پہلے", "ago_h": "{n} گھنٹے پہلے", "ago_d": "{n} دن پہلے", "fr_empty": "ابھی کوئی دوست نہیں۔ کوڈ کے ذریعے شامل کریں!", "fr_login": "دوستوں کو دیکھنے اور اپنے لمحات شیئر کرنے کے لیے لاگ اِن کریں۔", "my_code": "آپ کا دعوتی کوڈ", "share_invite": "دعوت شیئر کریں", "copy_code": "کوڈ کاپی کریں", "copied": "کاپی ہو گیا ✓", "add": "شامل کریں", "remove_friend": "دوست ہٹائیں", "confirm_remove": "کیا {name} کو اپنے دوستوں سے ہٹانا ہے؟", "invite_text": "مجھے بیان پر شامل کریں اور آئیں روزانہ غور و فکر کریں 🔥 میرا کوڈ: {code}", "code6": "کوڈ 6 حروف کا ہونا چاہیے", "code_nf": "یہ کوڈ نہیں ملا۔ دوبارہ جانچ لیں۔", "code_self": "یہ آپ کا اپنا کوڈ ہے 😄", "code_already": "پہلے سے آپ کا دوست ہے ✅", "added": "🎉 آپ نے {name} کو شامل کر لیا", "add_failed": "شامل نہیں ہو سکا۔ دوبارہ کوشش کریں۔", "like_failed": "پسند نہیں ہو سکا۔ Firebase کے قواعد اپڈیٹ کریں۔", "notif_none": "کوئی نئی اطلاع نہیں 🔔", "me_title": "میرا اکاؤنٹ", "best_streak": "بہترین سلسلہ", "total_days": "کل دن", "cur_streak": "موجودہ سلسلہ", "share_photos": "میری تصاویر دوستوں سے شیئر کریں", "language": "زبان", "logout": "لاگ آؤٹ", "confirm_logout": "کیا اپنے اکاؤنٹ سے لاگ آؤٹ ہونا ہے؟", "login_to_sync": "اپنے دوستوں کو محفوظ کرنے کے لیے لاگ اِن کریں", "privacy": "🔒 جن کے پاس آپ کا کوڈ ہے وہ آپ کی تصاویر دیکھ سکتے ہیں۔ آپ کسی بھی وقت دوست کو ہٹا سکتے ہیں۔", "ok": "ٹھیک ہے", "today_photos": "آج کی تصاویر", "analyzing": "آپ کی تصویر پر غور کیا جا رہا ہے...", "cancel": "منسوخ کریں", "limit_reached": "روزانہ حد پوری ہو گئی: {max} تصاویر۔ کل ملیں گے 🌙", "read_error": "تصویر پڑھی نہیں جا سکی۔ کوئی اور تصویر آزمائیں۔", "describe_prompt": "یہ منظر تصاویر براہِ راست نہیں پڑھ سکتا۔ اپنی تصویر چند الفاظ میں بیان کریں:", "describe_ph": "مثلاً سمندر پر غروبِ آفتاب", "analyze_btn": "میری تصویر کا تجزیہ کریں", "generic_error": "کچھ غلط ہو گیا۔ براہِ کرم دوبارہ کوشش کریں۔", "local_note": "💡 یہ ایک تیار شدہ تاثر ہے۔ آپ ہوم سے بیان سے سوال کر سکتے ہیں۔", "pill_reflect": "🌿 تاثر", "pill_warn": "⚠️ نرم نصیحت", "pill_note": "💡 آج کا نوٹ", "practice_label": "🎯 آج کا عمل", "source_label": "ماخذ:", "disclaimer": "یہ ایک یاد دہانی ہے، فتویٰ نہیں۔ یقین کے لیے کسی معتبر عالم یا رہنما سے پوچھیں۔", "first_pill": "🌱 ایک خوبصورت آغاز", "streak_pill": "🔥 ماشاءاللہ، {n} دن مسلسل", "photo_k": "📸 {max} میں سے تصویر {k}", "subj_extra": "آپ کے دن کی ایک اضافی تصویر", "subj_challenge": "آج کے چیلنج کی تصویر: {p}", "ask_back": "واپس", "bp_loading": "بیان لوڈ ہو رہا ہے...", "bp_fail": "بیان لوڈ نہیں ہو سکا۔ اپنا انٹرنیٹ چیک کریں۔", "retry": "دوبارہ کوشش کریں", "your_question": "آپ کا سوال:", "copy": "کاپی کریں", "err_used": "یہ ای میل پہلے سے رجسٹرڈ ہے۔ لاگ اِن کر کے دیکھیں۔", "err_email": "ای میل درست نہیں ہے۔", "err_weak": "پاس ورڈ کم از کم 6 حروف کا ہونا چاہیے۔", "err_cred": "ای میل یا پاس ورڈ غلط ہے۔", "err_many": "بہت زیادہ کوششیں۔ کچھ دیر انتظار کریں پھر دوبارہ کوشش کریں۔", "err_net": "اپنا انٹرنیٹ کنکشن چیک کریں۔", "err_off": "یہ لاگ اِن طریقہ Firebase میں فعال نہیں ہے۔", "err_api": "Firebase کی ترتیب میں API کی غلط کلید ہے۔", "err_domain": "یہ سائٹ Firebase کے مجاز ڈومینز میں شامل نہیں ہے۔", "err_generic": "کچھ غلط ہو گیا۔ دوبارہ کوشش کریں۔", "reset_sent": "📩 ہم نے آپ کو پاس ورڈ ری سیٹ کا لنک بھیج دیا ہے۔", "type_email_first": "پہلے اپنی ای میل درج کریں۔", "name_default": "دوست"}, "ws": {"title": "روزانہ ورد", "sub": "ہر دن اللہ کی کتاب سے پڑھیں اور دوستوں کے ساتھ شیئر کریں", "goal": "روزانہ کا ہدف", "one": "صفحہ", "two": "صفحات", "many": "صفحات", "doneBadge": "✅ آپ نے آج کا ورد پڑھ لیا", "cont": "پڑھنا جاری رکھیں", "start": "پڑھنا شروع کریں", "page": "صفحہ", "of": "از", "juz": "پارہ", "khatma": "آپ کا ختم", "mark": "✓ میں نے یہ صفحہ پڑھ لیا", "marked": "✓ صفحہ پڑھ لیا", "next": "اگلا", "prev": "پچھلا", "go": "جائیں", "goPh": "صفحہ", "back": "واپس", "loading": "صفحہ لوڈ ہو رہا ہے…", "fail": "صفحہ لوڈ نہیں ہو سکا۔ انٹرنیٹ چیک کر کے دوبارہ کوشش کریں۔", "retry": "دوبارہ کوشش کریں", "shareNote": "آپ کا ورد دوستوں کے ساتھ شیئر ہوتا ہے۔ آپ “میرا” میں شیئرنگ بند کر سکتے ہیں۔", "toastDone": "ماشاءاللہ! آپ نے آج کا ورد مکمل کر لیا 🌙", "toastPage": "صفحہ درج ہو گیا ✓", "you": "آپ", "fDone": "اپنا ورد پڑھ لیا ✓", "fNot": "ابھی نہیں", "homeDone": "آج کا آپ کا ورد: مکمل ✓", "homeNot": "آج کا آپ کا ورد: ابھی نہیں پڑھا", "surah": "سورہ", "khatmaDone": "مبارک ہو! آپ نے ایک مکمل ختم کر لیا 🎉", "pagesToday": "آج کے صفحات", "today": "آج کی تلاوت", "notYet": "آپ نے ابھی اپنا ورد مکمل نہیں کیا", "fTitle": "📖 آج دوستوں کا ورد", "wstreak": "ورد کا {n} دن کا سلسلہ"}, "bs": {"tabFeed": "لمحات", "tabBoard": "🏆 درجہ بندی", "friends": "دوست", "region": "علاقہ", "country": "ملک", "world": "دنیا", "title": "سلسلے کی درجہ بندی برائے", "renew": "ہر مہینے کی یکم کو نئی ہو جاتی ہے", "daysLeft": "", "day": "دن باقی", "daysWord": "دن باقی", "days": "دن اس مہینے", "empty": "ابھی درجہ بندی میں کوئی نہیں۔ پہلے آپ بنیں!", "join": "درجہ بندی میں شامل ہوں", "joinTxt": "علاقے، ملک اور دنیا کی درجہ بندی میں آنے کے لیے اپنا مقام منتخب کریں اور شیئرنگ آن کریں۔ صرف آپ کا پہلا نام دکھایا جاتا ہے۔", "setupTitle": "آپ کی درجہ بندی کی پروفائل", "pickCountry": "ملک منتخب کریں", "pickRegion": "علاقہ منتخب کریں", "showMe": "عوامی درجہ بندی میں میرا پہلا نام دکھائیں", "save": "محفوظ کریں", "saved": "محفوظ ہو گیا ✓", "yourRank": "آپ کا درجہ", "you": "آپ", "needRegion": "یہاں ظاہر ہونے کے لیے “درجہ بندی کی پروفائل” میں اپنا علاقہ منتخب کریں۔", "regionSaOnly": "علاقائی درجہ بندی فی الحال سعودی عرب کے لیے دستیاب ہے۔", "loading": "درجہ بندی لوڈ ہو رہی ہے…", "fail": "درجہ بندی لوڈ نہیں ہو سکی۔ انٹرنیٹ اور Firebase کے قواعد چیک کریں۔", "retry": "دوبارہ کوشش کریں", "score": "اس مہینے کا طویل ترین سلسلہ", "setupRow": "عوامی درجہ بندی", "off": "بند", "on": "آن", "note": "اس مہینے مسلسل تصاویر لینے کے طویل ترین سلسلے کے مطابق درجہ بندی۔", "lastDay": "مہینے کا آخری دن"}}, "id": {"str": {"continue": "Lanjut", "signup_title": "Mulai perjalananmu bersama Bayan", "signup_sub": "Simpan renungan, bangun streak harianmu, dan belajar dari sekitarmu.", "login_title": "Selamat datang kembali", "login_sub": "Masuk untuk kembali ke renungan dan teman-temanmu.", "full_name": "Nama lengkap", "email": "Alamat email", "password": "Kata sandi", "confirm": "Konfirmasi kata sandi", "create_account": "Buat akun", "login_btn": "Masuk", "or": "atau", "have_acc": "Sudah punya akun?", "no_acc": "Belum punya akun?", "login_link": "Masuk", "signup_link": "Daftar", "guest": "Lanjut tanpa akun", "forgot": "Lupa kata sandi?", "pw_mismatch": "Kata sandi tidak cocok.", "need_fields": "Masukkan email dan kata sandi.", "soon": "Segera hadir", "loading": "Memuat...", "greet_m": "Selamat pagi", "greet_d": "Selamat siang", "greet_e": "Selamat malam", "greet_n": "Selamat tidur", "home_sub": "Setiap hari adalah kesempatan baru untuk mendekat kepada Allah.", "streak_title": "Teruskan perjalananmu", "streak_sub": "Setiap hari satu langkah lebih dekat.", "days_zero": "Mulai streak-mu", "days_one": "hari berturut-turut", "days_two": "hari berturut-turut", "days_many": "hari berturut-turut", "logged_today": "Kamu sudah mencatat renunganmu hari ini", "open_reflection": "Buka renungan", "shoot_again": "Ambil foto lagi", "add_photo": "Tambah foto {n} dari {max}", "challenge": "Foto apa saja di depanmu", "free_sub": "Bayan memberimu renungan tentang fotomu sendiri", "shoot_now": "Ambil foto", "or_gallery": "Atau pilih dari perangkatmu", "maxed": "Kamu sudah menyelesaikan tiga foto hari ini", "see_tomorrow": "Sampai jumpa besok 🌙", "ask_title": "Tanya Bayan", "ask_sub": "Apa yang ada di pikiranmu?", "ask_sub2": "Dapatkan jawaban terpercaya dari sumber-sumber kami.", "ask_ph": "Tulis pertanyaanmu di sini...", "verse_label": "Pengingat untukmu hari ini", "tab_home": "Renungan", "tab_ask": "Tanya Bayan", "tab_wird": "Wirid", "tab_cam": "Renungan", "tab_friends": "Teman", "tab_me": "Saya", "fr_title": "Momen teman-temanmu", "fr_sub": "Bagikan renungan dan saling mendekat.", "add_friend": "Tambah teman", "your_story": "Ceritamu", "friend_code_ph": "Kode temanmu", "ago_now": "Baru saja", "ago_m": "{n} mnt lalu", "ago_h": "{n} jam lalu", "ago_d": "{n} hr lalu", "fr_empty": "Belum ada teman. Tambahkan dengan kode!", "fr_login": "Masuk untuk melihat teman dan membagikan momenmu.", "my_code": "Kode undanganmu", "share_invite": "Bagikan undangan", "copy_code": "Salin kode", "copied": "Tersalin ✓", "add": "Tambah", "remove_friend": "Hapus teman", "confirm_remove": "Hapus {name} dari daftar temanmu?", "invite_text": "Tambahkan aku di Bayan dan mari merenung setiap hari 🔥 Kodeku: {code}", "code6": "Kode harus 6 karakter", "code_nf": "Kode ini tidak ditemukan. Periksa kembali.", "code_self": "Ini kodemu sendiri 😄", "code_already": "Sudah jadi temanmu ✅", "added": "🎉 Kamu menambahkan {name}", "add_failed": "Gagal menambahkan. Coba lagi.", "like_failed": "Gagal menyukai. Perbarui aturan Firebase.", "notif_none": "Tidak ada notifikasi baru 🔔", "me_title": "Akunku", "best_streak": "Streak terbaik", "total_days": "Total hari", "cur_streak": "Streak saat ini", "share_photos": "Bagikan fotoku dengan teman", "language": "Bahasa", "logout": "Keluar", "confirm_logout": "Keluar dari akunmu?", "login_to_sync": "Masuk untuk menyimpan teman-temanmu", "privacy": "🔒 Orang yang punya kodemu bisa melihat fotomu. Kamu bisa menghapus teman kapan saja.", "ok": "OK", "today_photos": "Foto hari ini", "analyzing": "Merenungkan fotomu...", "cancel": "Batal", "limit_reached": "Batas harian tercapai: {max} foto. Sampai jumpa besok 🌙", "read_error": "Foto tidak dapat dibaca. Coba foto lain.", "describe_prompt": "Tampilan ini tidak bisa membaca foto secara langsung. Jelaskan fotomu dengan beberapa kata:", "describe_ph": "mis. matahari terbenam di laut", "analyze_btn": "Analisis fotoku", "generic_error": "Terjadi kesalahan. Silakan coba lagi.", "local_note": "💡 Ini renungan siap pakai. Kamu bisa bertanya kepada Bayan dari Beranda.", "pill_reflect": "🌿 Renungan", "pill_warn": "⚠️ Catatan lembut", "pill_note": "💡 Catatan hari ini", "practice_label": "🎯 Amalan hari ini", "source_label": "Sumber:", "disclaimer": "Ini pengingat, bukan fatwa. Tanyakan kepada ulama atau pembimbing tepercaya untuk memastikan.", "first_pill": "🌱 Awal yang indah", "streak_pill": "🔥 MasyaAllah, {n} hari berturut-turut", "photo_k": "📸 Foto {k} dari {max}", "subj_extra": "Satu foto tambahan dari harimu", "subj_challenge": "Foto tantangan hari ini: {p}", "ask_back": "Kembali", "bp_loading": "Memuat Bayan...", "bp_fail": "Tidak dapat memuat Bayan. Periksa koneksi internetmu.", "retry": "Coba lagi", "your_question": "Pertanyaanmu:", "copy": "Salin", "err_used": "Email ini sudah terdaftar. Coba masuk.", "err_email": "Alamat email tidak valid.", "err_weak": "Kata sandi minimal 6 karakter.", "err_cred": "Email atau kata sandi salah.", "err_many": "Terlalu banyak percobaan. Tunggu sebentar lalu coba lagi.", "err_net": "Periksa koneksi internetmu.", "err_off": "Metode masuk ini belum diaktifkan di Firebase.", "err_api": "Konfigurasi Firebase memiliki kunci API yang salah.", "err_domain": "Situs ini tidak ada di domain yang diizinkan Firebase.", "err_generic": "Terjadi kesalahan. Coba lagi.", "reset_sent": "📩 Kami mengirim tautan pengaturan ulang kata sandi.", "type_email_first": "Masukkan email terlebih dahulu.", "name_default": "Teman"}, "ws": {"title": "Wirid Harian", "sub": "Bacalah Kitab Allah setiap hari dan bagikan bersama teman", "goal": "Target harian", "one": "halaman", "two": "halaman", "many": "halaman", "doneBadge": "✅ Kamu sudah membaca wirid harianmu", "cont": "Lanjutkan membaca", "start": "Mulai membaca", "page": "Halaman", "of": "dari", "juz": "Juz", "khatma": "Khatammu", "mark": "✓ Saya sudah membaca halaman ini", "marked": "✓ Halaman sudah dibaca", "next": "Berikutnya", "prev": "Sebelumnya", "go": "Pergi", "goPh": "Halaman", "back": "Kembali", "loading": "Memuat halaman…", "fail": "Halaman tidak dapat dimuat. Periksa internetmu lalu coba lagi.", "retry": "Coba lagi", "shareNote": "Wiridmu dibagikan kepada teman. Kamu bisa mematikan berbagi di “Saya”.", "toastDone": "MasyaAllah! Kamu menyelesaikan wirid harianmu 🌙", "toastPage": "Halaman tercatat ✓", "you": "Kamu", "fDone": "Sudah membaca wiridnya ✓", "fNot": "Belum", "homeDone": "Wiridmu hari ini: selesai ✓", "homeNot": "Wiridmu hari ini: belum dibaca", "surah": "Surah", "khatmaDone": "Selamat! Kamu menyelesaikan satu khatam penuh 🎉", "pagesToday": "Halaman hari ini", "today": "Bacaan hari ini", "notYet": "Kamu belum menyelesaikan wiridmu", "fTitle": "📖 Wirid teman hari ini", "wstreak": "Streak wirid {n} hari"}, "bs": {"tabFeed": "Momen", "tabBoard": "🏆 Peringkat", "friends": "Teman", "region": "Wilayah", "country": "Negara", "world": "Dunia", "title": "Peringkat streak bulan", "renew": "Diatur ulang setiap tanggal 1", "daysLeft": "", "day": "hari lagi", "daysWord": "hari lagi", "days": "hari bulan ini", "empty": "Belum ada yang masuk peringkat. Jadilah yang pertama!", "join": "Gabung peringkat", "joinTxt": "Agar muncul di peringkat wilayah, negara, dan dunia, pilih lokasimu dan aktifkan berbagi. Hanya nama depanmu yang ditampilkan.", "setupTitle": "Profil peringkatmu", "pickCountry": "Pilih negara", "pickRegion": "Pilih wilayah", "showMe": "Tampilkan nama depanku di peringkat publik", "save": "Simpan", "saved": "Tersimpan ✓", "yourRank": "Peringkatmu", "you": "Kamu", "needRegion": "Pilih wilayahmu di “Profil peringkat” agar muncul di sini.", "regionSaOnly": "Peringkat wilayah saat ini tersedia untuk Arab Saudi.", "loading": "Memuat peringkat…", "fail": "Peringkat tidak dapat dimuat. Periksa internet dan aturan Firebase.", "retry": "Coba lagi", "score": "Streak terpanjang bulan ini", "setupRow": "Peringkat publik", "off": "Mati", "on": "Aktif", "note": "Diurutkan berdasarkan rangkaian hari foto berturut-turut terpanjang bulan ini.", "lastDay": "Hari terakhir bulan ini"}}, "bn": {"str": {"continue": "চালিয়ে যান", "signup_title": "বায়ানের সঙ্গে আপনার যাত্রা শুরু করুন", "signup_sub": "আপনার ভাবনাগুলো সংরক্ষণ করুন, প্রতিদিনের ধারা গড়ুন এবং আশপাশ থেকে শিখুন।", "login_title": "আবার স্বাগতম", "login_sub": "আপনার ভাবনা ও বন্ধুদের কাছে ফিরতে লগ ইন করুন।", "full_name": "পূর্ণ নাম", "email": "ইমেইল", "password": "পাসওয়ার্ড", "confirm": "পাসওয়ার্ড নিশ্চিত করুন", "create_account": "অ্যাকাউন্ট খুলুন", "login_btn": "লগ ইন", "or": "অথবা", "have_acc": "আগে থেকেই অ্যাকাউন্ট আছে?", "no_acc": "অ্যাকাউন্ট নেই?", "login_link": "লগ ইন", "signup_link": "সাইন আপ", "guest": "অ্যাকাউন্ট ছাড়াই চালিয়ে যান", "forgot": "পাসওয়ার্ড ভুলে গেছেন?", "pw_mismatch": "পাসওয়ার্ড মেলেনি।", "need_fields": "ইমেইল ও পাসওয়ার্ড লিখুন।", "soon": "শীঘ্রই আসছে", "loading": "লোড হচ্ছে...", "greet_m": "সুপ্রভাত", "greet_d": "শুভ দিন", "greet_e": "শুভ সন্ধ্যা", "greet_n": "শুভ রাত্রি", "home_sub": "প্রতিটি দিন আল্লাহর নিকটবর্তী হওয়ার নতুন সুযোগ।", "streak_title": "আপনার যাত্রা চালিয়ে যান", "streak_sub": "প্রতিদিন এক ধাপ কাছে।", "days_zero": "আপনার ধারা শুরু করুন", "days_one": "দিন টানা", "days_two": "দিন টানা", "days_many": "দিন টানা", "logged_today": "আপনি আজকের ভাবনা লিখেছেন", "open_reflection": "ভাবনা খুলুন", "shoot_again": "আরেকটি ছবি তুলুন", "add_photo": "{max}টির মধ্যে {n} নম্বর ছবি যোগ করুন", "challenge": "আপনার সামনে যেকোনো কিছুর ছবি তুলুন", "free_sub": "বায়ান আপনার নিজের ছবি নিয়ে একটি ভাবনা দেয়", "shoot_now": "ছবি তুলুন", "or_gallery": "অথবা আপনার ডিভাইস থেকে বেছে নিন", "maxed": "আপনি আজকের তিনটি ছবি সম্পূর্ণ করেছেন", "see_tomorrow": "কাল দেখা হবে 🌙", "ask_title": "বায়ানকে জিজ্ঞাসা করুন", "ask_sub": "আপনার মনে কী আছে?", "ask_sub2": "আমাদের অনুমোদিত উৎস থেকে নির্ভরযোগ্য উত্তর পান।", "ask_ph": "এখানে আপনার প্রশ্ন লিখুন...", "verse_label": "আজকের জন্য আপনার স্মরণ", "tab_home": "ভাবনা", "tab_ask": "জিজ্ঞাসা", "tab_wird": "ওয়ির্দ", "tab_cam": "ভাবনা", "tab_friends": "বন্ধু", "tab_me": "আমি", "fr_title": "আপনার বন্ধুদের মুহূর্ত", "fr_sub": "ভাবনা ভাগ করুন এবং কাছাকাছি থাকুন।", "add_friend": "বন্ধু যোগ করুন", "your_story": "আপনার স্টোরি", "friend_code_ph": "আপনার বন্ধুর কোড", "ago_now": "এইমাত্র", "ago_m": "{n} মিনিট আগে", "ago_h": "{n} ঘণ্টা আগে", "ago_d": "{n} দিন আগে", "fr_empty": "এখনো কোনো বন্ধু নেই। কোড দিয়ে যোগ করুন!", "fr_login": "বন্ধুদের দেখতে ও মুহূর্ত ভাগ করতে লগ ইন করুন।", "my_code": "আপনার আমন্ত্রণ কোড", "share_invite": "আমন্ত্রণ শেয়ার করুন", "copy_code": "কোড কপি করুন", "copied": "কপি হয়েছে ✓", "add": "যোগ করুন", "remove_friend": "বন্ধু সরান", "confirm_remove": "{name}-কে আপনার বন্ধুদের তালিকা থেকে সরাবেন?", "invite_text": "বায়ানে আমাকে যোগ করুন, আসুন প্রতিদিন ভাবি 🔥 আমার কোড: {code}", "code6": "কোড ৬ অক্ষরের হতে হবে", "code_nf": "এই কোড পাওয়া যায়নি। আবার দেখে নিন।", "code_self": "এটি আপনার নিজের কোড 😄", "code_already": "আগে থেকেই আপনার বন্ধু ✅", "added": "🎉 আপনি {name}-কে যোগ করেছেন", "add_failed": "যোগ করা যায়নি। আবার চেষ্টা করুন।", "like_failed": "লাইক করা যায়নি। Firebase-এর নিয়ম হালনাগাদ করুন।", "notif_none": "নতুন কোনো বিজ্ঞপ্তি নেই 🔔", "me_title": "আমার অ্যাকাউন্ট", "best_streak": "সেরা ধারা", "total_days": "মোট দিন", "cur_streak": "বর্তমান ধারা", "share_photos": "আমার ছবি বন্ধুদের সঙ্গে শেয়ার করুন", "language": "ভাষা", "logout": "লগ আউট", "confirm_logout": "আপনার অ্যাকাউন্ট থেকে লগ আউট করবেন?", "login_to_sync": "আপনার বন্ধুদের সংরক্ষণ করতে লগ ইন করুন", "privacy": "🔒 যাদের কাছে আপনার কোড আছে তারা আপনার ছবি দেখতে পারবে। আপনি যেকোনো সময় বন্ধু সরাতে পারেন।", "ok": "ঠিক আছে", "today_photos": "আজকের ছবি", "analyzing": "আপনার ছবি নিয়ে ভাবা হচ্ছে...", "cancel": "বাতিল", "limit_reached": "দৈনিক সীমা পূর্ণ: {max}টি ছবি। কাল দেখা হবে 🌙", "read_error": "ছবিটি পড়া যায়নি। অন্য একটি ছবি চেষ্টা করুন।", "describe_prompt": "এই ভিউ সরাসরি ছবি পড়তে পারে না। আপনার ছবিটি কয়েকটি শব্দে বর্ণনা করুন:", "describe_ph": "যেমন সমুদ্রের ওপর সূর্যাস্ত", "analyze_btn": "আমার ছবি বিশ্লেষণ করুন", "generic_error": "কিছু একটা ভুল হয়েছে। আবার চেষ্টা করুন।", "local_note": "💡 এটি একটি তৈরি করা ভাবনা। আপনি হোম থেকে বায়ানকে প্রশ্ন করতে পারেন।", "pill_reflect": "🌿 ভাবনা", "pill_warn": "⚠️ কোমল পরামর্শ", "pill_note": "💡 আজকের নোট", "practice_label": "🎯 আজকের আমল", "source_label": "উৎস:", "disclaimer": "এটি একটি স্মরণ, ফতোয়া নয়। নিশ্চিত হতে নির্ভরযোগ্য আলেম বা পথপ্রদর্শককে জিজ্ঞাসা করুন।", "first_pill": "🌱 সুন্দর শুরু", "streak_pill": "🔥 মাশাআল্লাহ, টানা {n} দিন", "photo_k": "📸 {max}টির মধ্যে {k} নম্বর ছবি", "subj_extra": "আপনার দিনের একটি অতিরিক্ত ছবি", "subj_challenge": "আজকের চ্যালেঞ্জের ছবি: {p}", "ask_back": "পিছনে", "bp_loading": "বায়ান লোড হচ্ছে...", "bp_fail": "বায়ান লোড করা যায়নি। ইন্টারনেট সংযোগ পরীক্ষা করুন।", "retry": "আবার চেষ্টা করুন", "your_question": "আপনার প্রশ্ন:", "copy": "কপি", "err_used": "এই ইমেইল আগেই নিবন্ধিত। লগ ইন করে দেখুন।", "err_email": "ইমেইল ঠিকানা সঠিক নয়।", "err_weak": "পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে।", "err_cred": "ইমেইল বা পাসওয়ার্ড ভুল।", "err_many": "অনেকবার চেষ্টা হয়েছে। একটু অপেক্ষা করে আবার চেষ্টা করুন।", "err_net": "ইন্টারনেট সংযোগ পরীক্ষা করুন।", "err_off": "এই লগ ইন পদ্ধতি Firebase-এ চালু নেই।", "err_api": "Firebase কনফিগারেশনে ভুল API কী আছে।", "err_domain": "এই সাইট Firebase-এর অনুমোদিত ডোমেইনে নেই।", "err_generic": "কিছু একটা ভুল হয়েছে। আবার চেষ্টা করুন।", "reset_sent": "📩 আমরা আপনাকে পাসওয়ার্ড রিসেটের লিংক পাঠিয়েছি।", "type_email_first": "আগে আপনার ইমেইল লিখুন।", "name_default": "বন্ধু"}, "ws": {"title": "দৈনিক ওয়ির্দ", "sub": "প্রতিদিন আল্লাহর কিতাব থেকে পড়ুন এবং বন্ধুদের সঙ্গে ভাগ করুন", "goal": "দৈনিক লক্ষ্য", "one": "পৃষ্ঠা", "two": "পৃষ্ঠা", "many": "পৃষ্ঠা", "doneBadge": "✅ আপনি আজকের ওয়ির্দ পড়েছেন", "cont": "পড়া চালিয়ে যান", "start": "পড়া শুরু করুন", "page": "পৃষ্ঠা", "of": "/", "juz": "পারা", "khatma": "আপনার খতম", "mark": "✓ আমি এই পৃষ্ঠা পড়েছি", "marked": "✓ পৃষ্ঠা পড়া হয়েছে", "next": "পরবর্তী", "prev": "পূর্ববর্তী", "go": "যান", "goPh": "পৃষ্ঠা", "back": "পিছনে", "loading": "পৃষ্ঠা লোড হচ্ছে…", "fail": "পৃষ্ঠা লোড করা যায়নি। ইন্টারনেট পরীক্ষা করে আবার চেষ্টা করুন।", "retry": "আবার চেষ্টা করুন", "shareNote": "আপনার ওয়ির্দ বন্ধুদের সঙ্গে ভাগ করা হয়। আপনি “আমি” থেকে শেয়ারিং বন্ধ করতে পারেন।", "toastDone": "মাশাআল্লাহ! আপনি আজকের ওয়ির্দ সম্পন্ন করেছেন 🌙", "toastPage": "পৃষ্ঠা নথিভুক্ত হয়েছে ✓", "you": "আপনি", "fDone": "নিজের ওয়ির্দ পড়েছে ✓", "fNot": "এখনো না", "homeDone": "আজকের আপনার ওয়ির্দ: সম্পন্ন ✓", "homeNot": "আজকের আপনার ওয়ির্দ: এখনো পড়া হয়নি", "surah": "সূরা", "khatmaDone": "অভিনন্দন! আপনি একটি পূর্ণ খতম সম্পন্ন করেছেন 🎉", "pagesToday": "আজকের পৃষ্ঠা", "today": "আজকের তিলাওয়াত", "notYet": "আপনি এখনো আপনার ওয়ির্দ সম্পন্ন করেননি", "fTitle": "📖 আজ বন্ধুদের ওয়ির্দ", "wstreak": "{n} দিনের ওয়ির্দ ধারা"}, "bs": {"tabFeed": "মুহূর্ত", "tabBoard": "🏆 র‍্যাঙ্কিং", "friends": "বন্ধু", "region": "অঞ্চল", "country": "দেশ", "world": "বিশ্ব", "title": "ধারার র‍্যাঙ্কিং:", "renew": "প্রতি মাসের ১ তারিখে নতুন হয়", "daysLeft": "", "day": "দিন বাকি", "daysWord": "দিন বাকি", "days": "দিন এই মাসে", "empty": "র‍্যাঙ্কিংয়ে এখনো কেউ নেই। প্রথম আপনিই হোন!", "join": "র‍্যাঙ্কিংয়ে যোগ দিন", "joinTxt": "অঞ্চল, দেশ ও বিশ্ব র‍্যাঙ্কিংয়ে আসতে আপনার অবস্থান বেছে নিন এবং শেয়ারিং চালু করুন। শুধু আপনার নামের প্রথম অংশ দেখানো হয়।", "setupTitle": "আপনার র‍্যাঙ্কিং প্রোফাইল", "pickCountry": "দেশ বেছে নিন", "pickRegion": "অঞ্চল বেছে নিন", "showMe": "পাবলিক র‍্যাঙ্কিংয়ে আমার নামের প্রথম অংশ দেখান", "save": "সংরক্ষণ", "saved": "সংরক্ষিত ✓", "yourRank": "আপনার অবস্থান", "you": "আপনি", "needRegion": "এখানে আসতে “র‍্যাঙ্কিং প্রোফাইল” থেকে আপনার অঞ্চল বেছে নিন।", "regionSaOnly": "অঞ্চলভিত্তিক র‍্যাঙ্কিং এখন শুধু সৌদি আরবের জন্য রয়েছে।", "loading": "র‍্যাঙ্কিং লোড হচ্ছে…", "fail": "র‍্যাঙ্কিং লোড করা যায়নি। ইন্টারনেট ও Firebase-এর নিয়ম পরীক্ষা করুন।", "retry": "আবার চেষ্টা করুন", "score": "এই মাসের দীর্ঘতম ধারা", "setupRow": "পাবলিক র‍্যাঙ্কিং", "off": "বন্ধ", "on": "চালু", "note": "এই মাসে টানা ছবি তোলার দীর্ঘতম ধারা অনুযায়ী র‍্যাঙ্কিং।", "lastDay": "মাসের শেষ দিন"}}, "ms": {"str": {"continue": "Teruskan", "signup_title": "Mulakan perjalanan anda bersama Bayan", "signup_sub": "Simpan renungan, bina streak harian dan belajar daripada persekitaran anda.", "login_title": "Selamat kembali", "login_sub": "Log masuk untuk kembali kepada renungan dan rakan anda.", "full_name": "Nama penuh", "email": "Alamat e-mel", "password": "Kata laluan", "confirm": "Sahkan kata laluan", "create_account": "Cipta akaun", "login_btn": "Log masuk", "or": "atau", "have_acc": "Sudah ada akaun?", "no_acc": "Belum ada akaun?", "login_link": "Log masuk", "signup_link": "Daftar", "guest": "Teruskan tanpa akaun", "forgot": "Lupa kata laluan?", "pw_mismatch": "Kata laluan tidak sepadan.", "need_fields": "Masukkan e-mel dan kata laluan anda.", "soon": "Akan datang", "loading": "Memuatkan...", "greet_m": "Selamat pagi", "greet_d": "Selamat tengah hari", "greet_e": "Selamat malam", "greet_n": "Selamat tidur", "home_sub": "Setiap hari ialah peluang baharu untuk mendekatkan diri kepada Allah.", "streak_title": "Teruskan perjalanan anda", "streak_sub": "Setiap hari satu langkah lebih dekat.", "days_zero": "Mulakan streak anda", "days_one": "hari berturut-turut", "days_two": "hari berturut-turut", "days_many": "hari berturut-turut", "logged_today": "Anda telah merekodkan renungan hari ini", "open_reflection": "Buka renungan", "shoot_again": "Ambil gambar lagi", "add_photo": "Tambah gambar {n} daripada {max}", "challenge": "Ambil gambar apa sahaja di hadapan anda", "free_sub": "Bayan memberikan renungan tentang gambar anda sendiri", "shoot_now": "Ambil gambar", "or_gallery": "Atau pilih daripada peranti anda", "maxed": "Anda telah melengkapkan tiga gambar hari ini", "see_tomorrow": "Jumpa esok 🌙", "ask_title": "Tanya Bayan", "ask_sub": "Apa yang ada di fikiran anda?", "ask_sub2": "Dapatkan jawapan yang dipercayai daripada sumber-sumber kami.", "ask_ph": "Tulis soalan anda di sini...", "verse_label": "Peringatan untuk anda hari ini", "tab_home": "Renungan", "tab_ask": "Tanya Bayan", "tab_wird": "Wirid", "tab_cam": "Renungan", "tab_friends": "Rakan", "tab_me": "Saya", "fr_title": "Detik-detik rakan anda", "fr_sub": "Kongsi renungan dan saling mendekat.", "add_friend": "Tambah rakan", "your_story": "Cerita anda", "friend_code_ph": "Kod rakan anda", "ago_now": "Baru sahaja", "ago_m": "{n} min lalu", "ago_h": "{n} jam lalu", "ago_d": "{n} hari lalu", "fr_empty": "Belum ada rakan. Tambah dengan kod!", "fr_login": "Log masuk untuk melihat rakan dan berkongsi detik anda.", "my_code": "Kod jemputan anda", "share_invite": "Kongsi jemputan", "copy_code": "Salin kod", "copied": "Disalin ✓", "add": "Tambah", "remove_friend": "Buang rakan", "confirm_remove": "Buang {name} daripada senarai rakan anda?", "invite_text": "Tambah saya di Bayan dan mari merenung setiap hari 🔥 Kod saya: {code}", "code6": "Kod mesti 6 aksara", "code_nf": "Kod ini tidak ditemui. Semak semula.", "code_self": "Ini kod anda sendiri 😄", "code_already": "Sudah menjadi rakan anda ✅", "added": "🎉 Anda menambah {name}", "add_failed": "Gagal menambah. Cuba lagi.", "like_failed": "Gagal menyukai. Kemas kini peraturan Firebase.", "notif_none": "Tiada pemberitahuan baharu 🔔", "me_title": "Akaun saya", "best_streak": "Streak terbaik", "total_days": "Jumlah hari", "cur_streak": "Streak semasa", "share_photos": "Kongsi gambar saya dengan rakan", "language": "Bahasa", "logout": "Log keluar", "confirm_logout": "Log keluar daripada akaun anda?", "login_to_sync": "Log masuk untuk menyimpan rakan anda", "privacy": "🔒 Orang yang mempunyai kod anda boleh melihat gambar anda. Anda boleh membuang rakan pada bila-bila masa.", "ok": "OK", "today_photos": "Gambar hari ini", "analyzing": "Merenung gambar anda...", "cancel": "Batal", "limit_reached": "Had harian dicapai: {max} gambar. Jumpa esok 🌙", "read_error": "Gambar tidak dapat dibaca. Cuba gambar lain.", "describe_prompt": "Paparan ini tidak boleh membaca gambar secara terus. Terangkan gambar anda dengan beberapa perkataan:", "describe_ph": "cth. matahari terbenam di laut", "analyze_btn": "Analisis gambar saya", "generic_error": "Berlaku ralat. Sila cuba lagi.", "local_note": "💡 Ini renungan sedia ada. Anda boleh bertanya kepada Bayan dari Laman Utama.", "pill_reflect": "🌿 Renungan", "pill_warn": "⚠️ Catatan lembut", "pill_note": "💡 Catatan hari ini", "practice_label": "🎯 Amalan hari ini", "source_label": "Sumber:", "disclaimer": "Ini peringatan, bukan fatwa. Tanya ulama atau pembimbing yang dipercayai untuk kepastian.", "first_pill": "🌱 Permulaan yang indah", "streak_pill": "🔥 MasyaAllah, {n} hari berturut-turut", "photo_k": "📸 Gambar {k} daripada {max}", "subj_extra": "Satu gambar tambahan daripada hari anda", "subj_challenge": "Gambar cabaran hari ini: {p}", "ask_back": "Kembali", "bp_loading": "Memuatkan Bayan...", "bp_fail": "Tidak dapat memuatkan Bayan. Semak sambungan internet anda.", "retry": "Cuba lagi", "your_question": "Soalan anda:", "copy": "Salin", "err_used": "E-mel ini sudah didaftarkan. Cuba log masuk.", "err_email": "Alamat e-mel tidak sah.", "err_weak": "Kata laluan mesti sekurang-kurangnya 6 aksara.", "err_cred": "E-mel atau kata laluan salah.", "err_many": "Terlalu banyak percubaan. Tunggu sebentar dan cuba lagi.", "err_net": "Semak sambungan internet anda.", "err_off": "Kaedah log masuk ini tidak diaktifkan dalam Firebase.", "err_api": "Konfigurasi Firebase mempunyai kunci API yang salah.", "err_domain": "Laman ini tiada dalam domain yang dibenarkan Firebase.", "err_generic": "Berlaku ralat. Cuba lagi.", "reset_sent": "📩 Kami telah menghantar pautan tetapan semula kata laluan.", "type_email_first": "Masukkan e-mel anda dahulu.", "name_default": "Rakan"}, "ws": {"title": "Wirid Harian", "sub": "Bacalah Kitab Allah setiap hari dan kongsikan bersama rakan", "goal": "Sasaran harian", "one": "muka surat", "two": "muka surat", "many": "muka surat", "doneBadge": "✅ Anda telah membaca wirid harian anda", "cont": "Sambung membaca", "start": "Mula membaca", "page": "Muka surat", "of": "daripada", "juz": "Juzuk", "khatma": "Khatam anda", "mark": "✓ Saya telah membaca muka surat ini", "marked": "✓ Muka surat telah dibaca", "next": "Seterusnya", "prev": "Sebelumnya", "go": "Pergi", "goPh": "Muka surat", "back": "Kembali", "loading": "Memuatkan muka surat…", "fail": "Muka surat tidak dapat dimuatkan. Semak internet anda dan cuba lagi.", "retry": "Cuba lagi", "shareNote": "Wirid anda dikongsi dengan rakan. Anda boleh mematikan perkongsian di “Saya”.", "toastDone": "MasyaAllah! Anda telah melengkapkan wirid harian anda 🌙", "toastPage": "Muka surat direkodkan ✓", "you": "Anda", "fDone": "Sudah membaca wiridnya ✓", "fNot": "Belum", "homeDone": "Wirid anda hari ini: selesai ✓", "homeNot": "Wirid anda hari ini: belum dibaca", "surah": "Surah", "khatmaDone": "Tahniah! Anda telah menamatkan satu khatam penuh 🎉", "pagesToday": "Muka surat hari ini", "today": "Bacaan hari ini", "notYet": "Anda belum melengkapkan wirid anda", "fTitle": "📖 Wirid rakan hari ini", "wstreak": "Streak wirid {n} hari"}, "bs": {"tabFeed": "Detik", "tabBoard": "🏆 Kedudukan", "friends": "Rakan", "region": "Wilayah", "country": "Negara", "world": "Dunia", "title": "Kedudukan streak bulan", "renew": "Ditetapkan semula pada 1hb setiap bulan", "daysLeft": "", "day": "hari lagi", "daysWord": "hari lagi", "days": "hari bulan ini", "empty": "Belum ada sesiapa dalam kedudukan. Jadilah yang pertama!", "join": "Sertai kedudukan", "joinTxt": "Untuk muncul dalam kedudukan wilayah, negara dan dunia, pilih lokasi anda dan hidupkan perkongsian. Hanya nama pertama anda dipaparkan.", "setupTitle": "Profil kedudukan anda", "pickCountry": "Pilih negara", "pickRegion": "Pilih wilayah", "showMe": "Papar nama pertama saya dalam kedudukan awam", "save": "Simpan", "saved": "Disimpan ✓", "yourRank": "Kedudukan anda", "you": "Anda", "needRegion": "Pilih wilayah anda dalam “Profil kedudukan” untuk muncul di sini.", "regionSaOnly": "Kedudukan wilayah kini tersedia untuk Arab Saudi.", "loading": "Memuatkan kedudukan…", "fail": "Kedudukan tidak dapat dimuatkan. Semak internet dan peraturan Firebase.", "retry": "Cuba lagi", "score": "Streak terpanjang bulan ini", "setupRow": "Kedudukan awam", "off": "Mati", "on": "Hidup", "note": "Disusun mengikut rentetan hari gambar berturut-turut yang paling panjang bulan ini.", "lastDay": "Hari terakhir bulan ini"}}};
+  Object.keys(I18N_MORE).forEach(c => { STR[c] = I18N_MORE[c].str; });
+  let prefs = { lang: '', guest: false, share: true, country: '', region: '', pub: false };
+  try { const r = localStorage.getItem(PREF_KEY); if (r) prefs = Object.assign(prefs, JSON.parse(r)); } catch(e){}
+  try { if (!localStorage.getItem(PREF_KEY)){ const o = JSON.parse(localStorage.getItem('taammul_social_v1') || 'null'); if (o && typeof o.share === 'boolean') prefs.share = o.share; } } catch(e){}
+  const savePrefs = () => { try { localStorage.setItem(PREF_KEY, JSON.stringify(prefs)); } catch(e){} };
+  const L = () => prefs.lang && STR[prefs.lang] ? prefs.lang : (prefs.lang ? 'en' : 'ar');
+  const isAr = () => L() === 'ar';
+  function t(k, v){
+    let s = STR[L()][k]; if (s === undefined) s = STR.en[k]; if (s === undefined) s = STR.ar[k]; if (s === undefined) return k;
+    if (v) for (const x in v) s = s.split('{' + x + '}').join(v[x]);
+    return s;
+  }
+  const isRtl = () => L() === 'ar' || L() === 'ur';
+  function applyLang(){ document.documentElement.lang = isAr() ? 'ar' : (prefs.lang || 'en'); document.documentElement.dir = isRtl() ? 'rtl' : 'ltr'; }
+  const dateLocale = () => L();
+
+  // ===== content =====
+  const PROMPTS = [
+    ['☁️','شيئاً في السماء','Something in the sky'],['🤲','شيئاً تشكر الله عليه','Something you are grateful for'],['🍽️','ما في صحنك قبل ما تأكل','What is on your plate before you eat'],
+    ['🌿','شيئاً صنعه الله ولم يصنعه إنسان','Something God made, not humans'],['🏞️','مكاناً هادئاً تحبه','A calm place you love'],['👨‍👩‍👧','شيئاً يذكّرك بعائلتك','Something that reminds you of family'],
+    ['🌄','أول ضوء تشوفه اليوم','The first light you see today'],['🔍','شيئاً صغيراً ما تلاحظه عادة','Something small you usually miss'],['🌳','شجرة أو نبتة','A tree or a plant'],
+    ['💧','ماء بأي شكل','Water in any form'],['💪','شيئاً تعبت عليه اليوم','Something you worked hard on today'],['✨','شيئاً نظيفاً ومرتباً','Something clean and tidy'],
+    ['🕊️','شيئاً يمشي أو يطير','Something that walks or flies'],['🪟','ما تشوفه من نافذتك','What you see from your window']
+  ];
+  const LOCAL = [
+    { ar:{h:'السماء فوقنا نعمة',r:'كل ما رفعت رأسك شفت سماء ممتدة بدون أعمدة. هذا تذكير هادئ بعظمة الخالق ونعمه علينا، فخلّ النظر إليها لحظة شكر وسكينة.',p:'انظر للسماء دقيقة وقل «سبحان الله».'}, en:{h:'The sky is a blessing',r:'Whenever you look up, a vast sky stretches without pillars. A quiet reminder of the Creator’s greatness and His gifts. Let it be a moment of gratitude and calm.',p:'Look at the sky for a minute and say “SubhanAllah.”'} },
+    { ar:{h:'نعمة تستحق الشكر',r:'كثير من النعم ما نلتفت لها إلا إذا فقدناها. تصويرك لها اليوم طريقة تسجّلها فيها وتقول الحمد لله عليها.',p:'سمِّ هالنعمة بصوتك وقل «الحمد لله».'}, en:{h:'A blessing worth thanking',r:'We often notice blessings only when they are gone. Capturing one today is a way to name it and say Alhamdulillah.',p:'Name this blessing out loud and say “Alhamdulillah.”'} },
+    { ar:{h:'رزق من الله',r:'قبل ما تأكل، تذكّر إن هذا الرزق وصلك بتوفيق الله. المسلم يبدأ طعامه بذكر الله ويحمده بعد ما يشبع. وإذا شككت في أي مكوّن، اقرأ الملصق أو اسأل.',p:'ابدأ أكلك بـ«بسم الله» واختمه بـ«الحمد لله».'}, en:{h:'Provision from God',r:'Before you eat, remember this food reached you by God’s grace. A Muslim begins with His name and praises Him afterwards. If you doubt an ingredient, check the label or ask.',p:'Start with “Bismillah” and end with “Alhamdulillah.”'} },
+    { ar:{h:'صنعة الخالق',r:'الشجر والماء والجبال ما صنعها أحد غير الله. التأمل فيها يقوّي الإيمان ويهدّي القلب.',p:'ابقَ دقيقة هادئاً وتأمل تفاصيل ما صوّرته.'}, en:{h:'The Creator’s craftsmanship',r:'Trees, water and mountains were made by none but God. Reflecting on them strengthens faith and calms the heart.',p:'Stay quiet for a minute and notice the details of what you captured.'} },
+    { ar:{h:'سكينة المكان',r:'الأماكن الهادئة تساعد القلب يرجع لنفسه ولذكر الله. اختر لك زاوية تحبها وخلّها لحظة صفاء كل يوم.',p:'اجلس دقيقتين بدون جوال وراجع يومك.'}, en:{h:'The calm of a place',r:'Quiet places help the heart return to itself and to the remembrance of God. Choose a corner you love and make it a daily moment of peace.',p:'Sit two minutes without your phone and review your day.'} },
+    { ar:{h:'صلة الرحم',r:'الإسلام يوصي بالإحسان للأهل وصلة الرحم، وحتى لو اختلفتم في الدين يبقى البر والإحسان. شيء يذكّرك بعائلتك فرصة تتذكر فضلهم.',p:'أرسل رسالة لطيفة لأحد من عائلتك اليوم.'}, en:{h:'Keeping family ties',r:'Islam encourages kindness to family and keeping ties, and even when you differ in faith, kindness and good treatment remain. Something that reminds you of family is a chance to remember their kindness.',p:'Send a kind message to someone in your family today.'} },
+    { ar:{h:'بداية يوم جديد',r:'كل صباح فرصة جديدة. النور اللي تشوفه تذكير إن الله يعطينا يوماً جديداً نعمل فيه خير.',p:'انوِ تسوي شيئاً طيباً واحداً اليوم.'}, en:{h:'A new day begins',r:'Every morning is a fresh chance. The light you see is a reminder that God grants us a new day to do good.',p:'Intend to do one good thing today.'} },
+    { ar:{h:'في التفاصيل جمال',r:'الأشياء الصغيرة اللي ما ننتبه لها فيها إتقان عجيب. المسلم يتعلم يلاحظ ويشكر حتى على الصغير.',p:'لاحظ ثلاث تفاصيل جميلة حولك الحين.'}, en:{h:'Beauty in the details',r:'The small things we overlook hold astonishing craftsmanship. A Muslim learns to notice and give thanks even for the little.',p:'Notice three beautiful details around you now.'} },
+    { ar:{h:'حياة تنمو بإذن الله',r:'الشجرة تنمو بصمت من حبة صغيرة. وهكذا يكون تعلّمنا للدين: خطوة خطوة وبدون استعجال.',p:'خذ خطوة صغيرة واحدة اليوم في تعلّمك.'}, en:{h:'Life growing by God’s leave',r:'A tree grows quietly from a tiny seed. Learning our faith is like that: step by step, without rushing.',p:'Take one small step in your learning today.'} },
+    { ar:{h:'الماء أصل الحياة',r:'الماء نعمة ما نقدر نعيش بدونها، والإسلام يوصي بعدم الإسراف فيها حتى في الوضوء.',p:'اشرب وقل «الحمد لله»، ولا تسرف في الماء.'}, en:{h:'Water, the source of life',r:'Water is a gift we cannot live without, and Islam teaches us not to waste it, even when making wudu.',p:'Drink and say “Alhamdulillah”, and do not waste water.'} },
+    { ar:{h:'تعبك مو ضايع',r:'الجهد اللي تبذله بإخلاص له أجره، والإسلام يحب الإتقان والاجتهاد. افرح بإنجازك مهما كان صغير.',p:'اشكر نفسك على تعبك وادعُ الله يبارك فيه.'}, en:{h:'Your effort is not lost',r:'Effort made sincerely has its reward, and Islam loves excellence and striving. Be glad of what you accomplished, however small.',p:'Thank yourself for your effort and ask God to bless it.'} },
+    { ar:{h:'الطهارة والترتيب',r:'النظافة والترتيب جزء من أخلاق المسلم. جاء في الحديث أن الطُّهور شطر الإيمان، فالمكان النظيف يريّح النفس ويعين على العبادة.',p:'رتّب شيئاً واحداً حولك الحين.',src:'حديث: «الطهور شطر الإيمان» (صحيح مسلم)'}, en:{h:'Purity and order',r:'Cleanliness and order are part of a Muslim’s character. The Prophet ﷺ said that purity is half of faith; a clean space calms the soul and helps worship.',p:'Tidy one thing around you right now.',src:'Hadith: “Purity is half of faith” (Sahih Muslim)'} },
+    { ar:{h:'كل مخلوق يسبّح',r:'الطيور والحيوانات كلها تسبّح ربها بطريقتها. تذكّر إن الكون كله في عبادة وتسبيح، وأنت جزء منه.',p:'قل «سبحان الله» وأنت تتأمل مخلوقاً حياً.',src:'سورة الإسراء، الآية ٤٤ (بمعناها)'}, en:{h:'Every creature glorifies',r:'Birds and animals all glorify their Lord in their own way. The whole universe is in worship, and you are part of it.',p:'Say “SubhanAllah” as you watch a living creature.',src:'Surah Al-Isra 17:44 (meaning)'} },
+    { ar:{h:'نافذة على النعمة',r:'اللي تشوفه من نافذتك صورة صغيرة من عالم واسع صنعه الله. خذ لحظة تتأمل وتشكر على نعمة البصر.',p:'انظر من النافذة دقيقة وقل «الحمد لله».'}, en:{h:'A window onto blessings',r:'What you see from your window is a small piece of a wide world God made. Take a moment to reflect and be thankful for sight.',p:'Look out of the window for a minute and say “Alhamdulillah.”'} }
+  ];
+  const VERSES = [
+    { v:'أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ', ar:'ما يطمئن قلبك', en:'What calms your heart', ra:'الرعد: ٢٨', re:'Ar-Ra‘d 13:28' },
+    { v:'إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا', ar:'بعد العسر يسر', en:'After hardship comes ease', ra:'الشرح: ٦', re:'Ash-Sharh 94:6' },
+    { v:'فَٱذْكُرُونِىٓ أَذْكُرْكُمْ', ar:'اذكروني أذكركم', en:'Remember Me, I will remember you', ra:'البقرة: ١٥٢', re:'Al-Baqarah 2:152' },
+    { v:'وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ', ar:'توكّل على الله', en:'Trust in God', ra:'الطلاق: ٣', re:'At-Talaq 65:3' },
+    { v:'لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ', ar:'الشكر يزيد النعمة', en:'Gratitude increases blessings', ra:'إبراهيم: ٧', re:'Ibrahim 14:7' },
+    { v:'لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا', ar:'على قدر طاقتك', en:'Never beyond your capacity', ra:'البقرة: ٢٨٦', re:'Al-Baqarah 2:286' },
+    { v:'فَإِنِّى قَرِيبٌ', ar:'الله قريب', en:'God is near', ra:'البقرة: ١٨٦', re:'Al-Baqarah 2:186' }
+  ];
+  const dayNum = () => { const n = new Date(); return Math.floor((n.getTime() - n.getTimezoneOffset() * 60000) / 86400000); };
+  const promptIndex = () => dayNum() % PROMPTS.length;
+  const pText = i => isAr() ? PROMPTS[i][1] : PROMPTS[i][2];
+
+  // ===== entries (local) =====
+  let state = { entries: [] };
+  try { const raw = localStorage.getItem(KEY); if (raw) state = JSON.parse(raw); } catch(e){}
+  if (!state || !Array.isArray(state.entries)) state = { entries: [] };
+  if (!state.wird || typeof state.wird !== 'object') state.wird = { goal: 1, pos: 0, days: {}, complete: {}, khatmas: 0 };
+  state.wird.goal = state.wird.goal || 1; state.wird.days = state.wird.days || {}; state.wird.complete = state.wird.complete || {};
+  function save(){ state.entries = state.entries.slice(0, 90); try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+  const entriesFor = key => state.entries.filter(e => e.date === key).sort((a, b) => a.ts - b.ts);
+  const todayCount = () => entriesFor(today()).length;
+  const datesSet = () => new Set(state.entries.map(e => e.date));
+  function streakCount(){
+    const s = datesSet(); let d = new Date(), n = 0;
+    if (!s.has(ymd(d))) d.setDate(d.getDate() - 1);
+    while (s.has(ymd(d))) { n++; d.setDate(d.getDate() - 1); }
+    return n;
+  }
+  function bestStreak(){
+    const ds = [...datesSet()].sort(); let best = 0, cur = 0, prev = null;
+    ds.forEach(x => { if (prev){ const diff = Math.round((new Date(x) - new Date(prev)) / 86400000); cur = diff === 1 ? cur + 1 : 1; } else cur = 1; best = Math.max(best, cur); prev = x; });
+    return best;
+  }
+  function arUnit(n, one, two, few, many){ return n === 1 ? 'منذ ' + one : n === 2 ? 'منذ ' + two : n <= 10 ? 'منذ ' + n + ' ' + few : 'منذ ' + n + ' ' + many; }
+  const ago = ts => {
+    if (!ts) return '';
+    const m = Math.floor((Date.now() - ts) / 60000);
+    if (m < 1) return t('ago_now');
+    const h = Math.floor(m / 60), d = Math.floor(h / 24);
+    if (isAr()){
+      if (m < 60) return arUnit(m, 'دقيقة', 'دقيقتين', 'دقائق', 'دقيقة');
+      if (h < 24) return arUnit(h, 'ساعة', 'ساعتين', 'ساعات', 'ساعة');
+      return arUnit(d, 'يوم', 'يومين', 'أيام', 'يوماً');
+    }
+    if (m < 60) return t('ago_m', { n: m }); if (h < 24) return t('ago_h', { n: h });
+    return t('ago_d', { n: d });
+  };
+  function toast(msg){
+    const old = document.querySelector('.toast'); if (old) old.remove();
+    const x = el('div', 'toast', msg); document.body.appendChild(x); setTimeout(() => x.remove(), 2400);
+  }
+
+  let sample = null, ctl = null, imagesOk = true;
+  // Paste a Google AI Studio key here to get real photo analysis outside Claude (see aistudio.google.com/apikey)
+  const GEMINI_KEY = ''; // ضع مفتاح Google AI Studio هنا (لا ترفعه إلى GitHub)
+  const GEMINI_MODEL = 'gemini-3.8-flash';
+
+  // ===== screens =====
+  function show(name){
+    ['scrLang','scrAuth','scrSplash','appShell'].forEach(id => { $(id).hidden = id !== name; });
+    window.scrollTo(0, 0);
+  }
+  function logoEl(small){
+    const d = el('div', 'logo' + (small ? ' sm' : ''));
+    d.appendChild(el('div', 'logo-ar', 'بَيَانُ')); d.appendChild(el('div', 'logo-en', 'BAYAN'));
+    const o = el('div', 'orn'); o.appendChild(el('i')); o.appendChild(el('b')); o.appendChild(el('i')); d.appendChild(o);
+    return d;
+  }
+  function cornerBtn(side, icon, label, fn){
+    const b = el('button', 'corner ' + side); b.type = 'button'; b.setAttribute('aria-label', label); b.appendChild(svg(icon)); b.onclick = fn; return b;
+  }
+
+  // ----- language screen -----
+  const MAIN_LANGS = ['ar', 'en', 'ur'];
+  let langPick = '';
+  function renderLang(){
+    const s = $('scrLang'); s.textContent = '';
+    const a = el('div', 'arch'); a.appendChild(logoEl());
+    a.appendChild(el('h1', 'langtitle', 'اختر لغتك')); a.appendChild(el('p', 'langsub', 'Choose your language'));
+    s.appendChild(a);
+    const list = el('div'); s.appendChild(list);
+    langPick = prefs.lang || '';
+    const rows = [];
+    const addRow = (l, host) => {
+      const b = el('button', 'langrow' + (langPick === l.c ? ' on' : '')); b.type = 'button';
+      b.appendChild(el('span', 'g', l.g));
+      const nm = el('span', 'nm'); nm.appendChild(el('b', null, l.n)); nm.appendChild(el('small', null, l.s)); b.appendChild(nm);
+      b.appendChild(el('span', 'ch', '›'));
+      b.onclick = () => { langPick = l.c; rows.forEach(r => r[1].classList.toggle('on', r[0] === l.c)); };
+      rows.push([l.c, b]); host.appendChild(b);
+    };
+    const mainLangs = LANGS.filter(l => MAIN_LANGS.includes(l.c)), moreLangs = LANGS.filter(l => !MAIN_LANGS.includes(l.c));
+    mainLangs.forEach(l => addRow(l, list));
+    const more = el('div'); more.hidden = !(prefs.lang && !MAIN_LANGS.includes(prefs.lang)); moreLangs.forEach(l => addRow(l, more));
+    const mb = el('button', 'langmore', 'المزيد · More languages ▾'); mb.type = 'button';
+    mb.onclick = () => { more.hidden = false; mb.hidden = true; };
+    mb.hidden = !more.hidden; list.appendChild(mb); list.appendChild(more);
+    const go = el('button', 'btn footbtn', 'متابعة'); go.type = 'button';
+    go.onclick = () => { prefs.lang = langPick || 'ar'; savePrefs(); applyLang(); decide(); };
+    s.appendChild(go);
+  }
+  function openLangSheet(){
+    openSheet(); const b = body();
+    const addRow = (l, host) => {
+      const r = el('button', 'langrow' + (prefs.lang === l.c ? ' on' : '')); r.type = 'button';
+      r.appendChild(el('span', 'g', l.g)); const nm = el('span', 'nm'); nm.appendChild(el('b', null, l.n)); nm.appendChild(el('small', null, l.s)); r.appendChild(nm);
+      r.onclick = () => { prefs.lang = l.c; savePrefs(); applyLang(); closeSheet(); decide(); };
+      host.appendChild(r);
+    };
+    LANGS.filter(l => MAIN_LANGS.includes(l.c)).forEach(l => addRow(l, b));
+    const more = el('div'); more.hidden = !(prefs.lang && !MAIN_LANGS.includes(prefs.lang));
+    LANGS.filter(l => !MAIN_LANGS.includes(l.c)).forEach(l => addRow(l, more));
+    const mb = el('button', 'langmore', 'المزيد · More languages ▾'); mb.type = 'button';
+    mb.onclick = () => { more.hidden = false; mb.hidden = true; }; mb.hidden = !more.hidden;
+    b.appendChild(mb); b.appendChild(more);
+  }
+
+  // ----- auth screen -----
+  let authMode = 'signup';
+  function field(icon, type, ph, ltr){
+    const w = el('label', 'fld'); w.appendChild(svg(icon));
+    const i = document.createElement('input'); i.type = type; i.placeholder = ph; i.setAttribute('aria-label', ph);
+    if (ltr){ i.dir = 'ltr'; i.style.textAlign = isRtl() ? 'right' : 'left'; i.autocapitalize = 'none'; i.autocomplete = type === 'password' ? (authMode === 'signup' ? 'new-password' : 'current-password') : 'email'; }
+    w.appendChild(i);
+    if (type === 'password'){
+      const e = el('button', 'eye'); e.type = 'button'; e.setAttribute('aria-label', 'show'); e.appendChild(svg(IC.eyeoff));
+      e.onclick = () => { const h = i.type === 'password'; i.type = h ? 'text' : 'password'; e.textContent = ''; e.appendChild(svg(h ? IC.eye : IC.eyeoff)); };
+      w.appendChild(e);
+    }
+    return { w, i };
+  }
+  function renderAuth(){
+    const s = $('scrAuth'); s.textContent = '';
+    const a = el('div', 'arch');
+    const back = cornerBtn('s', IC.chev, t('ask_back'), () => { prefs.lang = ''; savePrefs(); decide(); });
+    back.style.transform = isRtl() ? 'none' : 'scaleX(-1)'; back.firstChild.style.transform = isRtl() ? 'scaleX(1)' : 'none';
+    a.appendChild(back);
+    const lg = el('button', 'chip-e'); lg.type = 'button'; lg.appendChild(svg(IC.globe));
+    lg.appendChild(document.createTextNode((LANGS.find(l => l.c === prefs.lang) || LANGS[0]).n)); lg.appendChild(svg(IC.chevd)); lg.onclick = openLangSheet; a.appendChild(lg);
+    a.appendChild(logoEl(true));
+    a.appendChild(el('h1', 't', t(authMode === 'signup' ? 'signup_title' : 'login_title')));
+    a.appendChild(el('p', 'sub', t(authMode === 'signup' ? 'signup_sub' : 'login_sub')));
+    s.appendChild(a);
+
+    const form = el('div'); form.style.marginTop = '8px'; s.appendChild(form);
+    const nm = authMode === 'signup' ? field(IC.user, 'text', t('full_name'), false) : null;
+    if (nm){ nm.i.maxLength = 30; nm.i.autocomplete = 'name'; form.appendChild(nm.w); }
+    const em = field(IC.mail, 'email', t('email'), true); form.appendChild(em.w);
+    const pw = field(IC.lock, 'password', t('password'), true); form.appendChild(pw.w);
+    const pw2 = authMode === 'signup' ? field(IC.lock, 'password', t('confirm'), true) : null;
+    if (pw2) form.appendChild(pw2.w);
+    const msg = el('p', 'msg'); form.appendChild(msg);
+    const btn = el('button', 'btn'); btn.type = 'button';
+    btn.appendChild(document.createTextNode(t(authMode === 'signup' ? 'create_account' : 'login_btn')));
+    const ar = svg(IC.arrow); if (isRtl()) ar.style.transform = 'scaleX(-1)'; btn.appendChild(ar);
+    btn.onclick = async () => {
+      const e = em.i.value.trim(), p = pw.i.value;
+      if (nm && !nm.i.value.trim()){ nm.i.focus(); return; }
+      if (!e || !p){ msg.className = 'msg'; msg.textContent = t('need_fields'); return; }
+      if (pw2 && p !== pw2.i.value){ msg.className = 'msg'; msg.textContent = t('pw_mismatch'); return; }
+      btn.disabled = true; msg.className = 'msg ok'; msg.textContent = t('loading');
+      const err = authMode === 'signup' ? await doSignup(nm.i.value.trim(), e, p) : await doLogin(e, p);
+      if (err){ msg.className = 'msg'; msg.textContent = err; btn.disabled = false; }
+    };
+    form.appendChild(btn);
+    if (authMode === 'login'){
+      const f = el('button', 'lnk', t('forgot')); f.type = 'button';
+      f.onclick = async () => { if (!em.i.value.trim()){ msg.className = 'msg'; msg.textContent = t('type_email_first'); return; } const r = await doReset(em.i.value.trim()); msg.className = r.ok ? 'msg ok' : 'msg'; msg.textContent = r.text; };
+      form.appendChild(f);
+    }
+    form.appendChild(el('div', 'divider', t('or')));
+    const so = el('div', 'socials');
+    const g = el('button', 'iconbtn'); g.type = 'button'; g.setAttribute('aria-label', 'Google'); g.appendChild(svg(IC.google));
+    g.onclick = async () => { msg.className = 'msg ok'; msg.textContent = t('loading'); const err = await doGoogle(); msg.className = 'msg'; msg.textContent = err || ''; };
+    const ap = el('button', 'iconbtn'); ap.type = 'button'; ap.setAttribute('aria-label', 'Apple'); ap.appendChild(svg(IC.apple)); ap.onclick = () => toast(t('soon'));
+    const ml = el('button', 'iconbtn'); ml.type = 'button'; ml.setAttribute('aria-label', 'Email'); ml.appendChild(svg(IC.mail)); ml.onclick = () => em.i.focus();
+    so.appendChild(g); so.appendChild(ap); so.appendChild(ml); form.appendChild(so);
+    const sw = el('div', 'switch'); sw.appendChild(document.createTextNode(t(authMode === 'signup' ? 'have_acc' : 'no_acc') + ' '));
+    const sb = el('button', null, t(authMode === 'signup' ? 'login_link' : 'signup_link')); sb.type = 'button';
+    sb.onclick = () => { authMode = authMode === 'signup' ? 'login' : 'signup'; renderAuth(); };
+    sw.appendChild(sb); form.appendChild(sw);
+    const gl = el('button', 'lnk', t('guest')); gl.type = 'button';
+    gl.onclick = () => { prefs.guest = true; savePrefs(); decide(); }; form.appendChild(gl);
+  }
+
+  // ----- tabs / shell -----
+  let view = 'ask';
+  const TABS = [['ask', 'tab_ask', IC.chat], ['home', 'tab_home', IC.cam], ['wird', 'tab_wird', IC.book], ['friends', 'tab_friends', IC.users], ['me', 'tab_me', IC.user]];
+  function renderTabs(){
+    const n = $('tabs'); n.textContent = '';
+    TABS.forEach(([id, key, ic]) => {
+      const b = el('button', 'tab'); b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-selected', view === id ? 'true' : 'false');
+      b.appendChild(svg(ic)); b.appendChild(el('span', null, t(key))); b.onclick = () => setView(id); n.appendChild(b);
+    });
+  }
+  function setView(v){
+    closeAsk(true);
+    view = v;
+    [['ask','vAsk'],['home','vHome'],['wird','vWird'],['friends','vFriends'],['me','vMe']].forEach(([id, vid]) => { $(vid).hidden = id !== v; });
+    renderTabs(); renderView(v); window.scrollTo(0, 0);
+  }
+  function renderView(v){ ({ ask: openAsk, home: renderHome, wird: renderWird, friends: renderFriends, me: renderMe })[v](); }
+  function renderShell(){ setView(view); }
+  function refreshViews(){ if (!$('appShell').hidden) renderView(view); }
+
+  // ----- home -----
+  function fireLabel(n){ return n === 0 ? t('days_zero') : n === 1 ? t('days_one') : n === 2 ? t('days_two') : t('days_many'); }
+  function weekRow(){
+    const wk = el('div', 'week');
+    for (let i = 6; i >= 0; i--){
+      const d = new Date(); d.setDate(d.getDate() - i);
+      const es = entriesFor(ymd(d)), e = es[es.length - 1];
+      const c = el('div', 'd' + (e ? ' on' : '') + (i === 0 ? ' now' : ''));
+      const dot = el('i');
+      if (e){ dot.style.backgroundImage = 'url("' + e.thumb + '")'; const ck = el('span', 'ck'); ck.appendChild(svg(IC.check)); dot.appendChild(ck); if (es.length > 1) dot.appendChild(el('em', 'cnt', String(es.length))); }
+      else if (i === 0) dot.textContent = '📸';
+      c.appendChild(dot); c.appendChild(document.createTextNode(d.toLocaleDateString(dateLocale(), { weekday: isAr() ? 'long' : 'short' })));
+      wk.appendChild(c);
+    }
+    return wk;
+  }
+  function renderHome(){
+    const v = $('vHome'); v.textContent = '';
+    const now = new Date(), h = now.getHours();
+    let g, em;
+    if (h >= 4 && h < 12){ g = 'greet_m'; em = '☀️'; } else if (h >= 12 && h < 17){ g = 'greet_d'; em = '🌤️'; } else if (h >= 17 && h < 21){ g = 'greet_e'; em = '🌇'; } else { g = 'greet_n'; em = '🌙'; }
+    const a = el('div', 'arch');
+    a.appendChild(cornerBtn('s', IC.userplus, t('add_friend'), openAddFriend));
+    a.appendChild(cornerBtn('e', IC.bell, 'notifications', () => toast(t('notif_none'))));
+    a.appendChild(logoEl(true));
+    const hello = el('div', 'hello'); hello.appendChild(el('span', null, t(g))); hello.appendChild(el('span', null, em)); a.appendChild(hello);
+    a.appendChild(el('p', 'sub', t('home_sub'))); v.appendChild(a);
+
+    // streak
+    const n = streakCount();
+    const sc = el('div', 'card streak');
+    const top = el('div', 'streak-top');
+    const sn = el('div', 'snum'); sn.appendChild(el('span', 'fl', '🔥'));
+    const nb = el('div'); nb.appendChild(el('b', null, String(n))); nb.appendChild(el('small', null, fireLabel(n))); sn.appendChild(nb); top.appendChild(sn);
+    const st = el('div', 'stxt'); st.appendChild(el('b', null, t('streak_title'))); st.appendChild(el('small', null, t('streak_sub'))); top.appendChild(st);
+    sc.appendChild(top); sc.appendChild(weekRow()); v.appendChild(sc);
+
+    // today: challenge + 3 photo slots + camera (merged Reflect + Streak page)
+    const list = entriesFor(today()), cnt = list.length, last = list[cnt - 1], idx = promptIndex();
+    const tc = el('div', 'card');
+    const q = el('p', 'q'); q.appendChild(document.createTextNode('📸 ' + t('challenge'))); tc.appendChild(q);
+    tc.appendChild(el('div', 'logged', t('free_sub')));
+    const slots = el('div', 'slots');
+    for (let k = 0; k < MAX_PER_DAY; k++){
+      const e = list[k];
+      if (e){ const sb2 = el('button', 'slot'); sb2.type = 'button'; sb2.style.backgroundImage = 'url("' + e.thumb + '")'; sb2.onclick = () => openEntry(e); slots.appendChild(sb2); }
+      else slots.appendChild(el('div', 'slot' + (k === cnt ? ' next' : ''), k === cnt ? '📸' : '＋'));
+    }
+    tc.appendChild(slots);
+    if (cnt < MAX_PER_DAY){
+      const b = document.createElement('label'); b.className = 'btn'; b.htmlFor = 'cam'; b.tabIndex = 0; b.setAttribute('role', 'button');
+      b.appendChild(svg(IC.cam)); b.appendChild(document.createTextNode(cnt === 0 ? t('shoot_now') : t('add_photo', { n: cnt + 1, max: MAX_PER_DAY })));
+      b.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); $('cam').click(); } });
+      tc.appendChild(b);
+      const l = el('label', 'lnk', t('or_gallery')); l.htmlFor = 'gal'; tc.appendChild(l);
+    } else { tc.appendChild(el('p', 'logged', t('maxed') + ' · ' + t('see_tomorrow'))); }
+    if (cnt > 0){
+      const r = last.result || {};
+      tc.appendChild(el('div', 'headline', r.headline || t('open_reflection')));
+      const de = (r.reflection || ''); tc.appendChild(el('p', 'desc', de.length > 130 ? de.slice(0, 127).trim() + '…' : de));
+      const ob = el('button', 'btn alt'); ob.type = 'button'; ob.style.marginTop = '12px'; ob.appendChild(document.createTextNode(t('open_reflection'))); ob.appendChild(svg(IC.book)); ob.onclick = () => openEntry(last); tc.appendChild(ob);
+    }
+    v.appendChild(tc);
+
+
+
+    // verse
+    const vs = VERSES[dayNum() % VERSES.length];
+    const vc = el('div', 'card verse');
+    const vi = el('div', 'askic'); vi.appendChild(svg(IC.book)); vc.appendChild(vi);
+    vc.appendChild(el('h2', 'asktitle', isAr() ? vs.ar : vs.en)); vc.appendChild(el('p', 'askline', t('verse_label')));
+    const vb = el('div', 'vbox'); vb.appendChild(el('div', 'vtxt', '﴿ ' + vs.v + ' ﴾')); vb.appendChild(el('div', 'vref', isAr() ? vs.ra : vs.re)); vc.appendChild(vb);
+    v.appendChild(vc);
+  }
+
+  // ----- friends tab -----
+  function friendPhotos(d){ return (d.photos && d.photos.length) ? d.photos : (d.photo ? [d.photo] : []); }
+  function renderFriends(){
+    const v = $('vFriends'); v.textContent = '';
+    const a = el('div', 'arch frhead');
+    const addb = el('button', 'chip-e'); addb.type = 'button'; addb.style.top = '8px'; addb.style.insetInlineEnd = 'auto'; addb.style.insetInlineStart = '0'; addb.appendChild(svg(IC.userplus)); addb.appendChild(document.createTextNode(t('add_friend'))); addb.onclick = openAddFriend; a.appendChild(addb);
+    a.appendChild(logoEl(true)); a.appendChild(el('h1', 't', t('fr_title'))); a.appendChild(el('p', 'sub', t('fr_sub'))); v.appendChild(a);
+    if (fbState !== 'ready'){
+      const c = el('div', 'card'); c.style.textAlign = 'center';
+      if (fbState === 'loading' || fbState === 'idle') c.appendChild(el('p', 'logged', t('loading')));
+      else {
+        c.appendChild(el('p', 'smsg', t('fr_login')));
+        const b = el('button', 'btn'); b.type = 'button'; b.style.marginTop = '12px'; b.textContent = t('login_btn');
+        b.onclick = () => { prefs.guest = false; savePrefs(); authMode = 'login'; decide(); }; c.appendChild(b);
+      }
+      v.appendChild(c); return;
+    }
+    v.appendChild(frSeg());
+    if (frTab === 'board'){ renderBoard(v); return; }
+    const friends = [...friendData.entries()].filter(([, d]) => !d.denied).sort((x, y) => (y[1].ts || 0) - (x[1].ts || 0));
+    // stories
+    const st = el('div', 'stories');
+    const td = entriesFor(today()), mine = td[td.length - 1];
+    const my = el('button', 'story' + (mine ? '' : ' add')); my.type = 'button';
+    const mi = el('i'); if (mine) mi.style.backgroundImage = 'url("' + mine.thumb + '")'; else mi.textContent = '+';
+    my.appendChild(mi); my.appendChild(el('span', null, t('your_story')));
+    my.onclick = () => mine ? openFriendPhotos(t('today_photos'), { photos: td.map(e => e.thumb), headline: (mine.result && mine.result.headline) || '' }) : setView('home');
+    st.appendChild(my);
+    friends.forEach(([id, d]) => {
+      const ph = friendPhotos(d), fresh = d.date === today() && ph.length;
+      const b = el('button', 'story' + (fresh ? '' : ' off')); b.type = 'button';
+      const i = el('i'); if (ph.length) i.style.backgroundImage = 'url("' + ph[ph.length - 1] + '")'; else i.textContent = (d.name || '?').charAt(0);
+      if (d.wirdDate === today() && d.wirdDone) i.appendChild(el('em', 'wb', '📖'));
+      b.appendChild(i); b.appendChild(el('span', null, d.name || '')); b.onclick = () => ph.length ? openFriendPhotos(d.name || '', d) : null; st.appendChild(b);
+    });
+    v.appendChild(st);
+    if (!friends.length){ v.appendChild(el('p', 'empty', t('fr_empty'))); return; }
+    v.appendChild(friendsWirdCard(friends));
+    friends.forEach(([id, d]) => {
+      const ph = friendPhotos(d); if (!ph.length) return;
+      const p = el('article', 'post');
+      const hd = el('div', 'phead'); const av = el('div', 'av'); av.style.backgroundImage = 'url("' + ph[ph.length - 1] + '")'; hd.appendChild(av);
+      const pn = el('div', 'pn'); pn.appendChild(el('b', null, d.name || '')); pn.appendChild(el('small', null, ago(d.ts) + ((d.wirdDate === today() && d.wirdDone) ? '  ·  📖 ' + wt('fDone') : ''))); hd.appendChild(pn);
+      const mo = el('button', 'more', '⋯'); mo.type = 'button'; mo.setAttribute('aria-label', t('remove_friend'));
+      mo.onclick = () => { if (window.confirm(t('confirm_remove', { name: d.name || '' }))) removeFriend(id); }; hd.appendChild(mo); p.appendChild(hd);
+      const pi = el('button', 'pimg'); pi.type = 'button'; const im = el('img'); im.src = ph[ph.length - 1]; im.alt = ''; pi.appendChild(im);
+      if (ph.length > 1) pi.appendChild(el('span', 'pc', '📸 ' + ph.length));
+      pi.onclick = () => openFriendPhotos(d.name || '', d); p.appendChild(pi);
+      const ft = el('div', 'pfoot'); const tx = el('div', 'tx'); tx.appendChild(el('b', null, d.headline || ''));
+      if (d.caption) tx.appendChild(el('small', null, d.caption)); ft.appendChild(tx);
+      const liked = (d.likedBy || []).includes(fb.uid);
+      const hb = el('button', 'heart' + (liked ? ' on' : '')); hb.type = 'button'; hb.setAttribute('aria-pressed', liked ? 'true' : 'false'); hb.setAttribute('aria-label', 'like');
+      hb.appendChild(svg(IC.heart)); hb.appendChild(el('span', null, String((d.likedBy || []).length))); hb.onclick = () => toggleLike(id, d); ft.appendChild(hb);
+      p.appendChild(ft); v.appendChild(p);
+    });
+  }
+  function openFriendPhotos(name, d){
+    openSheet(); const b = body();
+    b.appendChild(el('h2', null, name)); if (d.headline) b.appendChild(el('p', 'subj', d.headline));
+    const stk = el('div', 'stack'); friendPhotos(d).forEach(p => { const im = el('img', 'photo'); im.src = p; im.alt = ''; stk.appendChild(im); });
+    b.appendChild(stk); b.appendChild(bigBtn(t('ok'), closeSheet));
+  }
+  function openAddFriend(){
+    openSheet(); const b = body();
+    if (fbState !== 'ready'){
+      b.appendChild(el('p', 'smsg', t('fr_login')));
+      b.appendChild(bigBtn(t('login_btn'), () => { closeSheet(); prefs.guest = false; savePrefs(); authMode = 'login'; decide(); })); return;
+    }
+    const code = (me && me.code) || '------';
+    b.appendChild(el('h2', null, t('add_friend')));
+    b.appendChild(el('p', 'subj', t('my_code'))); b.appendChild(el('div', 'code', code));
+    const row = el('div', 'row');
+    const sh = el('button', 'btn'); sh.type = 'button'; sh.textContent = t('share_invite');
+    const link = () => location.origin + location.pathname + '?add=' + code;
+    sh.onclick = async () => {
+      const text = t('invite_text', { code });
+      try { if (navigator.share){ await navigator.share({ title: 'BAYAN', text, url: link() }); return; } } catch(e){ return; }
+      try { await navigator.clipboard.writeText(text + ' ' + link()); toast(t('copied')); } catch(e){}
+    };
+    const cp = el('button', 'btn alt'); cp.type = 'button'; cp.textContent = t('copy_code');
+    cp.onclick = async () => { try { await navigator.clipboard.writeText(code); toast(t('copied')); } catch(e){} };
+    row.appendChild(sh); row.appendChild(cp); b.appendChild(row);
+    const f = field(IC.users, 'text', t('friend_code_ph'), true); f.i.maxLength = 6; f.i.style.textTransform = 'uppercase'; f.w.style.marginTop = '16px'; b.appendChild(f.w);
+    const msg = el('p', 'msg'); b.appendChild(msg);
+    const ab = el('button', 'btn'); ab.type = 'button'; ab.textContent = t('add');
+    ab.onclick = async () => { ab.disabled = true; msg.className = 'msg ok'; msg.textContent = t('loading'); const r = await addByCode(f.i.value); msg.className = r.ok ? 'msg ok' : 'msg'; msg.textContent = r.text; ab.disabled = false; if (r.ok) f.i.value = ''; };
+    b.appendChild(ab);
+  }
+
+  // ----- account tab -----
+  function renderMe(){
+    const v = $('vMe'); v.textContent = '';
+    const a = el('div', 'arch'); a.appendChild(logoEl(true)); a.appendChild(el('h1', 't', t('me_title'))); v.appendChild(a);
+    const c = el('div', 'card prof');
+    const name = (me && me.name) || (authUser && (authUser.displayName || (authUser.email || '').split('@')[0])) || '';
+    c.appendChild(el('div', 'bigav', (name || '؟').charAt(0).toUpperCase()));
+    if (name) c.appendChild(el('b', null, name));
+    if (authUser && authUser.email){ const e = el('div', 'sub', authUser.email); e.dir = 'ltr'; c.appendChild(e); }
+    const stt = el('div', 'stats');
+    [['🔥', streakCount(), t('cur_streak')], ['🏆', bestStreak(), t('best_streak')], ['📸', datesSet().size, t('total_days')]].forEach(([i, n, l]) => {
+      const s = el('div', 'stat'); s.appendChild(el('em', null, i)); s.appendChild(el('b', null, String(n))); s.appendChild(el('span', null, l)); stt.appendChild(s);
+    });
+    c.appendChild(stt); v.appendChild(c);
+
+    if (fbState === 'ready'){
+      const cc = el('div', 'card'); cc.style.textAlign = 'center'; cc.appendChild(el('small', 'sub', t('my_code'))); cc.appendChild(el('div', 'code', (me && me.code) || '------'));
+      const b = el('button', 'btn'); b.type = 'button'; b.textContent = t('add_friend'); b.onclick = openAddFriend; cc.appendChild(b); v.appendChild(cc);
+    }
+    const sc = el('div', 'card');
+    if (fbState === 'ready'){
+      const r = el('label', 'setrow'); r.appendChild(el('span', null, t('share_photos')));
+      const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = !!prefs.share;
+      cb.onchange = () => { prefs.share = cb.checked; savePrefs(); if (cb.checked && state.entries[0]) postToFriends(state.entries[0]); };
+      r.appendChild(cb); sc.appendChild(r);
+    }
+    const lr = el('div', 'setrow'); lr.appendChild(el('span', null, t('language')));
+    const lb = el('button', 'val'); lb.type = 'button'; lb.textContent = (LANGS.find(l => l.c === prefs.lang) || LANGS[0]).n; lb.onclick = openLangSheet; lr.appendChild(lb); sc.appendChild(lr);
+    if (fbState === 'ready'){ const br = el('div', 'setrow'); br.appendChild(el('span', null, bt('setupRow'))); const bb = el('button', 'val'); bb.type = 'button'; bb.textContent = prefs.pub ? bt('on') : bt('off'); bb.onclick = openBoardSetup; br.appendChild(bb); sc.appendChild(br); }
+    v.appendChild(sc);
+    if (fbState === 'ready') v.appendChild(el('p', 'note', t('privacy')));
+    const out = el('button', 'btn alt'); out.type = 'button'; out.style.marginTop = '14px';
+    if (authUser){ out.textContent = '🚪 ' + t('logout'); out.onclick = () => { if (window.confirm(t('confirm_logout'))) doLogout(); }; }
+    else { out.textContent = t('login_to_sync'); out.onclick = () => { prefs.guest = false; savePrefs(); authMode = 'login'; decide(); }; }
+    v.appendChild(out);
+  }
+
+  // ===== sheet =====
+  let sheetOpen = false;
+  function openSheet(){
+    if (sheetOpen) return; sheetOpen = true;
+    $('sb').hidden = false; $('sheet').hidden = false; document.body.style.overflow = 'hidden'; $('sheet').scrollTop = 0;
+    requestAnimationFrame(() => requestAnimationFrame(() => { $('sb').classList.add('open'); $('sheet').classList.add('open'); }));
+    setTimeout(() => $('sx').focus(), 80);
+  }
+  function closeSheet(){
+    if (!sheetOpen) return; sheetOpen = false;
+    if (ctl) ctl.abort();
+    $('sb').classList.remove('open'); $('sheet').classList.remove('open'); document.body.style.overflow = '';
+    setTimeout(() => { if (!sheetOpen){ $('sb').hidden = true; $('sheet').hidden = true; } }, 320);
+  }
+  $('sx').onclick = closeSheet; $('sb').onclick = closeSheet;
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+  const body = () => { const b = $('sbody'); b.textContent = ''; return b; };
+  function photoEl(thumb, alt){ const im = el('img', 'photo'); im.src = thumb; im.alt = alt || ''; return im; }
+  function bigBtn(label, fn){ const b = el('button', 'btn', label); b.type = 'button'; b.style.marginTop = '18px'; b.onclick = fn; return b; }
+  function showLoading(thumb){
+    const b = body(); b.appendChild(photoEl(thumb));
+    const c = el('div', 'center'); c.appendChild(el('span', 'wait', '🔥')); c.appendChild(el('p', 'smsg', t('analyzing')));
+    const stop = el('button', 'lnk', t('cancel')); stop.type = 'button'; stop.onclick = closeSheet; c.appendChild(stop); b.appendChild(c);
+  }
+  function showDescribe(thumb){
+    const b = body(); b.appendChild(photoEl(thumb)); b.appendChild(el('p', 'smsg', t('describe_prompt')));
+    const ta = document.createElement('textarea'); ta.rows = 2; ta.className = 'textarea'; ta.placeholder = t('describe_ph'); b.appendChild(ta);
+    b.appendChild(bigBtn(t('analyze_btn'), () => { const v = ta.value.trim(); if (!v){ ta.focus(); return; } run(thumb, null, v); }));
+  }
+  function showError(msg, thumb){ const b = body(); if (thumb) b.appendChild(photoEl(thumb)); b.appendChild(el('p', 'smsg', msg)); b.appendChild(bigBtn(t('ok'), closeSheet)); }
+  function showResult(entry, isNew){
+    const r = entry.result || {}; const b = body();
+    b.appendChild(photoEl(entry.thumb, r.subject));
+    if (isNew){
+      const n = streakCount(), k = entriesFor(entry.date).indexOf(entry) + 1;
+      b.appendChild(el('span', 'pill sun', k > 1 ? t('photo_k', { k, max: MAX_PER_DAY }) : (n <= 1 ? t('first_pill') : t('streak_pill', { n }))));
+    }
+    b.appendChild(el('span', 'pill' + (r.type === 'tanbeeh' ? ' warn' : ''), r.type === 'tameel' ? t('pill_reflect') : r.type === 'tanbeeh' ? t('pill_warn') : t('pill_note')));
+    if (r.subject) b.appendChild(el('p', 'subj', r.subject));
+    b.appendChild(el('h2', null, r.headline || '')); b.appendChild(el('p', 'refl', r.reflection || ''));
+    if (r.ruling && r.ruling.text){ const rule = el('div', 'rule'); rule.appendChild(el('b', null, r.ruling.status || '')); rule.appendChild(el('p', null, r.ruling.text)); b.appendChild(rule); }
+    if (r.practice){
+      const a = el('button', 'act'); a.type = 'button'; a.setAttribute('aria-pressed', entry.practiceDone ? 'true' : 'false');
+      const ck = el('span', 'ckk'); ck.appendChild(svg(IC.check)); const tx = el('div'); tx.appendChild(el('span', 't', t('practice_label'))); tx.appendChild(document.createTextNode(r.practice));
+      a.appendChild(ck); a.appendChild(tx);
+      a.onclick = () => { entry.practiceDone = !entry.practiceDone; a.setAttribute('aria-pressed', entry.practiceDone ? 'true' : 'false'); save(); }; b.appendChild(a);
+    }
+    if (r.source) b.appendChild(el('p', 'src', t('source_label') + ' ' + r.source));
+    b.appendChild(el('p', 'disc', t('disclaimer')));
+    if (r.local) b.appendChild(el('p', 'disc', t('local_note')));
+    b.appendChild(bigBtn(t('ok'), closeSheet));
+  }
+  function openEntry(e){ openSheet(); showResult(e, false); }
+
+  function celebrate(){
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const faces = ['🔥','⭐','✨','🌙','🎉','🌿'];
+    for (let i = 0; i < 26; i++){
+      const p = el('span', 'confetti', faces[i % faces.length]);
+      p.style.left = (Math.random() * 96) + 'vw'; p.style.fontSize = (18 + Math.random() * 18) + 'px'; document.body.appendChild(p);
+      const dx = (Math.random() - .5) * 120;
+      const a = p.animate([{ transform: 'translate(0,0) rotate(0deg)', opacity: 1 }, { transform: 'translate(' + dx + 'px,' + (window.innerHeight + 80) + 'px) rotate(' + (Math.random() * 540 - 270) + 'deg)', opacity: .9 }],
+        { duration: 1500 + Math.random() * 1400, delay: Math.random() * 350, easing: 'cubic-bezier(.3,.6,.4,1)', fill: 'forwards' });
+      a.onfinish = () => p.remove();
+    }
+  }
+
+  // ===== photo flow =====
+  function loadImg(file){
+    return new Promise((res, rej) => {
+      const url = URL.createObjectURL(file), im = new Image();
+      im.onload = () => { URL.revokeObjectURL(url); res(im); }; im.onerror = () => { URL.revokeObjectURL(url); rej(new Error('bad')); }; im.src = url;
+    });
+  }
+  function draw(im, max){
+    const sc = Math.min(1, max / Math.max(im.naturalWidth, im.naturalHeight));
+    const c = document.createElement('canvas'); c.width = Math.round(im.naturalWidth * sc); c.height = Math.round(im.naturalHeight * sc);
+    c.getContext('2d').drawImage(im, 0, 0, c.width, c.height); return c;
+  }
+  const toBlob = (c, q) => new Promise(r => c.toBlob(r, 'image/jpeg', q));
+
+  function buildPrompt(){
+    const prompt = [
+      'أنت مرافق لطيف لمسلم جديد في تطبيق اسمه "بيان". المستخدم صوّر صورة اليوم.',
+      'مهمتك: اربط ما في الصورة بالإسلام بطريقة دافئة وبسيطة، بدون وعظ ثقيل ولا أحكام قاسية.',
+      '', 'القواعد:',
+      '- إذا كانت الصورة طبيعة أو سماء أو شجر أو ماء أو حيوان أو شيء جميل: اجعل النوع "tameel" وقدّم تأملاً في خلق الله ونعمه.',
+      '- إذا فيها شيء ضار أو محرّم بوضوح (كحول، لحم خنزير، سجائر، تبذير ظاهر...): اجعل النوع "tanbeeh"، وبيّن الحكم والحكمة (الضرر الصحي أو غيره) بلطف، وطمئنه أن التغيير يكون بالتدرج.',
+      '- إذا فيها طعام أو منتج: اذكر ما قد يستدعي الانتباه (مكونات مشكوك فيها مثل الجيلاتين أو الكحول) إن وُجد، وإلا فاذكر نعمة الرزق.',
+      '- إذا الحكم محل خلاف بين العلماء فقل صراحة إن فيه خلافاً ولا تحسمه، وانصحه يسأل مرشداً أو عالماً موثوقاً.',
+      '- إذا الصورة عادية (مكتب، شارع، غرفة...): استخرج قيمة إسلامية قريبة منها (شكر، إتقان العمل، نظافة، صلة رحم، إلخ). اجعل النوع "neutral".',
+      '- إذا فيها أشخاص: لا تحدد هويتهم أبداً. تكلم عن قيمة مثل الأخوّة أو الإحسان أو الشكر فقط.',
+      '- لا تختلق آيات ولا أحاديث. اذكر مصدراً فقط إذا كنت متأكداً منه تماماً، وإلا اترك source فارغاً.',
+      '- لا تُصدر فتوى. أنت تذكّر وتربط ولا تفتي.',
+      '- إذا كانت الصورة غير مناسبة أو لا تُفهم: اجعل النوع "neutral" واعتذر بلطف في reflection واطلب صورة أخرى.',
+      '', (isAr() ? 'اكتب بالعربية البسيطة.' : 'Write all text values in simple ' + ({ fr: 'French', tr: 'Turkish', ur: 'Urdu', id: 'Indonesian', bn: 'Bengali', ms: 'Malay' }[L()] || 'English') + '.') + ' أرجع JSON فقط بهذا الشكل بدون أي كلام خارجه:',
+      '{"subject":"ما الذي تراه في الصورة في جملة قصيرة","type":"tameel أو tanbeeh أو neutral","headline":"عنوان قصير مؤثر","reflection":"٢ إلى ٣ جمل","ruling":null أو {"status":"متفق عليه أو فيه خلاف أو للتنبيه","text":"جملة أو جملتان"},"practice":"عمل صغير سهل يسويه اليوم في جملة واحدة","source":"مصدر إن كنت متأكداً وإلا نص فارغ"}'
+    ].join('\n');
+    return prompt;
+  }
+  async function askKnowledgeBase(blob, signal, desc){
+    const prompt = buildPrompt();
+    const opts = { signal, cache: false, modelTier: 'default' }; let full = prompt;
+    if (blob) opts.images = [blob]; else full += '\n\nملاحظة: لا تستطيع رؤية الصورة نفسها. المستخدم وصفها بهذه الكلمات: ' + desc;
+    return await sample.json(full, opts);
+  }
+  // Real photo analysis outside Claude (Google Gemini vision, called straight from the browser)
+  const blobB64 = b => new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(',')[1]); r.onerror = () => rej(new Error('read')); r.readAsDataURL(b); });
+  async function askGemini(blob, signal){
+    const data = await blobB64(blob);
+    const gen = { temperature: 0.4, responseMimeType: 'application/json', maxOutputTokens: 700 };
+    const mk = think => JSON.stringify({ contents: [{ parts: [{ text: buildPrompt() }, { inline_data: { mime_type: 'image/jpeg', data } }] }], generationConfig: think ? Object.assign({ thinkingConfig: { thinkingBudget: 0 } }, gen) : gen });
+    const bodyThink = mk(true), bodyPlain = mk(false);
+    let resp = null, usedModel = '';
+    const base = 'https://generativelanguage.googleapis.com/v1beta/models/';
+    const hdr = { 'Content-Type': 'application/json', 'x-goog-api-key': GEMINI_KEY };
+    const tried = [];
+    const LS = { get: k => { try { return localStorage.getItem(k); } catch(e){ return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch(e){} } };
+    // one request with its own 15s timeout (a slow model is skipped instead of making the user wait)
+    const post = async (m, body) => {
+      const ac = new AbortController(), tmo = setTimeout(() => ac.abort(), 15000), onAbort = () => ac.abort();
+      if (signal) signal.addEventListener('abort', onAbort);
+      try {
+        try { return await fetch(base + m + ':generateContent', { method: 'POST', signal: ac.signal, headers: hdr, body }); }
+        catch(err){
+          if (signal && signal.aborted) throw err;
+          if (ac.signal.aborted) return { ok: false, status: 0 };
+          return await fetch(base + m + ':generateContent?key=' + encodeURIComponent(GEMINI_KEY), { method: 'POST', signal: ac.signal, headers: { 'Content-Type': 'text/plain' }, body: body });
+        }
+      } catch(err){ if (signal && signal.aborted) throw err; return { ok: false, status: 0 }; }
+      finally { clearTimeout(tmo); if (signal) signal.removeEventListener('abort', onAbort); }
+    };
+    // try each model; busy (503/500/429), gone (404/403) or slow (0) -> next model
+    const BAD = [0, 400, 403, 404, 429, 500, 503];
+    const attemptAll = async (list, rounds) => {
+      for (let round = 0; round < rounds; round++){
+        for (const m of list){
+          const nt = 'bq_nothink_' + m;
+          resp = LS.get(nt) ? await post(m, bodyPlain) : await post(m, bodyThink);
+          if (resp.status === 400 && !LS.get(nt)){ LS.set(nt, '1'); resp = await post(m, bodyPlain); }   // model does not accept the "no thinking" option
+          tried.push(m.replace('gemini-', '') + ':' + resp.status);
+          if (resp.ok){ usedModel = m; return; }
+          if (!BAD.includes(resp.status)) return;
+        }
+        if (![0, 429, 500, 503].includes(resp.status)) return;
+        await new Promise(r => setTimeout(r, 800));
+      }
+    };
+    const listModels = async () => {
+      let out = [];
+      try {
+        const lr = await fetch(base.slice(0, -1) + '?pageSize=200', { signal, headers: { 'x-goog-api-key': GEMINI_KEY } });
+        if (lr.ok){
+          const lj = await lr.json();
+          const ver = n => { const m = /gemini-(\d+(?:\.\d+)?)/.exec(n); return m ? parseFloat(m[1]) : 0; };
+          out = (lj.models || [])
+            .filter(x => (x.supportedGenerationMethods || []).includes('generateContent'))
+            .map(x => String(x.name || '').replace('models/', ''))
+            .filter(n => /flash/.test(n) && !/image|tts|audio|live|embed|robotics|computer|learnlm|thinking|exp/.test(n))
+            .sort((x, y) => (ver(y) - ver(x)) || ((/lite/.test(x) ? 1 : 0) - (/lite/.test(y) ? 1 : 0)) || ((/preview/.test(x) ? 1 : 0) - (/preview/.test(y) ? 1 : 0)))
+            .slice(0, 6);
+          if (out.length) LS.set('bq_models_v1', JSON.stringify({ t: Date.now(), list: out }));
+        }
+      } catch(err){ if (signal && signal.aborted) throw err; }
+      return out;
+    };
+    // fast path: the model that worked last time (or the cached list) goes first, with no extra request
+    let cached = null;
+    try { const c = JSON.parse(LS.get('bq_models_v1') || 'null'); if (c && c.list && c.list.length && Date.now() - c.t < 6 * 3600 * 1000) cached = c.list.slice(); } catch(e){}
+    const lastOk = LS.get('bq_model_ok');
+    const first = [];
+    if (lastOk) first.push(lastOk);
+    (cached || ['gemini-flash-latest', 'gemini-flash-lite-latest']).forEach(n => { if (!first.includes(n)) first.push(n); });
+    await attemptAll(first, 1);
+    // slow path (only if the fast path failed): ask Google which models this key can use, plus known names as a safety net
+    if (!resp.ok && BAD.includes(resp.status)){
+      let models = cached ? [] : await listModels();
+      ['gemini-flash-latest', 'gemini-flash-lite-latest', GEMINI_MODEL, 'gemini-3.5-flash-lite', 'gemini-2.5-flash'].forEach(n => { if (!models.includes(n)) models.push(n); });
+      models = models.filter(n => !first.includes(n)).concat(first.slice(0, 1));
+      await attemptAll(models, 2);
+    }
+    if (resp.ok && usedModel) LS.set('bq_model_ok', usedModel);
+    if (resp.status === 429) throw { code: 'rate_limited' };
+    if (!resp.ok){ let m = ''; try { const ej = await resp.json(); m = (ej.error && (ej.error.message || ej.error.status)) || ''; } catch(e){} throw { code: 'http_' + resp.status, msg: tried.slice(-6).join(' ') + ' | ' + String(m).slice(0, 90) }; }
+    const j = await resp.json();
+    let txt = (((j.candidates || [])[0] || {}).content || {}).parts; txt = txt && txt[0] && txt[0].text;
+    if (!txt) throw { code: 'empty' };
+    txt = txt.replace(/```json|```/g, '').trim();
+    let r; try { r = JSON.parse(txt); } catch(e){ throw { code: 'invalid_json' }; }
+    if (Array.isArray(r)) r = r[0];
+    if (!r || typeof r.headline !== 'string' || typeof r.reflection !== 'string') throw { code: 'invalid_json' };
+    if (!['tameel', 'tanbeeh', 'neutral'].includes(r.type)) r.type = 'neutral';
+    return r;
+  }
+  const setBusy = v => document.body.classList.toggle('busy', v);
+
+  async function handle(file){
+    if (!file) return;
+    openSheet();
+    if (todayCount() >= MAX_PER_DAY){ showError(t('limit_reached', { max: MAX_PER_DAY })); $('cam').value = ''; $('gal').value = ''; return; }
+    let blob, thumb;
+    try { const im = await loadImg(file); blob = await toBlob(draw(im, 640), 0.72); thumb = draw(im, 440).toDataURL('image/jpeg', 0.58); }
+    catch(e){ showError(t('read_error')); return; }
+    if (!sample && !GEMINI_KEY){ finishLocal(thumb); return; }
+    if (sample && !imagesOk){ showDescribe(thumb); return; }
+    await run(thumb, blob, null);
+  }
+  function addEntry(entry){
+    const first = entriesFor(entry.date).length === 0;
+    state.entries.unshift(entry); save(); postToFriends(entry); publishBoard(); refreshViews();
+    if (sheetOpen){ showResult(entry, true); if (first) celebrate(); }
+  }
+  function finishLocal(thumb){
+    const k = todayCount(), i = (promptIndex() + k) % PROMPTS.length, L2 = LOCAL[i][isAr() ? 'ar' : 'en'], La = LOCAL[i].ar;
+    const r = { subject: k === 0 ? t('subj_challenge', { p: pText(i) }) : t('subj_extra'), type: 'tameel', headline: L2.h, reflection: L2.r, ruling: null, practice: L2.p, source: L2.src || '', local: true };
+    addEntry({ date: today(), ts: Date.now(), thumb, result: r, practiceDone: false });
+  }
+  async function run(thumb, blob, desc){
+    setBusy(true); showLoading(thumb); ctl = new AbortController();
+    let timedOut = false; const tm = setTimeout(() => { timedOut = true; try { ctl && ctl.abort(); } catch(e){} }, 50000);
+    try {
+      const r = sample ? await askKnowledgeBase(blob, ctl.signal, desc) : await askGemini(blob, ctl.signal);
+      if (!r || typeof r !== 'object') throw { code: 'invalid_json' };
+      addEntry({ date: today(), ts: Date.now(), thumb, result: r, practiceDone: false });
+    } catch(e){
+      const c = e && e.code;
+      if (timedOut) showError(t('generic_error') + ' [timeout]', thumb);
+      else if (c === 'cancelled'){}
+      else if (c === 'rate_limited') showError(t('err_many'), thumb);
+      else showError(t('generic_error') + (sample ? '' : ' [' + String((e && (e.code || e.message)) || 'unknown') + ((e && e.msg) ? ': ' + e.msg : '') + ']'), thumb);
+    } finally { clearTimeout(tm); setBusy(false); ctl = null; $('cam').value = ''; $('gal').value = ''; }
+  }
+  $('cam').addEventListener('change', e => handle(e.target.files[0]));
+  $('gal').addEventListener('change', e => handle(e.target.files[0]));
+
+  // ===== Firebase =====
+  let fb = null, fbState = FIREBASE_CONFIG.apiKey ? 'idle' : 'off', authState = FIREBASE_CONFIG.apiKey ? 'unknown' : 'out';
+  let authUser = null, me = null, myUnsub = null, fbPromise = null, pendingName = '';
+  const friendData = new Map(), friendUnsubs = new Map();
+  const CODE_CHARS = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+  const newCode = () => Array.from({ length: 6 }, () => CODE_CHARS[Math.floor(Math.random() * CODE_CHARS.length)]).join('');
+  let pendingAdd = (new URLSearchParams(location.search).get('add') || '').toUpperCase();
+
+  function fbInit(){
+    if (fbPromise) return fbPromise;
+    if (!FIREBASE_CONFIG.apiKey){ fbState = 'off'; return (fbPromise = Promise.resolve()); }
+    fbState = 'loading';
+    fbPromise = (async () => {
+      try {
+        const base = 'https://www.gstatic.com/firebasejs/' + FB_VER + '/';
+        const [A, AU, FS] = await Promise.all([import(base + 'firebase-app.js'), import(base + 'firebase-auth.js'), import(base + 'firebase-firestore.js')]);
+        const app = A.initializeApp(FIREBASE_CONFIG); const auth = AU.getAuth(app);
+        fb = { db: FS.getFirestore(app), auth, AU, FS, uid: null };
+        AU.onAuthStateChanged(auth, onAuth);
+      } catch(e){ console.error(e); fbState = 'error'; authState = 'out'; decide(); }
+    })();
+    return fbPromise;
+  }
+  async function onAuth(user){
+    authUser = user || null;
+    if (!user){ teardown(); authState = 'out'; fbState = 'out'; decide(); refreshViews(); return; }
+    authState = 'in'; fb.uid = user.uid;
+    try {
+      const snap = await fb.FS.getDoc(fb.FS.doc(fb.db, 'users', fb.uid));
+      if (snap.exists()) startSocial();
+      else {
+        const nm = pendingName || user.displayName || (user.email || '').split('@')[0] || t('name_default'); pendingName = '';
+        if (!(await createProfile(nm))){ fbState = 'error'; }
+      }
+    } catch(e){ console.error(e); fbState = 'error'; }
+    decide(); refreshViews();
+  }
+  function teardown(){
+    if (myUnsub){ myUnsub(); myUnsub = null; }
+    friendUnsubs.forEach(u => u()); friendUnsubs.clear(); friendData.clear(); me = null; if (fb) fb.uid = null;
+  }
+  function startSocial(){
+    fbState = 'ready'; const { FS, db, uid } = fb; setTimeout(publishBoard, 1500);
+    if (myUnsub) myUnsub();
+    myUnsub = FS.onSnapshot(FS.doc(db, 'users', uid), snap => {
+      me = snap.data() || me; syncFriends(); refreshViews();
+      if (pendingAdd){ const c = pendingAdd; pendingAdd = ''; try { history.replaceState(null, '', location.pathname); } catch(e){} addByCode(c).then(r => toast(r.text)); }
+    }, e => console.error(e));
+  }
+  function syncFriends(){
+    const { FS, db } = fb; const ids = new Set((me && me.friends) || []);
+    ids.forEach(id => {
+      if (friendUnsubs.has(id)) return;
+      friendUnsubs.set(id, FS.onSnapshot(FS.doc(db, 'users', id),
+        s => { if (s.exists()) friendData.set(id, s.data()); else friendData.delete(id); refreshViews(); },
+        () => { friendData.set(id, { denied: true, name: '' }); refreshViews(); }));
+    });
+    [...friendUnsubs.keys()].forEach(id => { if (!ids.has(id)){ friendUnsubs.get(id)(); friendUnsubs.delete(id); friendData.delete(id); } });
+  }
+  async function createProfile(name){
+    const { FS, db, uid } = fb; let lastErr = null;
+    for (let i = 0; i < 6; i++){
+      const code = newCode();
+      try {
+        await FS.setDoc(FS.doc(db, 'codes', code), { uid, name });
+        await FS.setDoc(FS.doc(db, 'users', uid), { name, code, friends: [], likedBy: [], streak: 0, lastDate: '', date: '', photo: '', photos: [], headline: '', caption: '', ts: 0 });
+        startSocial(); const e = state.entries[0]; if (e) postToFriends(e); return true;
+      } catch(e){ lastErr = e; }
+    }
+    console.error(lastErr); return false;
+  }
+  async function addByCode(raw){
+    const code = (raw || '').trim().toUpperCase();
+    if (code.length !== 6) return { ok: false, text: t('code6') };
+    try {
+      const { FS, db, uid } = fb;
+      const s = await FS.getDoc(FS.doc(db, 'codes', code));
+      if (!s.exists()) return { ok: false, text: t('code_nf') };
+      const f = s.data();
+      if (f.uid === uid) return { ok: false, text: t('code_self') };
+      if (me && (me.friends || []).includes(f.uid)) return { ok: false, text: t('code_already') };
+      await FS.updateDoc(FS.doc(db, 'users', uid), { friends: FS.arrayUnion(f.uid) });
+      await FS.updateDoc(FS.doc(db, 'users', f.uid), { friends: FS.arrayUnion(uid) });
+      return { ok: true, text: t('added', { name: f.name || '' }) };
+    } catch(e){ console.error(e); return { ok: false, text: t('add_failed') }; }
+  }
+  async function removeFriend(id){ try { const { FS, db, uid } = fb; await FS.updateDoc(FS.doc(db, 'users', uid), { friends: FS.arrayRemove(id) }); } catch(e){ console.error(e); } }
+  async function toggleLike(id, d){
+    if (!fb || !fb.uid) return;
+    const liked = (d.likedBy || []).includes(fb.uid), prev = (d.likedBy || []).slice();
+    const set = new Set(prev); liked ? set.delete(fb.uid) : set.add(fb.uid); d.likedBy = [...set]; refreshViews();
+    try { const { FS, db, uid } = fb; await FS.updateDoc(FS.doc(db, 'users', id), { likedBy: liked ? FS.arrayRemove(uid) : FS.arrayUnion(uid) }); }
+    catch(e){ console.error(e); d.likedBy = prev; refreshViews(); toast(t('like_failed')); }
+  }
+  async function postToFriends(entry){
+    if (!fb || fbState !== 'ready' || !prefs.share) return;
+    try {
+      const list = entriesFor(entry.date), last = list[list.length - 1] || entry, r = last.result || {};
+      const data = { photos: list.map(e => e.thumb), photo: last.thumb, headline: r.headline || '', caption: ((r.reflection || '').split(/[.。!؟?]/)[0] || '').slice(0, 90), date: entry.date, lastDate: entry.date, ts: entry.ts, streak: streakCount() };
+      if (!me || me.date !== entry.date || !Array.isArray(me.likedBy)) data.likedBy = [];
+      await fb.FS.updateDoc(fb.FS.doc(fb.db, 'users', fb.uid), data);
+    } catch(e){ console.error(e); }
+  }
+  function authMsg(e){
+    const c = (e && e.code) || '';
+    if (c.includes('email-already-in-use')) return t('err_used'); if (c.includes('invalid-email')) return t('err_email'); if (c.includes('weak-password')) return t('err_weak');
+    if (c.includes('invalid-credential') || c.includes('user-not-found') || c.includes('wrong-password')) return t('err_cred');
+    if (c.includes('too-many-requests')) return t('err_many'); if (c.includes('network')) return t('err_net');
+    if (c.includes('operation-not-allowed')) return t('err_off'); if (c.includes('api-key')) return t('err_api'); if (c.includes('unauthorized-domain')) return t('err_domain');
+    if (c.includes('popup-closed') || c.includes('cancelled-popup')) return '';
+    return t('err_generic');
+  }
+  async function ready(){ await fbInit(); return !!fb; }
+  async function doSignup(name, email, pw){
+    if (!(await ready())) return t('err_net'); pendingName = name;
+    try { await fb.AU.createUserWithEmailAndPassword(fb.auth, email, pw); return ''; } catch(e){ pendingName = ''; return authMsg(e); }
+  }
+  async function doLogin(email, pw){ if (!(await ready())) return t('err_net'); try { await fb.AU.signInWithEmailAndPassword(fb.auth, email, pw); return ''; } catch(e){ return authMsg(e); } }
+  async function doGoogle(){
+    if (!(await ready())) return t('err_net');
+    try { await fb.AU.signInWithPopup(fb.auth, new fb.AU.GoogleAuthProvider()); return ''; } catch(e){ return authMsg(e); }
+  }
+  async function doReset(email){ if (!(await ready())) return { ok: false, text: t('err_net') }; try { await fb.AU.sendPasswordResetEmail(fb.auth, email); return { ok: true, text: t('reset_sent') }; } catch(e){ return { ok: false, text: authMsg(e) }; } }
+  async function doLogout(){ try { await fb.AU.signOut(fb.auth); } catch(e){ console.error(e); } }
+
+  // ===== Ask Bayan (Botpress webchat) =====
+  const BAYAAN_INJECT = 'https://cdn.botpress.cloud/webchat/v5.0/inject.js';
+  function bayaanInit(){
+    const ar = isAr();
+    return {
+      botId: 'b07b0dab-bf97-43ed-8e82-e2810d95eb4e', clientId: 'd5f033d0-9759-4d7f-b4ae-cbcc45eb9160',
+      configuration: {
+        version: 'v2', botName: ar ? 'بيان' : 'Bayan',
+        botDescription: ar ? 'مرشد لطيف لأساسيات الإسلام والعبادات، يعتمد على مصادر موثوقة.' : 'A gentle guide to the basics of Islam and worship, based on trusted sources.',
+        website: {}, email: {}, phone: {}, termsOfService: {}, privacyPolicy: {},
+        color: '#34503F', themeMode: 'light', feedbackEnabled: true, allowFileUpload: true, soundEnabled: true,
+        embeddedChatId: 'bp-embedded-webchat', conversationHistory: true, homePageEnabled: true,
+        welcomeHeading: ar ? 'أهلاً فيك، تعلّم بالسرعة اللي تناسبك' : 'Welcome, learn at your own pace',
+        welcomeSubtitle: ar ? 'اسأل عن العقيدة أو العبادات أو أي مصطلح تبي يُشرح لك ببساطة.' : 'Ask about beliefs, worship, or any term you want explained simply.',
+        conversationStartersEnabled: true,
+        conversationStarters: (ar
+          ? ['ما هي أساسيات العقيدة في الإسلام؟', 'اشرح لي الوضوء خطوة بخطوة', 'ما معنى الشهادتين؟', 'كيف أفهم اختلاف آراء العلماء؟']
+          : ['What are the basics of belief in Islam?', 'Explain wudu step by step', 'What is the meaning of the two testimonies?', 'How do I understand scholars’ differing opinions?']
+        ).map((x, i) => ({ id: 'bootstrap-' + (i + 1), text: x, enabled: true })),
+        conversationStartersDisplayStyle: 'cards', citationsEnabled: true
+      }
+    };
+  }
+  let bpState = 'idle', bpScript = null, bpTimer = null, askQuestion = '';
+  const bpHasUI = () => { const c = document.getElementById('bp-embedded-webchat'); return !!c && c.children.length > 0; };
+  function bpOk(){
+    bpState = 'ready'; const m = $('bpMsg'); if (m) m.hidden = true; clearTimeout(bpTimer);
+    if (askQuestion){ try { window.botpress.sendMessage(askQuestion); askQuestion = ''; const qb = $('qBanner'); if (qb) qb.hidden = true; } catch(e){} }
+  }
+  function bpFail(){
+    if (bpState === 'ready') return; bpState = 'failed'; clearTimeout(bpTimer);
+    const m = $('bpMsg'); if (!m) return; m.hidden = false; m.textContent = t('bp_fail');
+    const r = el('button', 'lnk', t('retry')); r.type = 'button'; r.onclick = () => { if (bpScript) bpScript.remove(); bpScript = null; bpState = 'idle'; loadBayaan(); }; m.appendChild(r);
+  }
+  function loadBayaan(){
+    if (bpState === 'loading' || bpState === 'ready') return; bpState = 'loading';
+    const m = $('bpMsg'); m.hidden = false; m.textContent = t('bp_loading');
+    bpScript = document.createElement('script'); bpScript.src = BAYAAN_INJECT;
+    bpScript.onload = () => {
+      try {
+        const bp = window.botpress; const open = () => { try { bp.open(); } catch(e){} };
+        bp.on('webchat:initialized', () => { bpOk(); open(); }); bp.on('webchat:ready', () => { open(); if (bpHasUI()) bpOk(); });
+        bp.init(bayaanInit());
+      } catch(e){ bpFail(); }
+    };
+    bpScript.onerror = bpFail; document.head.appendChild(bpScript);
+    bpTimer = setTimeout(() => { if (bpHasUI()) bpOk(); else bpFail(); }, 15000);
+  }
+  function openAsk(q){
+    if (typeof q === 'string' && q) askQuestion = q;
+    const v = $('vAsk');
+    let host = document.getElementById('bp-embedded-webchat');
+    if (!host){
+      v.textContent = '';
+      const hd = el('div', 'askhead'); hd.appendChild(el('h2', null, t('ask_title'))); v.appendChild(hd);
+      const qb = el('div', 'qbanner'); qb.id = 'qBanner'; qb.hidden = true; v.appendChild(qb);
+      const m = el('div', 'bp-msg'); m.id = 'bpMsg'; m.hidden = true; v.appendChild(m);
+      const c = el('div'); c.id = 'bp-embedded-webchat'; c.dir = isRtl() ? 'rtl' : 'ltr'; v.appendChild(c);
+    }
+    const qb = $('qBanner');
+    if (askQuestion && bpState !== 'ready'){
+      qb.hidden = false; qb.textContent = ''; qb.appendChild(el('span', null, t('your_question') + ' ' + askQuestion));
+      const cp = el('button', null, t('copy')); cp.type = 'button'; cp.onclick = async () => { try { await navigator.clipboard.writeText(askQuestion); toast(t('copied')); } catch(e){} }; qb.appendChild(cp);
+    } else if (askQuestion && bpState === 'ready'){ bpOk(); } else qb.hidden = true;
+    loadBayaan();
+  }
+  function closeAsk(){ /* Ask is a regular tab now */ }
+
+  // ===== Daily Wird (Quran reader) =====
+  const SURAH_AR = ['الفاتحة','البقرة','آل عمران','النساء','المائدة','الأنعام','الأعراف','الأنفال','التوبة','يونس','هود','يوسف','الرعد','إبراهيم','الحجر','النحل','الإسراء','الكهف','مريم','طه','الأنبياء','الحج','المؤمنون','النور','الفرقان','الشعراء','النمل','القصص','العنكبوت','الروم','لقمان','السجدة','الأحزاب','سبأ','فاطر','يس','الصافات','ص','الزمر','غافر','فصلت','الشورى','الزخرف','الدخان','الجاثية','الأحقاف','محمد','الفتح','الحجرات','ق','الذاريات','الطور','النجم','القمر','الرحمن','الواقعة','الحديد','المجادلة','الحشر','الممتحنة','الصف','الجمعة','المنافقون','التغابن','الطلاق','التحريم','الملك','القلم','الحاقة','المعارج','نوح','الجن','المزمل','المدثر','القيامة','الإنسان','المرسلات','النبأ','النازعات','عبس','التكوير','الانفطار','المطففين','الانشقاق','البروج','الطارق','الأعلى','الغاشية','الفجر','البلد','الشمس','الليل','الضحى','الشرح','التين','العلق','القدر','البينة','الزلزلة','العاديات','القارعة','التكاثر','العصر','الهمزة','الفيل','قريش','الماعون','الكوثر','الكافرون','النصر','المسد','الإخلاص','الفلق','الناس'];
+  const WS = {
+    ar: { title: 'وِردك اليومي', sub: 'اقرأ من كتاب الله كل يوم وشاركه مع أصدقائك', today: 'قراءة اليوم', goal: 'هدفك اليومي', one: 'صفحة', two: 'صفحتان', many: 'صفحات', doneBadge: '✅ قرأتَ وِردك اليومي', notYet: 'لم تكمل وِردك بعد', cont: 'تابع القراءة', start: 'ابدأ القراءة', page: 'صفحة', of: 'من', juz: 'الجزء', khatma: 'ختمتك', mark: '✓ قرأتُ هذه الصفحة', marked: '✓ تمّت قراءتها', next: 'التالية', prev: 'السابقة', go: 'اذهب', goPh: 'الصفحة', back: 'رجوع', loading: 'جاري تحميل الصفحة…', fail: 'تعذّر تحميل الصفحة. تأكد من الإنترنت ثم أعد المحاولة.', retry: 'إعادة المحاولة', shareNote: 'يُشارك وِردك مع أصدقائك، ويمكنك إيقاف المشاركة من «حسابي».', toastDone: 'ما شاء الله! أتممت وِردك اليوم 🌙', toastPage: 'تم تسجيل الصفحة ✓', fTitle: '📖 وِرد الأصدقاء اليوم', you: 'أنت', fDone: 'قرأ وِرده ✓', fNot: 'لم يقرأ بعد', homeDone: 'وِردك اليوم: تمّ ✓', homeNot: 'وِردك اليوم: لم تقرأ بعد', surah: 'سورة', khatmaDone: 'مبارك! أتممت ختمة كاملة 🎉', pagesToday: 'صفحات اليوم' },
+    en: { title: 'Daily Wird', sub: 'Read from the Book of Allah every day and share it with friends', today: "Today's reading", goal: 'Daily goal', one: 'page', two: 'pages', many: 'pages', doneBadge: '✅ You read your daily wird', notYet: "You haven't finished your wird yet", cont: 'Continue reading', start: 'Start reading', page: 'Page', of: 'of', juz: 'Juz', khatma: 'Your khatma', mark: '✓ I read this page', marked: '✓ Page read', next: 'Next', prev: 'Previous', go: 'Go', goPh: 'Page', back: 'Back', loading: 'Loading page…', fail: 'Could not load the page. Check your internet and retry.', retry: 'Retry', shareNote: 'Your wird is shared with friends. You can turn sharing off in “Me”.', toastDone: 'MashaAllah! You completed your daily wird 🌙', toastPage: 'Page recorded ✓', fTitle: "📖 Friends' wird today", you: 'You', fDone: 'Read their wird ✓', fNot: 'Not yet', homeDone: 'Your wird today: done ✓', homeNot: "Your wird today: not read yet", surah: 'Surah', khatmaDone: 'Congratulations! You completed a full khatma 🎉', pagesToday: 'Pages today' }
+  };
+  WS.en.wstreak = '{n}-day wird streak'; WS.ar.wstreak = '{n} يوم متتالي في الورد';
+  Object.keys(I18N_MORE).forEach(c => { WS[c] = Object.assign({}, WS.en, I18N_MORE[c].ws); });
+  const wt = k => (WS[WS[L()] ? L() : 'en'][k]);
+  const faDigits = n => String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+  const wirdOf = () => state.wird;
+  const wirdPagesToday = () => ((state.wird.days || {})[today()] || []);
+  const wirdDone = d => !!(state.wird.complete || {})[d || today()];
+  const goalLabel = n => n === 1 ? (isAr() ? 'صفحة واحدة' : '1 ' + wt('one')) : n === 2 ? (isAr() ? 'صفحتان' : '2 ' + wt('two')) : (isAr() ? faDigits(n) + ' صفحات' : n + ' ' + wt('many'));
+  function wirdStreakCount(){
+    const set = new Set(Object.keys(state.wird.complete || {})); let d = new Date(), n = 0;
+    if (!set.has(ymd(d))) d.setDate(d.getDate() - 1);
+    while (set.has(ymd(d))){ n++; d.setDate(d.getDate() - 1); }
+    return n;
+  }
+  const nextPage = () => ((state.wird.pos || 0) % 604) + 1;
+  let wirdOpen = false, wirdPage = 1, wirdData = null, wirdState = 'idle'; // idle | loading | ok | fail
+
+  async function syncWird(){
+    if (!fb || fbState !== 'ready' || !prefs.share) return;
+    try {
+      const w = state.wird, d = today();
+      await fb.FS.updateDoc(fb.FS.doc(fb.db, 'users', fb.uid), { wirdDate: d, wirdDone: !!(w.complete || {})[d], wirdPages: ((w.days || {})[d] || []).length, wirdGoal: w.goal, wirdPos: w.pos || 0, wirdStreak: wirdStreakCount(), wirdTs: Date.now() });
+    } catch(e){ console.error(e); }
+  }
+  function normAr(s){ return String(s).replace(/[\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g, '').replace(/ٱ/g, 'ا'); }
+  async function fetchQuranPage(n){
+    const ck = 'bq_p' + n;
+    try { const c = localStorage.getItem(ck); if (c){ const j = JSON.parse(c); if (j && j.length) return j; } } catch(e){}
+    let ay = null;
+    try {
+      const r = await fetch('https://api.alquran.cloud/v1/page/' + n + '/quran-uthmani');
+      if (r.ok){ const j = await r.json(); ay = ((j.data && j.data.ayahs) || []).map(a => ({ s: a.surah.number, n: a.numberInSurah, t: a.text, j: a.juz })); }
+    } catch(e){}
+    if (!ay || !ay.length){
+      try {
+        const r = await fetch('https://api.quran.com/api/v4/quran/verses/uthmani?page_number=' + n);
+        if (r.ok){ const j = await r.json(); ay = (j.verses || []).map(v => { const k = String(v.verse_key).split(':'); return { s: +k[0], n: +k[1], t: v.text_uthmani, j: 0 }; }); }
+      } catch(e){}
+    }
+    if (!ay || !ay.length) throw new Error('quran_fetch');
+    try { localStorage.setItem(ck, JSON.stringify(ay)); } catch(e){}
+    return ay;
+  }
+  async function loadWirdPage(n){
+    wirdPage = n; wirdState = 'loading'; wirdData = null; renderWird();
+    try {
+      const ay = await fetchQuranPage(n);
+      if (wirdPage !== n) return;
+      wirdData = ay; wirdState = 'ok'; renderWird();
+      if (n < 604) fetchQuranPage(n + 1).catch(() => {});
+    } catch(e){ if (wirdPage === n){ wirdState = 'fail'; renderWird(); } }
+  }
+  function markPageRead(n){
+    const w = state.wird, d = today();
+    w.days = w.days || {}; w.complete = w.complete || {};
+    const arr = w.days[d] || [];
+    if (!arr.includes(n)) arr.push(n);
+    w.days[d] = arr;
+    let khatmaDone = false;
+    if (n === 604){ w.pos = 0; w.khatmas = (w.khatmas || 0) + 1; khatmaDone = true; } else w.pos = n;
+    let first = false;
+    if (arr.length >= w.goal && !w.complete[d]){ w.complete[d] = true; first = true; }
+    save(); syncWird();
+    if (first){ celebrate(); toast(wt('toastDone')); } else if (khatmaDone){ celebrate(); toast(wt('khatmaDone')); } else toast(wt('toastPage'));
+    renderWird();
+  }
+  function setWirdGoal(g){
+    const w = state.wird, d = today(); w.goal = g; w.complete = w.complete || {};
+    if (((w.days || {})[d] || []).length >= g && !w.complete[d]){ w.complete[d] = true; celebrate(); toast(wt('toastDone')); }
+    save(); syncWird(); renderWird();
+  }
+  function wirdBtn(label, fn, alt){ const b = el('button', 'btn' + (alt ? ' alt' : ''), label); b.type = 'button'; b.onclick = fn; return b; }
+  function renderWird(){
+    const v = $('vWird'); if (!v) return; v.textContent = '';
+    const w = state.wird, done = wirdDone(), cnt = wirdPagesToday().length;
+    const a = el('div', 'arch'); a.appendChild(logoEl(true)); a.appendChild(el('h1', 't', wt('title'))); a.appendChild(el('p', 'sub', wt('sub'))); v.appendChild(a);
+    if (wirdOpen){ renderWirdReader(v); return; }
+    const c = el('div', 'card');
+    c.appendChild(el('div', 'logged', wt('today')));
+    const big = el('div', 'headline', (isAr() ? faDigits(Math.min(cnt, 99)) + ' / ' + faDigits(w.goal) : cnt + ' / ' + w.goal) + ' ' + (isAr() ? (w.goal === 1 ? 'صفحة' : w.goal === 2 ? 'صفحتين' : 'صفحات') : (w.goal === 1 ? wt('one') : w.goal === 2 ? wt('two') : wt('many')))); c.appendChild(big);
+    const bar = el('div', 'wprog'); const fill = el('b'); fill.style.width = Math.min(100, Math.round(cnt / w.goal * 100)) + '%'; bar.appendChild(fill); c.appendChild(bar);
+    c.appendChild(done ? el('div', 'wbadge', wt('doneBadge')) : el('p', 'desc', wt('notYet')));
+    const ws = wirdStreakCount(); if (ws > 0) c.appendChild(el('div', 'logged', '🔥 ' + (isAr() ? faDigits(ws) + (ws === 1 ? ' يوم متتالي في الورد' : ws === 2 ? ' يومان متتاليان في الورد' : ' أيام متتالية في الورد') : wt('wstreak').replace('{n}', ws))));
+    c.appendChild(el('div', 'logged', wt('goal')));
+    const gs = el('div', 'wgoals');
+    [1, 2, 3, 5, 10].forEach(g => { const b = el('button', null, goalLabel(g)); b.type = 'button'; b.setAttribute('aria-pressed', w.goal === g ? 'true' : 'false'); b.onclick = () => setWirdGoal(g); gs.appendChild(b); });
+    c.appendChild(gs);
+    const np = nextPage();
+    const kb = el('div', 'logged', wt('khatma') + ': ' + wt('page') + ' ' + (isAr() ? faDigits(w.pos || 0) : (w.pos || 0)) + ' ' + wt('of') + ' ' + (isAr() ? '٦٠٤' : '604') + (w.khatmas ? '  ·  🏅 ' + (isAr() ? faDigits(w.khatmas) : w.khatmas) : ''));
+    kb.style.marginTop = '14px'; c.appendChild(kb);
+    const kbar = el('div', 'wprog'); const kf = el('b'); kf.style.width = Math.round(((w.pos || 0) / 604) * 100) + '%'; kbar.appendChild(kf); c.appendChild(kbar);
+    const go = wirdBtn((w.pos ? wt('cont') : wt('start')) + ' · ' + wt('page') + ' ' + (isAr() ? faDigits(np) : np), () => { wirdOpen = true; loadWirdPage(np); }); go.style.marginTop = '14px'; c.appendChild(go);
+    c.appendChild(el('p', 'logged', wt('shareNote')));
+    v.appendChild(c);
+  }
+  function renderWirdReader(v){
+    const n = wirdPage, w = state.wird, read = wirdPagesToday().includes(n);
+    const top = el('div', 'wnav');
+    const bk = wirdBtn(wt('back'), () => { wirdOpen = false; renderWird(); }, true); bk.style.width = 'auto'; bk.style.padding = '0 18px'; top.appendChild(bk);
+    const jr = el('div', 'wjump'); const inp = el('input'); inp.type = 'number'; inp.min = '1'; inp.max = '604'; inp.placeholder = wt('goPh'); inp.inputMode = 'numeric';
+    const gb = el('button', null, wt('go')); gb.type = 'button'; gb.onclick = () => { const x = parseInt(inp.value, 10); if (x >= 1 && x <= 604) loadWirdPage(x); };
+    inp.onkeydown = e => { if (e.key === 'Enter') gb.click(); };
+    jr.appendChild(inp); jr.appendChild(gb); top.appendChild(jr); v.appendChild(top);
+    const c = el('div', 'card');
+    if (wirdState === 'loading') c.appendChild(el('p', 'bp-msg', wt('loading')));
+    else if (wirdState === 'fail'){ c.appendChild(el('p', 'bp-msg', wt('fail'))); c.appendChild(wirdBtn(wt('retry'), () => loadWirdPage(n))); }
+    else if (wirdData){
+      const qp = el('div', 'qpage'); qp.dir = 'rtl';
+      wirdData.forEach(a => {
+        if (a.n === 1){
+          const sb = el('div', 'qsurah', wt('surah') + ' ' + (SURAH_AR[a.s - 1] || a.s)); qp.appendChild(sb);
+        }
+        let txt = a.t || '';
+        if (a.n === 1 && a.s !== 1 && a.s !== 9){
+          const tk = txt.split(' ');
+          if (tk.length > 4 && normAr(tk.slice(0, 4).join(' ')) === 'بسم الله الرحمن الرحيم'){ qp.appendChild(el('div', 'qbism', tk.slice(0, 4).join(' '))); txt = tk.slice(4).join(' '); }
+        }
+        qp.appendChild(document.createTextNode(txt + ' ')); qp.appendChild(el('span', 'qnum', '﴿' + faDigits(a.n) + '﴾')); qp.appendChild(document.createTextNode(' '));
+      });
+      c.appendChild(qp);
+      const juz = (wirdData[0] && wirdData[0].j) ? ' · ' + wt('juz') + ' ' + (isAr() ? faDigits(wirdData[0].j) : wirdData[0].j) : '';
+      c.appendChild(el('div', 'qmeta', wt('page') + ' ' + (isAr() ? faDigits(n) : n) + ' ' + wt('of') + ' ' + (isAr() ? '٦٠٤' : '604') + juz));
+    }
+    v.appendChild(c);
+    if (wirdState === 'ok'){
+      const mb = wirdBtn(read ? wt('marked') : wt('mark'), () => { if (!read) markPageRead(n); }, read); mb.style.marginTop = '14px'; if (read) mb.disabled = true; v.appendChild(mb);
+      if (wirdDone()) v.appendChild(el('div', 'wbadge', wt('doneBadge')));
+    }
+    const nv = el('div', 'wnav');
+    const pv = wirdBtn(wt('prev'), () => { if (n > 1) loadWirdPage(n - 1); }, true); pv.style.width = 'auto'; pv.style.padding = '0 22px'; if (n <= 1) pv.disabled = true;
+    const nx = wirdBtn(wt('next'), () => { if (n < 604) loadWirdPage(n + 1); }, true); nx.style.width = 'auto'; nx.style.padding = '0 22px'; if (n >= 604) nx.disabled = true;
+    nv.appendChild(pv); nv.appendChild(nx); v.appendChild(nv);
+  }
+  function wirdRow(){
+    const done = wirdDone(), c = el('button', 'card wrow'); c.type = 'button';
+    c.appendChild(el('span', 'wic', done ? '✅' : '📖')); c.appendChild(el('b', null, done ? wt('homeDone') : wt('homeNot')));
+    c.onclick = () => setView('wird'); return c;
+  }
+  function friendsWirdCard(friends){
+    const c = el('div', 'card'); c.appendChild(el('div', 'logged', wt('fTitle')));
+    const row = (name, done, streak) => { const r = el('div', 'wfr'); r.appendChild(el('span', 'wfa', (name || '?').charAt(0))); const nm = el('div', 'wfn'); nm.appendChild(el('b', null, name)); nm.appendChild(el('small', done ? 'ok' : null, done ? wt('fDone') : wt('fNot'))); r.appendChild(nm); if (streak) r.appendChild(el('span', 'wfs', '🔥 ' + (isAr() ? faDigits(streak) : streak))); return r; };
+    c.appendChild(row(wt('you'), wirdDone(), wirdStreakCount()));
+    friends.forEach(([id, d]) => c.appendChild(row(d.name || '', d.wirdDate === today() && !!d.wirdDone, d.wirdStreak || 0)));
+    return c;
+  }
+
+  // ===== Streak leaderboards (friends / region / country / world, monthly) =====
+  const COUNTRIES = [['SA','السعودية','Saudi Arabia'],['AE','الإمارات','UAE'],['KW','الكويت','Kuwait'],['QA','قطر','Qatar'],['BH','البحرين','Bahrain'],['OM','عُمان','Oman'],['EG','مصر','Egypt'],['JO','الأردن','Jordan'],['IQ','العراق','Iraq'],['SY','سوريا','Syria'],['LB','لبنان','Lebanon'],['PS','فلسطين','Palestine'],['YE','اليمن','Yemen'],['SD','السودان','Sudan'],['LY','ليبيا','Libya'],['TN','تونس','Tunisia'],['DZ','الجزائر','Algeria'],['MA','المغرب','Morocco'],['TR','تركيا','Türkiye'],['PK','باكستان','Pakistan'],['ID','إندونيسيا','Indonesia'],['MY','ماليزيا','Malaysia'],['BD','بنغلاديش','Bangladesh'],['US','الولايات المتحدة','United States'],['GB','بريطانيا','United Kingdom'],['CA','كندا','Canada'],['FR','فرنسا','France'],['DE','ألمانيا','Germany'],['XX','أخرى','Other']];
+  const SA_REGIONS = [['riyadh','الرياض','Riyadh'],['makkah','مكة المكرمة','Makkah'],['madinah','المدينة المنورة','Madinah'],['qassim','القصيم','Al-Qassim'],['sharqiya','المنطقة الشرقية','Eastern Province'],['asir','عسير','Asir'],['tabuk','تبوك','Tabuk'],['hail','حائل','Hail'],['north','الحدود الشمالية','Northern Borders'],['jazan','جازان','Jazan'],['najran','نجران','Najran'],['baha','الباحة','Al-Baha'],['jouf','الجوف','Al-Jouf']];
+  const BS = {
+    ar: { tabFeed: 'اللحظات', tabBoard: '🏆 التصنيف', friends: 'الأصدقاء', region: 'المنطقة', country: 'الدولة', world: 'العالم', title: 'ترتيب ستريك شهر', renew: 'يتجدد التصنيف أول كل شهر', daysLeft: 'باقي', day: 'يوم', daysWord: 'أيام', days: 'يوم هذا الشهر', empty: 'ما أحد في التصنيف بعد. كن أول المشاركين!', join: 'انضم للتصنيف', joinTxt: 'عشان تظهر في تصنيف المنطقة والدولة والعالم، اختر موقعك وفعّل المشاركة. يظهر اسمك الأول فقط.', setupTitle: 'ملفك في التصنيف', country: 'الدولة', region: 'المنطقة', pickCountry: 'اختر الدولة', pickRegion: 'اختر المنطقة', showMe: 'أظهر اسمي الأول في التصنيف العام', save: 'حفظ', saved: 'تم الحفظ ✓', yourRank: 'ترتيبك', you: 'أنت', needRegion: 'اختر منطقتك من «ملفك في التصنيف» لتظهر هنا.', regionSaOnly: 'تصنيف المنطقة متاح حالياً للسعودية.', loading: 'جاري تحميل التصنيف…', fail: 'تعذّر تحميل التصنيف. تأكد من الإنترنت وقواعد Firebase.', retry: 'إعادة المحاولة', score: 'أطول ستريك هذا الشهر', setupRow: 'التصنيف العام', off: 'غير مفعّل', on: 'مفعّل', note: 'الترتيب بأطول سلسلة أيام متتالية بالصور خلال الشهر.' },
+    en: { tabFeed: 'Moments', tabBoard: '🏆 Leaderboard', friends: 'Friends', region: 'Region', country: 'Country', world: 'World', title: 'Streak ranking for', renew: 'Resets on the 1st of every month', daysLeft: '', day: 'day left', daysWord: 'days left', days: 'days this month', empty: 'Nobody is on the board yet. Be the first!', join: 'Join the leaderboard', joinTxt: 'To appear in the region, country and world rankings, choose your location and turn sharing on. Only your first name is shown.', setupTitle: 'Your leaderboard profile', country: 'Country', region: 'Region', pickCountry: 'Choose country', pickRegion: 'Choose region', showMe: 'Show my first name on public leaderboards', save: 'Save', saved: 'Saved ✓', yourRank: 'Your rank', you: 'You', needRegion: 'Choose your region in “Leaderboard profile” to appear here.', regionSaOnly: 'Regional ranking is currently available for Saudi Arabia.', loading: 'Loading leaderboard…', fail: 'Could not load the leaderboard. Check your internet and Firebase rules.', retry: 'Retry', score: 'Longest streak this month', setupRow: 'Public leaderboard', off: 'Off', on: 'On', note: 'Ranked by your longest run of consecutive photo days this month.' }
+  };
+  BS.en.lastDay = 'Last day of the month'; BS.ar.lastDay = 'آخر يوم في الشهر';
+  Object.keys(I18N_MORE).forEach(c => { BS[c] = Object.assign({}, BS.en, I18N_MORE[c].bs); });
+  const bt = k => BS[BS[L()] ? L() : 'en'][k];
+  const monthKey = () => ymd(new Date()).slice(0, 7);
+  const countryName = c => { const x = COUNTRIES.find(y => y[0] === c); return x ? x[isAr() ? 1 : 2] : ''; };
+  const regionName = r => { const x = SA_REGIONS.find(y => y[0] === r); return x ? x[isAr() ? 1 : 2] : ''; };
+  function monthStats(){
+    const mk = monthKey(), ds = [...datesSet()].filter(x => x.startsWith(mk)).sort();
+    let best = 0, cur = 0, prev = null;
+    ds.forEach(x => { if (prev && Math.round((new Date(x) - new Date(prev)) / 86400000) === 1) cur++; else cur = 1; best = Math.max(best, cur); prev = x; });
+    return { month: mk, score: best, days: ds.length };
+  }
+  async function publishBoard(){
+    if (!fb || fbState !== 'ready') return;
+    try {
+      const { FS, db, uid } = fb, ms = monthStats();
+      await FS.updateDoc(FS.doc(db, 'users', uid), { mMonth: ms.month, mScore: ms.score, mDays: ms.days });
+      if (prefs.pub && prefs.country && ms.days > 0){
+        const nm = ((me && me.name) || '').trim().split(/\s+/)[0] || '—';
+        await FS.setDoc(FS.doc(db, 'board', uid), { name: nm, month: ms.month, score: ms.score, days: ms.days, streak: streakCount(), country: prefs.country, region: prefs.region || '', ts: Date.now() });
+      } else { await FS.deleteDoc(FS.doc(db, 'board', uid)); }
+      boardCache = {};
+    } catch(e){ console.error(e); }
+  }
+  let frTab = 'feed', boardScope = 'friends', boardCache = {}, boardToken = 0;
+  async function loadBoardRows(scope){
+    const mk = monthKey(), key = scope + '|' + mk + '|' + (prefs.country || '') + '|' + (prefs.region || '');
+    const c = boardCache[key]; if (c && Date.now() - c.t < 45000) return c.rows;
+    const { FS, db } = fb; const col = FS.collection(db, 'board'); const W = FS.where; let q;
+    if (scope === 'world') q = FS.query(col, W('month', '==', mk), FS.limit(300));
+    else if (scope === 'country') q = FS.query(col, W('month', '==', mk), W('country', '==', prefs.country), FS.limit(300));
+    else q = FS.query(col, W('month', '==', mk), W('country', '==', prefs.country), W('region', '==', prefs.region), FS.limit(300));
+    const snap = await FS.getDocs(q), rows = [];
+    snap.forEach(d => rows.push(Object.assign({ id: d.id }, d.data())));
+    boardCache[key] = { t: Date.now(), rows }; return rows;
+  }
+  function friendRows(){
+    const mk = monthKey(), ms = monthStats(), rows = [{ id: fb.uid, name: ((me && me.name) || bt('you')).trim().split(/\s+/)[0], score: ms.score, days: ms.days, mine: true }];
+    friendData.forEach((d, id) => { if (d.denied) return; const ok = d.mMonth === mk; rows.push({ id, name: (d.name || '').trim().split(/\s+/)[0], score: ok ? (d.mScore || 0) : 0, days: ok ? (d.mDays || 0) : 0 }); });
+    return rows;
+  }
+  const sortRows = rows => rows.sort((a, b) => (b.score - a.score) || (b.days - a.days) || String(a.name).localeCompare(String(b.name)));
+  function frSeg(){
+    const sg = el('div', 'seg');
+    [['feed', bt('tabFeed')], ['board', bt('tabBoard')]].forEach(([k, l]) => { const b = el('button', null, l); b.type = 'button'; b.setAttribute('aria-pressed', frTab === k ? 'true' : 'false'); b.onclick = () => { frTab = k; renderFriends(); }; sg.appendChild(b); });
+    return sg;
+  }
+  function boardRow(r, rank, showLoc){
+    const row = el('div', 'lbrow' + (r.mine ? ' me' : ''));
+    row.appendChild(el('span', 'lbrk', rank <= 3 ? ['🥇', '🥈', '🥉'][rank - 1] : (isAr() ? faDigits(rank) : String(rank))));
+    row.appendChild(el('span', 'wfa', (r.name || '?').charAt(0)));
+    const nm = el('div', 'lbn'); nm.appendChild(el('b', null, r.mine ? (r.name || '') + ' · ' + bt('you') : (r.name || '')));
+    if (showLoc){ const loc = [regionName(r.region), countryName(r.country)].filter(Boolean).join('، '); if (loc) nm.appendChild(el('small', null, loc)); }
+    row.appendChild(nm);
+    const sc = el('div', 'lbs', '🔥 ' + (isAr() ? faDigits(r.score) : r.score)); sc.appendChild(el('small', null, (isAr() ? faDigits(r.days) : r.days) + ' ' + bt('days')));
+    row.appendChild(sc); return row;
+  }
+  function openBoardSetup(){
+    openSheet(); const b = body();
+    b.appendChild(el('h2', null, bt('setupTitle')));
+    const cs = el('select', 'sel'); cs.appendChild(new Option(bt('pickCountry'), ''));
+    COUNTRIES.forEach(([c, a, e]) => cs.appendChild(new Option(isAr() ? a : e, c))); cs.value = prefs.country || '';
+    b.appendChild(cs);
+    const rs = el('select', 'sel'); rs.appendChild(new Option(bt('pickRegion'), ''));
+    SA_REGIONS.forEach(([r, a, e]) => rs.appendChild(new Option(isAr() ? a : e, r))); rs.value = prefs.region || '';
+    b.appendChild(rs);
+    const syncR = () => { rs.hidden = cs.value !== 'SA'; }; cs.onchange = () => { if (cs.value !== 'SA') rs.value = ''; syncR(); }; syncR();
+    const row = el('label', 'setrow'); row.style.marginTop = '14px'; row.appendChild(el('span', null, bt('showMe')));
+    const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = !!prefs.pub; row.appendChild(cb); b.appendChild(row);
+    b.appendChild(el('p', 'note', bt('joinTxt')));
+    b.appendChild(bigBtn(bt('save'), () => {
+      prefs.country = cs.value; prefs.region = cs.value === 'SA' ? rs.value : ''; prefs.pub = cb.checked && !!cs.value; savePrefs();
+      closeSheet(); toast(bt('saved')); publishBoard().then(() => { if (view === 'friends') renderFriends(); if (view === 'me') renderMe(); });
+      if (view === 'friends') renderFriends(); if (view === 'me') renderMe();
+    }));
+  }
+  function renderBoard(v){
+    const c = el('div', 'card');
+    const now = new Date(), left = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate() - now.getDate();
+    c.appendChild(el('div', 'logged', bt('title') + ' ' + now.toLocaleDateString(dateLocale(), { month: 'long' })));
+    const lt = isAr() ? (left === 0 ? 'آخر يوم في الشهر' : left === 1 ? 'باقي يوم واحد' : left === 2 ? 'باقي يومان' : 'باقي ' + faDigits(left) + ' ' + (left <= 10 ? 'أيام' : 'يوماً')) : (left === 0 ? bt('lastDay') : left + ' ' + (left === 1 ? bt('day') : bt('daysWord')));
+    c.appendChild(el('p', 'desc', bt('renew') + ' · ' + lt));
+    const sg = el('div', 'seg sm');
+    [['friends', bt('friends')], ['region', bt('region')], ['country', bt('country')], ['world', bt('world')]].forEach(([k, l]) => { const b = el('button', null, l); b.type = 'button'; b.setAttribute('aria-pressed', boardScope === k ? 'true' : 'false'); b.onclick = () => { boardScope = k; renderFriends(); }; sg.appendChild(b); });
+    c.appendChild(sg);
+    const list = el('div'); list.style.marginTop = '10px'; c.appendChild(list); v.appendChild(c);
+    c.appendChild(el('p', 'logged', bt('note')));
+    const needSetup = boardScope !== 'friends' && (!prefs.pub || !prefs.country);
+    const joinCard = txt => { list.appendChild(el('p', 'desc', txt)); const jb = el('button', 'btn'); jb.type = 'button'; jb.textContent = bt('join'); jb.onclick = openBoardSetup; list.appendChild(jb); };
+    if (needSetup){ joinCard(bt('joinTxt')); return; }
+    if (boardScope === 'region'){
+      if (prefs.country !== 'SA'){ joinCard(bt('regionSaOnly')); return; }
+      if (!prefs.region){ joinCard(bt('needRegion')); return; }
+    }
+    const token = ++boardToken;
+    const paint = rowsIn => {
+      if (token !== boardToken) return; list.textContent = '';
+      let rows = rowsIn.slice(); const ms = monthStats();
+      if (boardScope !== 'friends'){ rows = rows.filter(r => r.id !== fb.uid); if (ms.days > 0) rows.push({ id: fb.uid, name: ((me && me.name) || '').trim().split(/\s+/)[0], score: ms.score, days: ms.days, country: prefs.country, region: prefs.region, mine: true }); }
+      sortRows(rows);
+      if (!rows.length){ list.appendChild(el('p', 'desc', bt('empty'))); return; }
+      const top = rows.slice(0, 20); top.forEach((r, i) => list.appendChild(boardRow(r, i + 1, boardScope !== 'friends')));
+      const mi = rows.findIndex(r => r.mine);
+      if (mi >= 20){ list.appendChild(el('div', 'lbgap', '⋯')); list.appendChild(boardRow(rows[mi], mi + 1, true)); }
+    };
+    if (boardScope === 'friends'){ paint(friendRows()); return; }
+    list.appendChild(el('p', 'bp-msg', bt('loading')));
+    loadBoardRows(boardScope).then(paint).catch(e => {
+      console.error(e); if (token !== boardToken) return; list.textContent = '';
+      list.appendChild(el('p', 'bp-msg', bt('fail'))); const rb = el('button', 'btn alt'); rb.type = 'button'; rb.textContent = bt('retry'); rb.onclick = () => { boardCache = {}; renderFriends(); }; list.appendChild(rb);
+    });
+  }
+
+  // ===== routing =====
+  function decide(){
+    applyLang();
+    if (!prefs.lang){ show('scrLang'); renderLang(); return; }
+    const noAuthNeeded = !FIREBASE_CONFIG.apiKey || fbState === 'error' || prefs.guest || authState === 'in';
+    if (noAuthNeeded){ if ($('appShell').hidden){ show('appShell'); } renderShell(); return; }
+    if (authState === 'unknown'){ show('scrSplash'); return; }
+    show('scrAuth'); renderAuth();
+  }
+
+  decide();
+  fbInit();
+  (async () => {
+    try { if (window.claude && claude.use) sample = await claude.use('sample'); } catch(e){ sample = null; }
+    if (!sample) return;
+    try { const lim = await sample.limits(); if (!lim.images) imagesOk = false; } catch(e){}
+  })();
+})();
+</script>
+</body>
+</html>
